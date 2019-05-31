@@ -1,0 +1,142 @@
+%!TEX root = bioPrediction_main.tex
+\section{Field Study}
+We conducted an eight-week field study with 14 participants to investigate the feasibility of predicting stress, focus, and awakeness based on biometric signals. On each workday for eight consecutive weeks, each of the 14 participants wore a biometric sensor while performing their normal work tasks and completed two electronic surveys to report their current self-perceived levels of stress, focus, and awakeness. During the eight week study period, a computer activity tracker was installed and active on 10 of the participants' company-issued laptops (note: a few declined for privacy reasons).
+
+The goal of our study is to understand the efficacy of biometric measurements in predicting stress, focus, and awakeness. To that end we posed the following research questions.
+
+\vspace{0.5em}
+\noindent\textbf{RQ1}: Can we use biometric measurements to accurately predict stress,
+focus, and awakeness? 
+
+\vspace{0.5em}
+\noindent\textbf{RQ2}: What is the minimum number of samples needed to accurately predict stress, focus, and awakeness? 
+
+\vspace{0.5em}
+\noindent\textbf{RQ3}: What is the minimum time window needed to accurately predict stress, focus, and awakeness? 
+
+\vspace{0.5em}
+\noindent\textbf{RQ4}: How do biometrics compare to computer interaction measurements for predicting stress, focus, and awakeness?
+
+\vspace{0.5em}
+
+%We answer RQ1 in Section~\ref{secOverallAccuracy} by analyzing the overall performance of different
+%machine learning models and by comparing the best performing models to baseline approaches.
+%To answer RQ2, in Section~\ref{secLearningCurve} we identify the smallest number of training samples necessary to obtain satisfactorily high prediction accuracy and acceptably low mean squared error.
+%We answer RQ3 in Section~\ref{secMinimumTW} by considering 16 different time windows for collection of biometric measurements and by identifying the smallest time window on which we can base our training features without sacrificing prediction accuracy.
+%Finally, to answer RQ4, in Section~\ref{secCI} we compare the prediction accuracy of machine learning models trained on biometric data versus those trained on computer interaction data.
+
+
+\subsection{Participants}
+We recruited 14 professionals via personal contacts from a large power and automation company. All participants work primarily in an office environment, though half of the participants spend at least 10\% (and up to 50\%) of their time in a laboratory environment. Office workers are a population that generalizes to a variety of contexts, and including part-time laboratory workers guarantees that our participants have varying work patterns that include different levels of computer usage, as well as different levels of activity in both individual and collaborative tasks.
+
+Of the 14 participants, 11 were male, 3 female. The average participant age is ~40, with 5 in the age range 25-34, 7 in the age range 35-44, and 2 in the age range 55+. The participants have an average number of years of professional experience of ~12, with 2 having less than 5 years, 10 having 5-15 years, and 2 having more than 25 years. All participants work for a research organization within the company, but their job functions span line management, laboratory science, scientific research, technology evaluation, and software development.
+
+\begin{comment}
+\subsection{Procedure}
+\todo{This section does not work here. It is not really the study procedure, but rather the project procedure. Perhaps it can form the basis of an overview section after Field Study but before Analysis and Results.}
+
+%\begin{figure}
+%  \centering
+%      \includegraphics[width=0.5\textwidth]{Figure1.png}
+%  \caption{Process used to gather data and create the machine learning model able to predict the level of stress, focus, and awakeness} 
+%  \label{process}
+%\end{figure}
+%\todo{The figure or text in the boxes could be shortened a lot, maybe even just replaced with pictures of sensor and survey like question with 5point scale. At this point, i'm not sure the figure adds a lot.}
+
+%Figure \ref{process} shows the overall process performed in this study. We started by selecting a population
+%of professionals in an office environment.
+
+We use state-of-the-art sensors to capture a stream of biometric data from each individual and a computer interaction tracker to collect computer interaction information during the time
+of the study. 
+
+The participants were asked to fill a survey 3 times a day: two during the working day, and
+one at the end of the day, where they rated their level of stress, focus, and awakeness during
+the day; and their level of stress, awakeness, productiveness, and overall feeling at the end of the day.
+This was conducted over an eight week period, which is
+400\% longer than previous studies~\cite{zuger18,Muller16}.
+
+We then pick a set of time windows (10sec, 20sec, 30sec, 45sec, 1min, 2min, 3min, 5min, 7.5min, 10min, 20min, 30min, 45min, 1hour, 2hour, 3hour) to analyze. We applied different statistical measurements (mean, standard deviation, variance, median, percentile25, percentile75, interquartile range, maximum, minimum, range) to each of the collected biometric signals and the computer interaction data within the time windows selected. We then 
+compared the performance of four different machine learning 
+algorithms to be able to predict the survey responses based in the biometric and 
+computer interaction data.
+
+Based in the initial corpus of training data, we create a machine learning model that is able to accurately predict the responses for stress, focus, and awakeness for each of the individuals wearing the sensors.
+We are therefore able to infer the answer within the spectrum to each of these indicators without the need to ask the participants to provide an answer.
+\end{comment}
+
+\subsection{Data Collection}
+
+In this section we describe the two datasets that we collected from each study participant.
+
+\subsubsection{Biometric Sensors}
+Figure~\ref{everion} illustrates Biovotion's Everion~\cite{everion}, which we used to track the biometric signals of the study participants. The Everion is worn on the upper arm and provides continuous monitoring of certain biometric measurements. Previous studies~\cite{zuger18,sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent} have used similar devices~\cite{Okada11,polar,fitbitCharge} to capture psycho-physiological and biometric measurements.
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.35\textwidth]{Everion.jpg}
+  \caption{Everion sensor used to collect biometric measures.}
+   \label{everion}\vspace*{-0.2cm}
+\end{figure}
+
+Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study.
+
+\begin{table}[t!]
+\begin{center}
+\begin{tabular}{l l}
+\hline
+Biometric Measurement & Units of Measure \\ 
+\hline
+\textbf{Physical Activity} & \cite{fox1999,aldana1996}\\
+\hspace{3mm}Intensity of motion & (No unit)  \\
+\hspace{3mm}Energy Expenditure & Calories per second (cal/s)  \\
+\hspace{3mm}Step counter & Steps  \\
+\hline
+\textbf{Heart} & \cite{haapalainen2010psycho,healey2005detecting,mulder1992measurement,haag2004emotion} \\
+\hspace{3mm}Heart rate & Beats per Minute (bpm) \\
+\hspace{3mm}Blood pulse wave & (No Unit)  \\
+\hspace{3mm}Heart rate variability & Milliseconds (ms) \\
+\hspace{3mm}Blood oxygenation  & Percent (\%)  \\
+\hspace{3mm}Blood perfusion & (No unit)  \\
+\hline
+\textbf{Skin} & \cite{healey2005detecting,haag2004emotion} \\
+\hspace{3mm}Galvanic skin response &  kOhm  \\
+\hspace{3mm}Skin temperature &  Degrees Celsius ($^{\circ}$C)  \\
+\hline
+\textbf{Respiration} & \cite{mulder1992measurement,healey2005detecting,haag2004emotion,masaoka1997}\\
+\hspace{3mm}Respiratory rate & Breaths per Minute (bpm)  \\
+\hline
+%\textbf{Environmental}\\
+%\hspace{3mm}Barometric pressure & Milibar (mbar)  \\
+%\hline
+\end{tabular}
+\caption{Biometric measurements captured by the Everion, organized by category and with references to previous works using similar data}
+\label{signals}
+\end{center}
+\vspace*{-7mm}
+\end{table}
+
+
+
+\subsubsection{Surveys}
+\label{sec:Surveys}
+We sent via text message a survey request to each participant two times per work day. We sent the first request at a random time between 9am and 11am and sent the second request at a random time between 1pm and 3pm. We randomized the request times to avoid either establishing or observing a standard behavioral pattern. That is, we did not want the participants to plan for the arrival of the survey request at a set time, and we did not want the survey request to overlap with a set daily behavior (e.g., coffee break every day at 2:30pm). The same survey was sent each time:
+\begin{enumerate}
+\item How awake are you right now?
+\item How stressed do you feel right now?
+\item How focused on work are you right now? 
+\end{enumerate}
+We used the phrase ``right now'' to capture each aspect in the moment (so as to permit later prediction of each aspect based on biometric data). The wordings of the questions are based on a previous survey of individuals in an organizational context~\cite{Gloor_etal:2010}. The use of awakeness (rather than sleepiness) in Question 1 is inspired by previous work~\cite{Wilhelm_Schoebi:2007} and to some extent also captures the ``arousal'' aspect of the affective space~\cite{Russell:1980}.
+
+
+%\todo{we are not using the last survey for anything in this paper, so I'd leave it out}
+%One last survey was sent at the end of the day, at 4:25pm which asked the 
+%four different questions
+%detailed below:
+%\begin{itemize}
+%\item How awake have you been today?
+%\item How stressed did you feel today?
+%\item How productive have you been today?
+%\item How do you feel about your work day?
+%\end{itemize}
+
+Following guidelines from similar previous studies~\cite{fogarty05,tanaka11}, we asked the participants to respond to each question using a 5-point Likert scale ranging from 1 (not at all) to 5 (extremely) awake/stressed/focused. Each participant response, as stored by Survey Gizmo, comprised the date, the time at which the response was initiated, the time at which the survey was submitted, the unique identifier for the participant, and the responses submitted by the participant.

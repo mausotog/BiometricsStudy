@@ -1,0 +1,44 @@
+%!TEX root = bioPrediction_main.tex
+
+\todo{NAK: I have heard from either Thomas or CGM a figure that captures how many problems are due to human error (something like 80\%). If we can find that cite, it should figure prominently in the motivation.  UPDATE: Mau added
+this book to the bib file, so we can cite it like this\cite{hse99}. The text
+says the following: "Accidents can occur through people's involvement with their work. As technical systems have become more reliable, the focus has turned to human causes of accidents. It is estimated that up to 80\% of accidents may be attributed, at least in part, to the actions or omissions of people."}
+
+\section{Introduction}
+%Control rooms, while not much different from standard office settings on the surface, differ in the immediacy of their impact. In emergency dispatch offices, factory control rooms, and mining operations centers decision immediately impact safety and profits. A sleepy factory operator that misses early warnings could lose millions of dollars due to a process shutdown; a stressed mining operator that mistakenly dispatches two underground trucks to the same location could cause a deadly crash.  In these demanding settings  the environment must be finely tuned to support the job at hand. For instance, on overnight shifts, if controlling the lighting helps workers shift their circadian sleep cycle, reducing their sleepiness, it should be done, as the consequences of bad decisions are high.
+
+%To ensure the best decisions are made we focus on reducing stress, increasing focus and awakeness. Unfortunately, beyond a few lightly-studied phenomenon such as temperature's affect on awakeness, there are few absolutes that can be applied to workplaces wholesale. Thus, when optimizing a workspace tracking the affect of a given change, if any, is key. 
+
+%The challenge with tracking the affect of a given change in a workspace on its workers is that it is most often done via self-reporting, or the process of filling out daily, hourly, or worse surveys on one's current awakeness, stress, and focus. Worse, this process must be repeated every time a change is implemented. Performing this process rapidly becomes impractical since the changes in the environment may be very frequent  (e.g., modifying the room temperature several times a day). Previous studies show that interruptions that undesired constant interruptions that happen at inopportune moments have negative effects, causing more stress and frustration~\cite{adamczyk2004if,czerwinski2000instant,mark2008cost}.
+
+% The importance of the problem
+Human decisions in the workplace directly impact worker productivity, product/process quality, and workplace safety. Control rooms are noteworthy for the immediacy of impact. Control room operators make hundreds of decisions during a workday, and the consequences of poor decisions can be severe. A sleepy factory operator could cause millions of dollars in losses by failing to recognize the early warning signs of a process shutdown, an unfocused water-processing plant operator could cause a water line failure by missing an alarm warning of a pressure overload, or a stressed mining operator could cause a deadly crash by mistakenly dispatching two trucks to the same underground location.
+
+% The overall problem
+The goal of control room design is to create and maintain an environment that maximizes operator alertness (i.e., that decreases stress and that increases focus and awakeness). Modern control rooms rely on adjustments to ergonomics, light, and temperature to support improved operator alertness. For example, adjusting the lighting in a control room can help operators on overnight shifts to alter their circadian sleep cycles, improving their awakeness while at work. A key challenge in control room design is understanding the effects of a given change to the control room environment on the operators. In particular, reliance on operator self-reporting to capture current levels of stress, focus, and awakeness is cumbersome, distracting, and labor intensive. Indeed, self-reporting can affect the phenomena being measured; e.g., interrupting work to respond to a survey can reduce focus. Moreover, as self-reporting is required not only to create the initial environment, but also to maintain it over time, operator self-reporting is impractical and can be harmful to operator alertness. Previous studies establish that regular interruptions, particularly those that happen at inopportune moments, cause stress and frustration~\cite{adamczyk2004if,czerwinski2000instant,mark2008cost}.
+
+% What others have done
+Previous research addresses how various signals such as blood pressure, heartbeat, and temperature can be linked to psychological states and processes~\cite{Kramer90,Rowe98,Eekelen04,valentini10}. However, little research addresses how biometric signals can be used to predict proxies for alertness such as levels of stress, focus, and awakeness. Instead, previous research has focused on using biometric signals to assess task difficulty in software development~\cite{fritz2014using}, code quality online~\cite{Muller16}, or  interruptibility~\cite{zuger18}.
+
+% What we present in this paper
+\todo{NAK: Would like the opinion of Thomas here --- should we give more of our vision here or stick to the (current) approach of keeping it specific to this paper. That is, do we want to talk about using biometrics to monitor and improve the workplace, or just stick to talking about predicting based on biometrics?}
+The overall goal of our work is to create a machine learning 
+model based in anecdotal biometric
+data which can infer the level of stress, focus, and 
+awakeness of a person by analyzing their biometric data.
+This approach will remove the unnecessary constant interruptions by inferring
+the stress, focus, and awakeness of an individual from their biometric features.
+This will allows to assess if a change performed in the environment 
+of an individual is beneficial
+or prejudicial to their productivity and alertness and, therefore, be able to 
+act upon this information to reverse or increase the change. 
+
+% The contributions of this paper
+The contributions of this paper are:
+\begin{itemize}
+\item The results of an exploratory study on the viability of using biometric sensors to predict the stress, focus, and awakeness of an individual
+\item A machine learning approach to predict proxies for alertness using biometric signals
+\item Guidance regarding the optimal time window and learning curve to generate an effective predictive model
+\item A comparison between the proposed approach using biometric signals and an approach using computer interaction data
+\end{itemize}
+
