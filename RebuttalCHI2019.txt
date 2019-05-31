@@ -1,0 +1,58 @@
+
+Rebuttal
+We would like to thank the reviewers for valuable and constructive feedback and appreciate the opportunity to address the main comments 
+expressed in them and how we plan to address them in the revised version.
+
+Relevance to CHI:
+In regard to the relevance of our work to the CHI community, we agree with the reviewers and will provide a better framing of the work’s 
+relevance and potential impact to the CHI community. In particular, we will state that knowledge workers’ stress, and lack of focus or 
+awakeness can have a significant impact on their interaction with computers and their work in general. For control room operators, similar to 
+car drivers, a lack of focus and awakeness can even lead to severe incidents. We will further state, that various HCI researchers have 
+therefore previously examined these and similar variables, in particular, (a) their occurrence, cause and effect in various context, including 
+knowledge work, e.g. [50,51], (b) how they can be measured, e.g. [Reb5], and (c) how they might be modulated/regulated, e.g. [Reb7]. While 
+previous work mostly focused on smaller or controlled lab studies, our study extends this work by performing a field study to examine whether 
+and how these three variables--stress, focus and awakeness--can be measured over an extended period of time in a knowledge workers’ work 
+context. We will further state that our results show that a combination of sensors can be used in the field to automatically measure these 
+variables, in particular awakeness and stress with a certain accuracy, and that even less invasive computer interaction sensors can be used for 
+measuring these variables in certain contexts. In addition, we will extend the discussion to include the usage of such a measurement in the 
+workplace, in particular in control rooms as well as regular knowledge worker’s contexts, to modulate stress and awakeness with the goal to 
+increase the wellbeing of the worker and the quality of their work, e.g. through individual approaches such as adapting the lighting in a 
+control room, or scheduling breaks, and more team based approaches such as an awareness dashboard of a teams’ stress level.
+
+Related work
+Regarding the related work, we agree with the reviewers and will extend the comparison of our work to previous work. As stated above, we will 
+provide a better framing of our work and situate it better in related work in terms of the study of these variables, the measuring thereof and 
+the approaches to regulate/modulate them. We further thank the reviewers for their pointers to relevant related work and will add them. In 
+particular, we will also state that previous approaches have already shown the feasibility of applying machine learning to biometric data to 
+measure variables, such as stress, interruptibility, negative emotion or confusion during computer interaction [Reb1, Reb3, Reb4] and that 
+these approaches vary in the variables examined, the invasiveness of the sensors and the length and context of the studies. We will state that 
+many previous studies focused on shorter time frames (mostly hours, but in one case also up to 5 days [Reb2] or 2 weeks [Reb1]), but that none 
+examined an 8 week period in a real-world office environment and these variables.
+
+Data collection and preparation:
+We thank the reviewers for their comments on the data collection and will clarify this aspect in our paper. We will state that we decided upon 
+our data collection method based on prior work [Reb3,Reb4] and through extensive piloting with users. In the end we decided on the text 
+messaging approach since pilot participants preferred these over other means also due to them being accessible and noticeable anywhere in the 
+office. Biometric data collection was performed with the state-of-the-art Everion device which captures a broad set of signals (Table 1). We 
+are aware that there are biometric signals not being captured by this device, or captured at a higher granularity that desired. However, in an 
+effort to maintain this research applicable to real-world environments, we picked this already existing device, even when, as a trade-off, we 
+could not capture more descriptive and more intrusive signals as SDNN, SCL, SCR, eye tracking, or brain activity.
+
+Technical implementations:
+Low precision and recall values in some of the users in Table 3 are due to the unbalanced nature of the responses of these particular users. It 
+is worth noticing how users that have the lowest precision and recall values are those where the data is the most unbalanced (column 
+“Distribution”, Table 3). This translates to a scenario where the classifier will likely label the minority instances as part of the majority 
+class due to the unbalanced ratio of the data.
+As to clarify how the data is labelled, the participants do not label each time window analyzed by the features (e.g., the participant does not 
+label the last 3 hours as “awake”). The participants respond to how they are currently feeling, and based in the response, we create a set of 
+features using different time windows (Figure 5), finally we analyze which features (time windows and biometric signals) can predict best the 
+“awake” value.
+
+
+Reb1. M. Zuger et al. Analyzing Interruptibility in the Office: A Field Study on the Use of Biometric and Computer Interaction Sensors. CHI18
+Reb2. A. Sano et al. Stress Recognition using Wearable Sensors and Mobile Phones. ACII13
+Reb3. S. Lallé et al. Predicting Confusion in Information Visualization from Eye Tracking and Interaction Data. IJCAI16
+Reb4. P. Panwar et al. Detecting Negative Emotion for Mixed Initiative Visual Analytics. CHI18
+Reb5. Hernandez et al. Under pressure: Sensing Stress of Computer Users. CHI14
+Reb6. G. Mark et al. Email Duration, Batching and Self-interruption: Patterns of Email Use on Productivity and Stress. CHI16
+Reb7. J. Snyder et al. MoodLight: Exploring Personal and Social Implications of Ambient Display of Biosensor Data. CSCW15
