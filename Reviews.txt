@@ -1,0 +1,263 @@
+Reviewer 1 (reviewer)
+Expertise
+Knowledgeable
+Recommendation
+Neutral: I am unable to argue for accepting or rejecting this paper; 3.0
+Review
+This paper describes an approach using biometric measures to create a machine learning model to predict stress, focus, and awakeness. Using 
+bio-data, physiological signals and biometric measures for recognizing emotional states or stress level have been extensively studied, compared 
+to the previous studies, the contribution of the paper can be seen in two forms: 
+
+First, the field study with 14 professionals at the workplace to investigate the feasibility of the proposed approach in workaday routines. 
+Compared to the lab-based studies that use a special test (e.g., Stroop color-word or arithmetical test) as the stimulus to induce stress in 
+participants, the authors took the challenges to recognize stress, focus, and awakeness in workaday routines. I appreciate the author's efforts 
+for conducting such a field study, in which the real-life stress might have low intensity, last for a long period, more difficult to be 
+perceived by the participants and therefore more difficult to measure and predict. Therefore, I think the RQ1 in this paper is a challenging 
+and meaningful question to study. Second, a thorough analysis of ways to create and test machine learning model to predict stress accurately. 
+To improve the accuracy of the prediction, the authors examined the classifier’s performance by testing different numbers of samples, length of 
+the time window.
+
+However, the paper has some issues with data collection which prevent a strong recommendation for acceptance at present. These issues can be 
+summarized as: 
+
+1) experience sample collection：
+This study collected experience sample by using a text message-based electronic survey (assumed that through smartphone) twice per day, in the 
+morning and afternoon.
+
+Firstly, this type of method can be very ‘invasive’ to a participant’s experience in a workflow, especially, the notification of text message 
+might ‘break’ user’s flow, focus and the extra requirement to fill the survey might become new stress. As shown in Figure 2, more than 8 
+participants ignored the survey about 20 times. 
+
+Secondly, there are some doubts about the accuracy of the collected ‘stress’ ratings by responding to the survey questions, namely ‘how 
+stressed do you feel right now’. The timing of the participants responding to the survey can be an important factor influencing the subjective 
+experience of stress. For instance, the participant was busy and stressful with his work, and just after he/she finished this stressful work, 
+the text-message survey came in, at this timing, the answer to the question that ‘how stressed do you feel right now’ might be ‘not at all’, 
+which was inconsistent with the biometric measures collected during one-minute or one-hour before the survey. Could you provide an elaboration 
+of the survey collection? What is the average time delay between the delivery of the survey and receive the response?
+
+Because the experience samples were used to label the biometric measures for creating a machine learning model, the accuracy of self-reported 
+or self-log experience data seems critical and a prerequisite and basis for training the machine learning model. This is a big concern for the 
+reviewer to evaluate the feasibility of the proposed approach.
+
+I suggest the author to consider using a more unobtrusive method to collect experience data without interrupting the workflow. There is already 
+a lot of work on designing a new self-log, a self-report tool which can blend into the workstation [1] or offers users more freedom in time to 
+self-report [2], or facilitate the self-log by using wearables. I think this can greatly increase the ‘sample rate’ of experience data and the 
+number of the labeled biometrics data for training the model. Secondly, besides, the rating scores, I suggest collecting a simple text together 
+with the rating score, which might help the researcher explain the quantitative experience data, and screen out the outliners, refer to [1].
+
+[1]. Luo, Yuhan, et al. "Time for Break: Understanding Information Workers' Sedentary Behavior Through a Break Prompting System." Proceedings 
+of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, 2018.
+[2]. Adams, Alexander T., et al. "Keppi: A Tangible User Interface for Self-Reporting Pain." Proceedings of the 2018 CHI Conference on Human 
+Factors in Computing Systems. ACM, 2018.
+
+2) Biometric measures collection: lack of strong elaboration of the details about the calculation of measures. For example, heart rate 
+variability has many indicators, including SDNN, RMSSD, or LF/HF in the frequency domain. Normally, the minimum required window size for 
+calculating a valid heart rate variability is 3 minutes. And the loss of heartbeat data will cause large noise in HRV calculation. Galvanic 
+skin responses (GSR) signal consists of two main components: Skin Conductance Level (SCL) and Skin Conductance Response (SCR). And the SCR is 
+more related to emotional and stress states. For instance, the number of SCR bursts indicates the arousal level and emotional changes. But the 
+SCL level on its own is not that informative. The authors need to look at how these biometric measures can support some of the claims in the 
+paper. 
+
+In summary, the objectives of the study are clear and meaningful, but the data collection, especially the collection of experience sample (as 
+the label for machine learning) and the details about the biometrics measures are not yet well developed and clearly stated. Although the 
+machine-learning model seems the main focus of this paper, the input of the biometric dataset and experience sample for machine-learning can be 
+the basic. Due to the concerns about the data collection, I do not consider the other researchers can replicate the proposed method, or 
+directly use the results of the paper (the answers to the RQ2 and RQ3). This reduces the significance of the paper's contribution to HCI.
+Rebuttal response
+I thank the authors for their attention and address our comments. I still have the doubtful attitude toward the collection methods of the 
+self-reported values which are used as the ground truth data. Overall, I have increased my score to 3.0 based on the rebuttal and 
+clarifications provided. 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Reviewer 2 (2AC)
+Expertise
+Knowledgeable
+Recommendation
+Neutral: I am unable to argue for accepting or rejecting this paper; 3.0
+Review
+Overall the introduction is well written and well motivated. The claimed contributions are clear yet the contribution to HCI can be further 
+improved. There aren't new ideas or approaches introduced here as the sensor and ESM instruments are standard as is the use of an off the shelf 
+random forest classifier. Indeed, the results on accuracy aren't sufficient to suggest they could be used to afford any new forms of 
+interaction. This stands as preliminary work as what is now needed are contributions which show clear benefits in HCI. 
+
+The validity of the work is very good and well described but the authors don't clearly demonstrate how such low accuracy awareness, stress or 
+focus measures could be used to make a contribution to Human-Computer Interaction. The authors state that "the results also open up new 
+opportunities to help increase knowledge workers’ productivity and well-being" however, knowledge that such psycho-physiological and biometric 
+measurements could be useful in HCI have been well established in prior work. Of course, the 8 week data collection and corpus size are solid 
+contributions. 
+
+Introduction
+what are the "aspects" - aspects such as a person’s cognitive and emotional states [5, 49, 66, 68, 83].
+Define what is meant by focus when it's first introduced. 
+Please relate the measurement of these three aspects more clearly to HCI and clarify what benefit others can gain from the contributions 
+claimed here. 
+
+Field Study 
+The field study description is very clear and the description of the research questions and participants are excellent. What is missing here is 
+any underpinning theory in HCI. While related work comes at the end of the paper, there is background here on biometric measurement which is 
+essential to understand before reading the field study description. Clarify what is meant by "a few declined" as 4 (which you detail later on 
+page 8). 
+
+How does the data collection approach taken here differ from the six studies listed? 
+
+Which of the previous studies have considered the same breath of biometric measurement as has been used here? What have these pieces of related 
+work then shown in HCI? 
+
+A Likert scale is the sum of responses on several Likert items. You asked people three Likert items. A scale is the simple sum or average of 
+questionnaire responses. To treat it as a scale, all items are assumed to be replications of each other or in other words items are considered 
+to be parallel instruments. 
+
+Data Preparation. 
+Is it correct that the maximum number of responses should have been 112 on the surveys? This makes S3 is most compliant with 76 what % and S13 
+the lowest with 10, what %? 
+
+What are the figures for surveys, which weren't answered, where they was and was BioInfo available?
+
+What is the impact on your results of the randomly replicated data in the minority cases used? 
+
+Can you comment of how the varying importance of the features used across users would impact on the real word deployment of the technique. The 
+cold start problem is often tackled with prototypical users or classes. How might you achieve this in practice to reduce the training times 
+with a series of general models, not simply one. 
+
+Section 3.2 
+Why only 10 participants? What was the rationale for the cut-off selected? 
+The RMS results suggest more training classifiers don't really help. Can you comment further on this. 
+
+3.3 
+On what basis can you state that "the performance for a time window of 1200 seconds is already very close to optimal". What is meant by optimal 
+here? 
+
+3.4 
+The combined data performance worse overall except for accuracy on focus. Can you discuss this further as this suggests one of the main points 
+of this sort of work isn't born out. 
+
+Related work 
+This is well written and well describes what has been tackled previously. 
+
+Conclusions 
+The links to HCI aren't well made here and there is little to no discussion on the results and the implications for HCI. Without such linkage 
+the work feel quite preliminary and the starting point for the development of techniques in HCI which might benefit from such sensing. 
+
+Minor 
+Issues in references 125–âĂŞ134. 
+Rebuttal response
+The authors have provided an excellent rebuttal here which addresses many of the concerns I had with this work. While I'm still neutral of the 
+paper overall I think the suggestions the authors have can be achieved and the paper could be considered. 
+
+This paper was discussed at length but the PC could not see how such low accuracy awareness, stress or focus measures could be used to make a 
+contribution to Human-Computer Interaction given the extensive body of related work already known in this area. 
+
+The lower 1AC score reflects the view of the PC when the reviews and rebuttals were discussed and considered. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Reviewer 3 (reviewer)
+Expertise
+Knowledgeable
+Recommendation
+. . . Between neutral and possibly accept; 3.5
+Review
+This paper presents an approach to automatically detecting awakeness, focus, and stress when completing computer-based tasks. Models were 
+trained to detect these factors using data collected from an 8 week field study and the accuracy of the generated models at classifying these 
+states based on a user-provided ground truth is reasonable, though the features which are important, are varied highly in hold-one-out 
+cross-validation, leading to doubt as to the generalizability of the approach and the weight that can be put in any conclusions about feature 
+importance. 
+
+On the positive side, this paper addresses an area of potentially transformational impact within HCI. If stress, awakeness, and focus could be 
+reliably detected using non-intrusive sensors, then mixed-initiative systems could be designed to improve productivity, warn about problems in 
+safety-critical scenarios, etc. Unfortunately, the paper focuses almost entirely on the training of the classifiers and is weak in terms of the 
+framing of the potential impact and relevance to CHI audiences. 
+
+Others have trained models and conducted similar studies to detect emotional changes or other user states. Notable work which is missing is the 
+series of papers by Conati in the information visualization field, e.g. "Predicting Confusion in Information Visualization from Eye Tracking 
+and Interaction Data". Similarly, work by Panwar and Collins on detecting frustration using a multi-sensor approach and random forest model may 
+be relevant ("Detecting Negative Emotion for Mixed Initiative Visual Analytics"). 
+
+It wasn't clear to me how the ground truth was labeled. In some scenarios, the time window for analysis was up to 3 hours long. If the 
+participants rated themselves as "awake" in that period, then all the data in the window would be classified as such for the purposes of 
+training the model. However, a 3 hour period seems like a long time to apply one value of "awake", "focused", or "stressed". I know that many 
+window sizes were investigated, it would be good to have some discussion in the paper about the rational for the range of window sizes and 
+whether it is practical to expect the person to have the same awakeness, focus, and stress during some of the longer periods. 
+
+The paper thoroughly discusses the collected data, the preparation process, the machine learning algorithms used, and the various methods used 
+to reduce the feature space. The features which were most important for each classifier varied both across training runs in a leave-one-out 
+cross-validation and across the three types of target state (focus, stress, awakeness). The spread or at least standard deviation in the 
+feature weightings in Table 5 would be helpful to see how large that variance really was. It is interesting that there was some general 
+consistency on some of the features across participants. 
+
+I did note that, while the overall classifier quality is competitive given the stratified random classifier baseline, the accuracy, precision, 
+and recall vary greatly across participants, with some participants having recall and precision of 0.000 in Table 3. Some explanation of these 
+low values for these participants would be helpful. 
+
+The paper carefully acknowledges and addresses the limitations of the work, in particular, the generalizability of the study results to other 
+types of workers or environments. What I found lacking was a careful discussion of the potential implications of these classifiers for HCI 
+design. There are some mentions of increasing knowledge worker productivity and well-being but some depth in this direction would greatly 
+improve the work. 
+
+Overall, this is an interesting paper which makes use of novel hardware and a rather straightforward and sound approach to collect a 
+significant amount of data to train classifiers. I'm not sure how interesting this will be to attendees at CHI, given that much of the paper is 
+dedicated to discussing the training and testing of the machine learning. 
+
+The paper is well-written and polished, with only a few minor typos. For example on page 4 "random forest" is listed as one of the algorithms 
+which outperformed "random forest". 
+
+Rebuttal response
+
+I thank the authors for their attention to our comments and their clarifications of several aspects, including the relationship to the related 
+work and the framing for a CHI audience. I agree that this paper could be reframed to be more relevant to the CHI audience in a rewrite. 
+
+I remain confused as to how the self-reported values are translated into ground truth data at varying window sizes. I specifically was asking 
+how this works for the longer window sizes - is the label applied to the entire window of data? 
+
+The clarification about the unbalanced nature of the data, especially for some participants, and how it affected the precision, makes sense. 
+However, it leaves me curious as to whether approaches for mitigating the effects of the unbalanced class problem (e.g. under or over sampling) 
+were attempted?
+
+Overall my I have increased my score to 3.5 to indicate I am moderately positive in terms of the possibility of accepting this work given the 
+rebuttal and clarifications provided. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Reviewer 4 (AC)
+Expertise
+Passing Knowledge
+Recommendation
+Reject: I would argue for rejecting this paper; 1.0
+1AC: The Meta-Review
+This paper introduces a machine learning model to analyze biometric measures including heart rate, respiration rate and galvanic skin response, 
+and as a result to predict the level of stress, focus and awareness. 
+
+R3 is the most positive with the score of 3. R3 stress that the affective sensing is potentially transformational for HCI. And the paper has a 
+“ novel hardware and a rather straightforward and sound approach to collect a significant amount of data to train classifiers”. Additionally, 
+R1 also recognized the contribution of the paper as it collects data in “workaday routines” rather than lab-based studies. 
+
+However, all the reviewers pointed out many challenges/questions:
+
+1. Relevance to HCI:
+- “the paper focuses almost entirely on the training of the classifiers and is weak in terms of the framing of the potential impact and 
+relevance to CHI audiences” (R3). “the contribution to HCI can be further improved” (2AC). “The links to HCI aren't well made here and there is 
+little to no discussion on the results and the implications for HCI.” (2AC)
+
+2. Missing related work and comparisons 
+- series of papers by Conati  (R3)
+
+3. Technical Implementation
+ground truth is unclear (R3)
+Variance in the data is unclear (R3)
+More explanations for the low precision values of the participants in Table 3 (R3)
+
+4. Data-collection
+- (R2) Tex message-based survey is “invasive”. 
+- (R2) Potential incoherency /inaccuracy in the “stress” rating. More elaboration of the survey collection method is requested by R2.
+- The effectiveness of the data measurements. More details in the methods of biometric measurement. R2 listed a few questions related to the 
+measurements of heart rate and skin conductance level. 
+- The difference of the data collection approach from literature needs clarification (2AC)
+- 2AC has posed many detailed questions and comments on the field study itself; please try to address them in your future study or improvement 
+of the work.
+
+Rebuttal response
+
+We appreciate the authors' efforts for the rebuttal. Unfortunately, this paper did not reach the bar this time. This is a borderline paper and 
+it was discussed during the PC meeting. We saw some merit in terms of its technical contribution and outcomes of its study, however, reviewers 
+think the HCI relevance of this paper is little. Please refer to each reviewer for their detailed feedbacks before and after the rebuttal. 
