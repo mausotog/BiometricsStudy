@@ -46,15 +46,14 @@ the remaining indicators are 29\% for stress and no overall improvement for focu
 In a second step, we analyzed a more fine-grained prediction using the initial 5-point Likert scale responses rather than the binarized ones as output measure. Figure~\ref{fig:learningCurve5} depicts the performance of the individually trained classifiers in terms of the root mean squared error. The root mean squared error represents the distance of the predicted from the actual value, which provides a more nuanced measure of the performance in the fine-grained prediction case. The figure shows a similar trend as for the binarized prediction, in that the root mean square error averaged over all ten participants decreases with more samples (from 0.49 to 0.41 root mean square error) and thus the performance increases. At the same time, the figure also shows that the performance results for the fine-grained prediction, again, vary substantially across participants.
 
 \subsection{Minimum Time Window}\label{secMinimumTW}
-In general, the less biometric data is needed to accurately predict a certain outcome measure, the easier and faster the analysis and data collection. To examine the optimal and minimum time window for the prediction of stress, focus, and awakeness, we used 16 different time windows from 10 seconds to 3 hours.% as depicted in Figure~\ref{timeWindows}. 
-For our analysis, we then trained individual classifiers for each of the 16 time windows, using only features that had a time window smaller or equal to the time window rather than using all combinations of \small{$\{Biometric Measures\} X \{Statistical Metrics\} X \{Time Windows\}$}. We again used random forest and a leave-one-out cross validation to train individual classifiers. Since the number of features used for the training changed with each time window, we did not apply our feature selection in this case, but used all features available. Finally, due to the imbalance in the data, we again weighted each participants' classifier performance by the number of instances in the smaller class to calculate the average.
+In general, the less biometric data is needed to accurately predict a certain outcome measure, the easier and faster the analysis and data collection. To examine the optimal and minimum time window for the prediction of stress, focus, and awakeness, we used 16 different time windows from 10 seconds to 3 hours as depicted in Figure~\ref{timeWindows}. For our analysis, we then trained individual classifiers for each of the 16 time windows, using only features that had a time window smaller or equal to the time window rather than using all combinations of $\{Biometric Measures\} X \{Statistical Metrics\} X \{Time Windows\}$. We again used random forest and a leave-one-out cross validation to train individual classifiers. Since the number of features used for the training changed with each time window, we did not apply our feature selection in this case, but used all features available. Finally, due to the imbalance in the data, we again weighted each participants' classifier performance by the number of instances in the smaller class to calculate the average.
 
-%\begin{figure}
-%  \centering
-%      \includegraphics[width=0.4\textwidth]{timeWindows.png}
-%  \caption{Time windows of biometric data collected prior to each survey response: 10sec, 20sec, 30sec, 45sec, 1min, 2min, 3min, 5min, 7.5min, 10min, 20min, 30min, 45min, 1hour, 2hour, and 3hour.}
-%   \label{timeWindows}
-%\end{figure}
+\begin{figure}
+  \centering
+      \includegraphics[width=0.4\textwidth]{timeWindows.png}
+  \caption{Time windows of biometric data collected prior to each survey response: 10sec, 20sec, 30sec, 45sec, 1min, 2min, 3min, 5min, 7.5min, 10min, 20min, 30min, 45min, 1hour, 2hour, and 3hour.}
+   \label{timeWindows}
+\end{figure}
 
 
 
@@ -105,8 +104,9 @@ to track participant's mouse and keyboard activity, as well as details about the
 
 \begin{table}
 \begin{center}
-\begin{tabularx}{\columnwidth}{l l}
+\begin{tabular}{l l}
 \hline
+
 Feature collected by tool & Description \\ 
 \hline
 Total keystrokes per min& Sum of all types of keystrokes \\ 
@@ -122,11 +122,11 @@ Moved distance per min& Mouse movements in pixels \\
 Activity switches per min& Browser window title changes \\ 
 Category switches per min& Activity performed category \\ 
 \hline
-\end{tabularx}
-\caption{List of computer interaction features.}%~\cite{meyer18}}
+\end{tabular}
+\caption{Features collected per user by the computer interaction tracker}%~\cite{meyer18}}
 \label{tracker}
 \end{center}
-\vspace*{-7mm}
+\vspace*{-4mm}
 \end{table}
 
 For calculating computer interaction features, we again used the aforementioned 16 time windows and scaled the computer interaction values if the time windows did not align. For our comparative analysis of the different sensing techniques---biometrics vs computer interaction---we then created two new feature sets for each participant in addition to the biometric one: one with only computer interaction features, and one with computer interaction features plus biometric features. 
@@ -137,31 +137,30 @@ Table~\ref{ciPerformance} lists the results of our analysis. The results show th
 
 \begin{table}
 \begin{center}
-\begin{tabularx}{\columnwidth}{llllll}
+\begin{tabular}{llllll}
 \hline
 Model/Feature Set & Accuracy & Precision & Recall & F-Score\\
 \hline
 \textbf{Awakeness}\\
 \hspace{3mm}Biometrics only & 0.808 & 0.269 & 0.314 & 0.289\\
-\hspace{3mm}CI  & 0.758 & 0.425 & 0.362 & 0.391\\
-\hspace{3mm}Biometrics + CI & 0.791 & 0.390 & 0.404 & 0.400\\
+\hspace{3mm}C.I. only & 0.758 & 0.425 & 0.362 & 0.391\\
+\hspace{3mm}Biometrics + C.I. & 0.791 & 0.390 & 0.404 & 0.400\\
 \hline
 \textbf{Stress}\\
 \hspace{3mm}Biometrics only & 0.775 & 0.270 &	0.260 & 0.265\\
-\hspace{3mm}CI  & 0.698 & 0.290 & 0.272 & 0.281\\
-\hspace{3mm}Biometrics + CI & 0.712 & 0.317 & 0.286 & 0.301\\
+\hspace{3mm}C.I. only & 0.698 & 0.290 & 0.272 & 0.281\\
+\hspace{3mm}Biometrics + C.I. & 0.712 & 0.317 & 0.286 & 0.301\\
 \hline
 \textbf{Focus}\\
 \hspace{3mm}Biometrics only & 0.716 & 0.251 & 0.256 & 0.253\\
-\hspace{3mm}CI  & 0.742 & 0.332 & 0.342 & 0.337\\
-\hspace{3mm}Biometrics + CI & 0.745 & 0.340 & 0.316 & 0.328\\
+\hspace{3mm}C.I. only & 0.742 & 0.332 & 0.342 & 0.337\\
+\hspace{3mm}Biometrics + C.I. & 0.745 & 0.340 & 0.316 & 0.328\\
 \hline
-\end{tabularx}
-\caption{Comparison of prediction performance for the 3 different features sets for 10 participants. CI stands for computer interaction.  Precision/recall refer to prediction of more important classes, i.e. stressed, not awake, not focused.}
-%Comparison of the performance of predicting stress, focus and awakeness using the 3 different feature sets for the 10 participants. The performance is calculated as the average of the performance of the individual classifiers. Computer Interactions is abbreviated as C.I. here for readability. Precision and recall refer to the prediction of the more important classes, i.e. `stressed', `not awake', `not focused'.}
+\end{tabular}
+\caption{Comparison of the performance of predicting stress, focus and awakeness using the 3 different feature sets for the 10 participants. The performance is calculated as the average of the performance of the individual classifiers. Computer Interactions is abbreviated as C.I. here for readability. Precision and recall refer to the prediction of the more important classes, i.e. `stressed', `not awake', `not focused'.}
 \label{ciPerformance}
 \end{center}
-\vspace*{-7mm}
+\vspace*{-6mm}
 \end{table}
 
 As with the biometric models, the individual performance of both the computer interaction only models and the combined models varied quite a bit between participants. Using stress as an example again, in the computer interaction models 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 128\% in precision, and 78\% in recall. In the combined model for stress, 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 117\% in precision and 95\% in recall. Neither model was capable of correctly predicting any instances of 'stressed' for participant S7.
@@ -170,25 +169,25 @@ Since the number of features changes  depending on which feature set is used, we
 
 \begin{table}
 \begin{center}
-\begin{tabularx}{\columnwidth}{lc}
+\begin{tabular}{lc}
 \hline
 Model/Feature Set & Number of Features Selected\\
 \hline
 \textbf{Stress}\\
-\hspace{3mm}CI & 400\\
-\hspace{3mm}Biometrics + CI & 800\\
+\hspace{3mm}C.I. & 400\\
+\hspace{3mm}Biometrics + C.I. & 800\\
 \hline
 \textbf{Focus}\\
-\hspace{3mm}CI & 20\\
-\hspace{3mm}Biometrics + CI & 300\\
+\hspace{3mm}C.I. & 20\\
+\hspace{3mm}Biometrics + C.I. & 300\\
 \hline
 \textbf{Awakeness}\\
-\hspace{3mm}CI & All\\
-\hspace{3mm}Biometrics + CI & 50\\
+\hspace{3mm}C.I. & All\\
+\hspace{3mm}Biometrics + C.I. & 50\\
 \hline
-\end{tabularx}
-\caption{Optimal number of features used for each of the three models. CI: computer interaction}
-%The optimal number of features we found to select for each of the model/feature set combinations. Computer interactions is abbreviated as C.I.}
+
+\end{tabular}
+\caption{The optimal number of features we found to select for each of the model/feature set combinations. Computer interactions is abbreviated as C.I.}
 \label{ciFeatureSelection}
 \end{center}
 \vspace*{-7mm}

@@ -7,8 +7,7 @@
 \begin{table*}[h]
   \centering
   \includegraphics[width=1.0\textwidth]{rq1performance.pdf}
-  \caption{Prediction results individual models. The baseline row states averaged results of our baseline classifier, the general row states the averaged results of model trained on all participants. Distribution presents the distribution of the binarized outcome variable.}\label{tab:accuracy}%\todo{revise caption}}
-%  The distribution columns show a bar chart of the response distribution (negative/positive) for each of the three variables. The baseline row represents the averaged results of our baesline classifier. The general row shows the averaged results of our models trained on all participants.
+  \caption{Results of predictions using the individual models. The distribution columns show a bar chart of the response distribution (negative/positive) for each of the three variables. The baseline row represents the averaged results of our baesline classifier. The general row shows the averaged results of our models trained on all participants.}\label{tab:accuracy}%\todo{revise caption}}
   \vspace*{-4mm}
 \end{table*}
 
@@ -19,7 +18,7 @@ To evaluate the efficacy of continuously predicting a knowledge worker's stress,
 \label{secOverallAccuracy}
 As a first step, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performing a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, random forest, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we will be referring to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
 % for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
-\begin{table}[t!]
+\begin{table}[h]
 	\begin{centering}
     \begin{tabular}{llll}
       \hline
@@ -30,8 +29,7 @@ As a first step, we compared multiple classifiers using the popular machine lear
       Awakeness & 800 & 100 & 4\\
       \hline
     \end{tabular}
-    \caption{Hyperparameters selected by grid search analysis for tuning our random forest models. K refers to the number of features selected.}\label{tab:hyperparams}
-    \vspace*{-1cm}
+    \caption{The hyperparameters selected by grid search analysis to tune our random forest models. K refers to the number of features selected.}    \label{tab:hyperparams}
     \end{centering}
 \end{table}
 
@@ -83,7 +81,7 @@ There are a large variety of features that can be (and have been) calculated in 
 Overall, the features that were selected as the important ones for the individual models based on the random forest algorithm varied greatly across participants. Yet, some feature categories were considered to be important more frequently than others. Table~\ref{tab:featureImportance} shows the averaged Gini importance for the feature categories used for predicting stress. Particularly important for stress were the feature categories heart rate variability (18.3\%) and skin temperature (15.7\%), both of which have been shown in several previous studies to be  indicators for stress~\cite{dishman2000stress,mcduff16,kataoka00}. For predicting focus, the feature categories for blood pulse wave (14.2\%) and heart rate variability (13\%) showed to be the most important categories, while for awakeness the most important ones were heart rate variability (13.6\%) and blood pulse wave (13.1\%).\\[-0.1cm]
 
 
-\begin{table}[t!]
+\begin{table}[h!]
   \begin{centering}
   \begin{tabular}{llll}
     \hline
@@ -102,10 +100,10 @@ Overall, the features that were selected as the important ones for the individua
     Time of Day & 0\% & 0.1\% & 0.5\%\\
     \hline
   \end{tabular}
-  \caption{Averaged Gini importance of each feature category per response variable.}
+  \caption{The averaged Gini importance of each feature category, per response variable.}
   \label{tab:featureImportance}
   \end{centering}
-  \vspace*{-7mm}
+  \vspace*{-5mm}
 \end{table}
 
 

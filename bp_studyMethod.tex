@@ -15,21 +15,21 @@ focus, and awakeness?
 \noindent\textbf{RQ3}: What is the minimum time window needed to accurately predict stress, focus, and awakeness? 
 
 \vspace{0.5em}
-\noindent\textbf{RQ4}: How do biometrics compare to computer interaction measurements for predicting stress, focus, and awakeness?
+\noindent\textbf{RQ4}: How do biometric measurements compare to computer interaction measurements for predicting stress, focus, and awakeness?
 
 \vspace{0.5em}
 
-%We answer RQ1 in Section~\ref{secOverallAccuracy} by analyzing the overall performance of different
-%machine learning models and by comparing the best performing models to baseline approaches.
-%To answer RQ2, in Section~\ref{secLearningCurve} we identify the smallest number of training samples necessary to obtain satisfactorily high prediction accuracy and acceptably low mean squared error.
-%We answer RQ3 in Section~\ref{secMinimumTW} by considering 16 different time windows for collection of biometric measurements and by identifying the smallest time window on which we can base our training features without sacrificing prediction accuracy.
-%Finally, to answer RQ4, in Section~\ref{secCI} we compare the prediction accuracy of machine learning models trained on biometric data versus those trained on computer interaction data.
+We answer RQ1 in Section~\ref{secOverallAccuracy} by analyzing the overall performance of different
+machine learning models and by comparing the best performing models to baseline approaches.
+To answer RQ2, in Section~\ref{secLearningCurve} we identify the smallest number of training samples necessary to obtain satisfactorily high prediction accuracy and acceptably low mean squared error.
+We answer RQ3 in Section~\ref{secMinimumTW} by considering 16 different time windows for collection of biometric measurements and by identifying the smallest time window on which we can base our training features without sacrificing prediction accuracy.
+Finally, to answer RQ4, in Section~\ref{secCI} we compare the prediction accuracy of machine learning models trained on biometric data versus those trained on computer interaction data.
 
 
 \subsection{Participants}
 We recruited 14 professionals via personal contacts from a large power and automation company. All participants work primarily in an office environment, though half of the participants spend at least 10\% (and up to 50\%) of their time in a laboratory environment. Office workers are a population that generalizes to a variety of contexts, and including part-time laboratory workers guarantees that our participants have varying work patterns that include different levels of computer usage, as well as different levels of activity in both individual and collaborative tasks.
 
-Of the 14 participants, 11 were male, 3 female. The average participant age is ~40, with 5 in the age range 25-34, 7 in the age range 35-44, and 2 in the age range 55+. The participants have an average number of years of professional experience of ~12, with 2 having less than 5 years, 10 having 5-15 years, and 2 having more than 25 years. All participants work for a research organization within the company, but their job functions span line management, laboratory science, scientific research, technology evaluation, and software development.
+Of the 14 participants, 11 are male and 3 are female. The average participant age is ~40, with 5 in the age range 25-34, 7 in the age range 35-44, and 2 in the age range 55+. The participants have an average number of years of professional experience of ~12, with 2 having less than 5 years, 10 having 5-15 years, and 2 having more than 25 years. All participants work for a research organization within the company, but their job functions span line management, laboratory science, scientific research, technology evaluation, and software development.
 
 \begin{comment}
 \subsection{Procedure}
@@ -69,18 +69,18 @@ We are therefore able to infer the answer within the spectrum to each of these i
 In this section we describe the two datasets that we collected from each study participant.
 
 \subsubsection{Biometric Sensors}
-Figure~\ref{everion} illustrates Biovotion's Everion~\cite{everion}, which we used to track the biometric signals of the study participants. The Everion is worn on the upper arm and provides continuous monitoring of certain biometric measurements. Previous studies~\cite{zuger18,sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent} have used similar devices~\cite{Okada11,polar,fitbitCharge} to capture psycho-physiological and biometric measurements.
+Figure~\ref{everion} illustrates Biovotion's Everion, which we used to track the biometric signals of the study participants. The Everion is worn on the upper arm and provides continuous monitoring of certain biometric measurements.\footnote{https://biovotion.zendesk.com/hc/en-us/categories/201633909-Everion-Device} Previous studies~\cite{zuger18,sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent} have used similar devices~\cite{Okada11,polar,fitbitCharge} to capture psycho-physiological and biometric measurements.
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.35\textwidth]{Everion.jpg}
-  \caption{Everion sensor used to collect biometric measures.}
-   \label{everion}\vspace*{-0.2cm}
+      \includegraphics[width=0.4\textwidth]{Everion.jpg}
+  \caption{We used Biovotion's Everion to collect biometric measurements from the participants}
+   \label{everion}
 \end{figure}
 
 Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study.
 
-\begin{table}[t!]
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{l l}
 \hline
@@ -112,7 +112,7 @@ Biometric Measurement & Units of Measure \\
 \caption{Biometric measurements captured by the Everion, organized by category and with references to previous works using similar data}
 \label{signals}
 \end{center}
-\vspace*{-7mm}
+\vspace*{-4mm}
 \end{table}
 
 
@@ -139,4 +139,4 @@ We used the phrase ``right now'' to capture each aspect in the moment (so as to 
 %\item How do you feel about your work day?
 %\end{itemize}
 
-Following guidelines from similar previous studies~\cite{fogarty05,tanaka11}, we asked the participants to respond to each question using a 5-point Likert scale ranging from 1 (not at all) to 5 (extremely) awake/stressed/focused. Each participant response, as stored by Survey Gizmo, comprised the date, the time at which the response was initiated, the time at which the survey was submitted, the unique identifier for the participant, and the responses submitted by the participant.
+Following guidelines from similar previous studies~\cite{fogarty05,tanaka11}, we asked the participants to respond to each question using a 5-point Likert scale ranging from 1 (not at all awake/stressed/focused) to 5 (extremely awake/stressed/focused). Each participant response, as stored by Survey Gizmo, comprised the date, the time at which the response was initiated, the time at which the survey was submitted, the unique identifier for the participant, and the responses submitted by the participant.
