@@ -20,6 +20,7 @@ As a first step, we compared multiple classifiers using the popular machine lear
 % for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
 \begin{table}[h]
 	\begin{centering}
+	\small\addtolength{\tabcolsep}{-1pt}
     \begin{tabular}{llll}
       \hline
       Variable & K & \# Estimators & Minimum Samples Split \\
@@ -41,7 +42,7 @@ Since peoples' experience of stress, focus, and awakeness (as well as their phys
 
 
 
-Overall, we were able to use the extracted physiological features to predict all three aspects with reasonable accuracy, precision, and recall, as well as to improve upon the baseline---a stratified random classifier that randomly chooses one of the two classes with a bias towards the larger class. While the individually trained classifiers improved on average across all participants upon the baseline in all cases excepting recall of 'not focused', the improvement was substantially higher for awakeness (85\% improvement in precision,  62\% in recall, and 7\% in accuracy) than for stress or focus. Also, the performance of the individually trained classifiers varied greatly across participants. While some participants showed a large improvement, for others the baseline performed much better than the individually trained classifier. For instance, for predicting 'stressed', the individual classifiers improved upon the baseline for S4, S6, S8, S11, S12, and S14 with a maximum improvement of 88.4\% in precision and 184.6\% in recall for S12, while they did worse for S1, S3, S5, S7, S9, S10, and S13, and in the worst cases did not correctly predict a single instance of 'stressed'.\\[-0.1cm]
+Overall, we were able to use the extracted physiological features to predict all three aspects with reasonable accuracy, precision, and recall, as well as to improve upon the baseline---a stratified random classifier that randomly chooses one of the two classes with a bias towards the larger class. While the individually trained classifiers improved on average across all participants upon the baseline in all cases excepting recall of 'not focused', the improvement was substantially higher for awakeness (85\% improvement in precision,  62\% in recall, and 7\% in accuracy) than for stress or focus. Also, the performance of the individually trained classifiers varied greatly across participants. While some participants showed a large improvement, for others the baseline performed much better than the individually trained classifier. For instance, for predicting 'stressed', the individual classifiers improved upon the baseline for S4, S6, S8, S11, S12, and S14 with a maximum improvement of 88.4\% in precision and 184.6\% in recall for S12, while they did worse for S1, S3, S5, S7, S9, S10, and S13, and in the worst cases did not correctly predict a single instance of 'stressed'. Typically users that have the lowest precision and recall values are those where the data is the most unbalanced. This translates to a scenario where the classifier will likely label the minority instances as part of the majority class due to the unbalanced ratio of the data.\\[-0.1cm]
 % We attribute these discrepancies to the large differences in response distributions between participants, as well as to the subjectivity of self-reporting.
 %
 %(improvement: 8\% precision, 1\% recall, 8\% accuracy), the individual performance varied greatly among participants. Some participants showed negligible difference in comparison to the baseline classifier, e.g. subject ..., while others showed a large improvement, e.g. subject ...
@@ -103,7 +104,7 @@ Overall, the features that were selected as the important ones for the individua
   \caption{The averaged Gini importance of each feature category, per response variable.}
   \label{tab:featureImportance}
   \end{centering}
-  \vspace*{-5mm}
+  \vspace*{-2mm}
 \end{table}
 
 

@@ -1,11 +1,33 @@
 %!TEX root = bioPrediction_main.tex
 
 \subsection{Minimum Number of Training Samples}\label{secLearningCurve}
-Collecting experience samples from users is expensive, since participants are being interrupted several times a day and have to answer the questions. To minimize the number of samples to be collected from participants, we examined how the performance of individual classifiers changes over the number of samples used to train the classifier.
+Collecting experience samples from users is expensive, since participants 
+are being interrupted several times a day and have to answer the survey. 
+To minimize the number of samples to be collected from participants, we 
+examined how the performance of individual classifiers changes over the 
+number of samples used to train the classifier.
 
-Participants in our study had varying levels of responsiveness to the experience sampling ranging from 10 to 76 (see Figure~\ref{responseDistribution}). To maintain a certain generalizability while also being able to examine a range of sample numbers for training the classifier, we decided to include the ten participants with the most samples for this analysis. As a result, we had at least 34 survey responses per participant to examine the learning curve of the classifiers. For our analysis, we thus performed a leave-one-out cross validation with random sample sets of size 1 to 33 and calculated the average through all folds of the validation.
+Participants in our study had varying levels of responsiveness to the 
+experience sampling ranging from 10 to 76 (see Figure~
+\ref{responseDistribution}).
+%Answering Reviewer 2's concern: Why only 10 participants? What was the rationale for the cut-off selected? 
+To answer this research question we analyze the maximum number of responses \textbf{all} analyzed participants have to train the model. Since some participants have a very small number of maximum answers (ten being the lowest) we excluded the four participants with the least number of responses for this analysis.
+%To maintain a certain generalizability while 
+%also being able to examine a range of sample numbers for training the 
+%classifier, we removed the four participants with the least number of 
+%samples for this analysis. 
+As a result, we obtained a corpus of analysis where all participants have a 
+higher number of responses (34 being the lowest), which allows us to examine 
+the learning curve of the classifiers for a larger number of training data points. For our 
+analysis, we thus performed a leave-one-out cross validation with random 
+sample sets of size 1 to 33 and calculated the average through all folds of 
+the validation.
 
-For each of the three productivity-related aspects, we are again more interested in predicting when a worker is stressed, not awake, or not focused, the less common class in all three cases. Since the less common class can be very small, we weighted each participants' classifier performance by the percentage of the samples in this smaller class.
+For each of the three productivity-related aspects, we are again more 
+interested in predicting when a worker is stressed, not awake, or not 
+focused, the less common class in all three cases. Since the less common 
+class can be very small, we weighted each participants' classifier 
+performance by the percentage of the samples in this smaller class.
 
 
 \begin{figure}
@@ -65,7 +87,17 @@ In general, the less biometric data is needed to accurately predict a certain ou
   \vspace*{-3mm}
 \end{figure}
 
-Figure~\ref{timeWindowsPandR} shows how the F-score changes for predicting `awake' over the 16 different time windows. The figure shows an increasing trend in the F-score, i.e. the higher the number of included time windows included, the higher the F-score. However, there is one exception, the time window of 1200 seconds that achieves a performance close to the one for the time window 10,800 seconds (3 hours), at which point all features are included. Overall, our results thus show that while using all time windows up to 3 hours performs best, and outperforms the feature set that is solely based on a 10 second time window by 28\% (from 0.18 to 0.24), the performance for a time window of 1200 seconds is already very close to optimal (everything up to 3 hours in our case).
+Figure~\ref{timeWindowsPandR} shows how the F-score changes for predicting 
+`awake' over the 16 different time windows. The figure shows an increasing 
+trend in the F-score, i.e. the higher the number of included time windows, 
+the higher the F-score. However, there is one exception, the time window of 
+1200 seconds that achieves a performance close to the one for the time 
+window 10,800 seconds (3 hours), at which point all features are included. 
+Overall, our results thus show that while using all time windows up to 3 
+hours performs best, and outperforms the feature set that is solely based on 
+a 10 second time window by 28\% (from 0.18 to 0.24), the performance for a 
+time window of 1200 seconds is a good trade-off for selecting a shorter time 
+window while maintaining high performance.
 
 
 
@@ -104,6 +136,7 @@ to track participant's mouse and keyboard activity, as well as details about the
 
 \begin{table}
 \begin{center}
+\small\addtolength{\tabcolsep}{-1pt}
 \begin{tabular}{l l}
 \hline
 
@@ -126,41 +159,45 @@ Category switches per min& Activity performed category \\
 \caption{Features collected per user by the computer interaction tracker}%~\cite{meyer18}}
 \label{tracker}
 \end{center}
-\vspace*{-4mm}
+\vspace*{-1mm}
 \end{table}
 
 For calculating computer interaction features, we again used the aforementioned 16 time windows and scaled the computer interaction values if the time windows did not align. For our comparative analysis of the different sensing techniques---biometrics vs computer interaction---we then created two new feature sets for each participant in addition to the biometric one: one with only computer interaction features, and one with computer interaction features plus biometric features. 
 
-Table~\ref{ciPerformance} lists the results of our analysis. The results show that in all cases, the computer interaction based model was able to improve upon the biometric model in terms of precision and recall, but not in accuracy. Further, we found that the combined model was the most effective model in terms of precision and recall for predicting stress and awakeness overall, but performed slightly worse than the model using only computer interaction features for focus. 
+Table~\ref{ciPerformance} lists the results of our analysis. The results show that in all cases, the computer interaction based model was able to improve upon the biometric model in terms of precision and recall.
+%MS is removing the accuracy results because it is not what we care about and it is just making the results harder to understand
+%, but not in accuracy. 
+Further, we found that the combined model was the most effective model in terms of precision and recall for predicting stress and awakeness overall, but performed slightly worse than the model using only computer interaction features for focus. 
 %Since we consider precision and recall for predicting the class of higher interest, i.e. stressed, not focused, not awake, to be the most important statistics when interpreting our results, we compared the models against each other by averaging these two statistics.
 
 
 \begin{table}
 \begin{center}
+%\small\addtolength{\tabcolsep}{-1pt}
 \begin{tabular}{llllll}
 \hline
-Model/Feature Set & Accuracy & Precision & Recall & F-Score\\
+Model/Feature Set & Precision & Recall & F-Score \\ %& Accuracy\\
 \hline
 \textbf{Awakeness}\\
-\hspace{3mm}Biometrics only & 0.808 & 0.269 & 0.314 & 0.289\\
-\hspace{3mm}C.I. only & 0.758 & 0.425 & 0.362 & 0.391\\
-\hspace{3mm}Biometrics + C.I. & 0.791 & 0.390 & 0.404 & 0.400\\
+\hspace{3mm}Biometrics only  & 0.269 & 0.314 & 0.289 \\ %& 0.808\\
+\hspace{3mm}C.I. only  & 0.425 & 0.362 & 0.391 \\ % & 0.758\\
+\hspace{3mm}Biometrics + C.I. & 0.390 & 0.404 & 0.400 \\ % & 0.791 \\
 \hline
 \textbf{Stress}\\
-\hspace{3mm}Biometrics only & 0.775 & 0.270 &	0.260 & 0.265\\
-\hspace{3mm}C.I. only & 0.698 & 0.290 & 0.272 & 0.281\\
-\hspace{3mm}Biometrics + C.I. & 0.712 & 0.317 & 0.286 & 0.301\\
+\hspace{3mm}Biometrics only  & 0.270 &	0.260 & 0.265 \\ % & 0.775\\
+\hspace{3mm}C.I. only & 0.290 & 0.272 & 0.281 \\ % & 0.698 \\
+\hspace{3mm}Biometrics + C.I. & 0.317 & 0.286 & 0.301 \\ % & 0.712\\
 \hline
 \textbf{Focus}\\
-\hspace{3mm}Biometrics only & 0.716 & 0.251 & 0.256 & 0.253\\
-\hspace{3mm}C.I. only & 0.742 & 0.332 & 0.342 & 0.337\\
-\hspace{3mm}Biometrics + C.I. & 0.745 & 0.340 & 0.316 & 0.328\\
+\hspace{3mm}Biometrics only & 0.251 & 0.256 & 0.253 \\ % & 0.716\\
+\hspace{3mm}C.I. only & 0.332 & 0.342 & 0.337 \\ % & 0.742\\
+\hspace{3mm}Biometrics + C.I. & 0.340 & 0.316 & 0.328 \\ % & 0.745\\
 \hline
 \end{tabular}
 \caption{Comparison of the performance of predicting stress, focus and awakeness using the 3 different feature sets for the 10 participants. The performance is calculated as the average of the performance of the individual classifiers. Computer Interactions is abbreviated as C.I. here for readability. Precision and recall refer to the prediction of the more important classes, i.e. `stressed', `not awake', `not focused'.}
 \label{ciPerformance}
 \end{center}
-\vspace*{-6mm}
+\vspace*{-3mm}
 \end{table}
 
 As with the biometric models, the individual performance of both the computer interaction only models and the combined models varied quite a bit between participants. Using stress as an example again, in the computer interaction models 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 128\% in precision, and 78\% in recall. In the combined model for stress, 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 117\% in precision and 95\% in recall. Neither model was capable of correctly predicting any instances of 'stressed' for participant S7.
@@ -185,11 +222,10 @@ Model/Feature Set & Number of Features Selected\\
 \hspace{3mm}C.I. & All\\
 \hspace{3mm}Biometrics + C.I. & 50\\
 \hline
-
 \end{tabular}
 \caption{The optimal number of features we found to select for each of the model/feature set combinations. Computer interactions is abbreviated as C.I.}
 \label{ciFeatureSelection}
 \end{center}
-\vspace*{-7mm}
+\vspace*{-4mm}
 \end{table}
 

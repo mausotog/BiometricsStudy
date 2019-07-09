@@ -19,7 +19,10 @@ Reasons for a survey response to lack associated biometric data include:
 %\item Issues accessing the data uploaded by the participants
 \end{itemize}
 
-Figure~\ref{surveyBio} illustrates the number of survey responses with associated biometric data for each study participant. Participant S2 and S12 have particularly low numbers of usable survey responses. In each of these cases, the issue related to biometric data not being uploaded successfully to the server.
+Figure~\ref{surveyBio} illustrates the number of survey responses with associated biometric data for each study participant. 
+%This was added to address REviewer 2's concern: Is it correct that the maximum number of responses should have been 112 on the surveys?
+The total number of responses per participant is affected by their response rate and by the number days out-of-office (e.g., vacations, holidays, etc.). 
+Participant S2 and S12 have particularly low numbers of usable survey responses. In each of these cases, the issue related to biometric data not being uploaded successfully to the server.
 
 \begin{figure}
   \centering
@@ -37,7 +40,7 @@ We extracted features from the biometric data to provide as input to machine lea
 From the start time of each survey response, we look back the amount of time that corresponds to each time window, and we create features for all of the biometric data available in that time window. For example, if a participant started a survey response at 11:05am, for the 30min time window, we create features using all of the available biometric data from 10:35am to 11:05am. For each time window, we calculate 10 statistical measurements from the biometric data to create 10 distinct features. Specifically, the 10 statistical measurements are: mean, standard deviation, variance, median, percentile25, percentile75, interquartile range, maximum, minimum, and range. Thus, for each survey response, we generate a large number of corresponding features based on three factors: biometric measurement, time window, and statistical measurement. In addition to these biometric features, we also considered the time of day in which the questions were asked.
 
 \subsubsection{Response Transformations}
-Table~\ref{responseDistribution} illustrates the distribution of responses from each participant for each of the three survey questions (which are listed in Section~\ref{sec:Surveys}). The figure shows that there is a notable imbalance in the distribution of the self-reported responses provided by the participants. Most participants did not use all five points of the five-point Likert scale in their responses, and the distributions tend to skew toward one side or the other, depending on the question. Thus, we binarized the survey data into a two-point scale to give the machine learning models the best possible chance to make useful predictions. The two points in the binary scale represent negative or positive responses for each of the three human aspects of interests (e.g., not stressed or stressed). 
+Table~\ref{responseDistribution} illustrates the distribution of responses from each participant for each of the three survey questions (listed in Section~\ref{sec:Surveys}). The figure shows that there is a notable imbalance in the distribution of the self-reported responses provided by the participants. Most participants did not use all five points of the five-point Likert scale in their responses, and the distributions tend to skew toward one side or the other, depending on the question. Thus, we binarized the survey data into a two-point scale to give the machine learning models the best possible chance to make useful predictions. The two points in the binary scale represent negative or positive responses for each of the three human aspects of interests (e.g., not stressed or stressed). 
 
 We binarized the survey responses as follows. For each participant, we calculated the median response value for each question. We classified each response below the median as 0 ('negative') and each response above the median as 1 ('positive'). The distribution for the stress question skewed left, so we included the median values in the 'positive' class, while the distributions for focus and awakeness skewed right, so we included those median values in the 'negative' class.
 
@@ -50,6 +53,6 @@ Even after binarizing the responses as described in the previous section, we fou
       \includegraphics[width=0.5\textwidth]{distributiontable.pdf}
   \caption{The distribution of the responses of each participant to the three questions asked during the day are shown. Each bar in the histograms represent one of the 5 values on the 5-point Likert scale we asked participants to respond with, where the far left side of the histograms are 1/Not at all, and the far right sides are 5/Extremely}
    \label{responseDistribution}
-   \vspace*{-9mm}
+   \vspace*{-2mm}
 \end{table}
 
