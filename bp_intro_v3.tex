@@ -1,32 +1,79 @@
 %!TEX root = bioPrediction_main.tex
 \section{Introduction}
-\textit{`The most valuable asset of a 21st-century institution (whether business or non-business) will be its knowledge workers and their productivity'}~\cite{drucker1999knowledge}. Yet, in today's workplaces, knowledge workers and their time are not necessarily treated as the most valuable asset, and they constantly face challenges, such as a high work fragmentation, continuous disruptions and distractions, highly complex and demanding tasks, and long working hours~\cite{gonzalez2004constant,mark2008cost,czerwinski04diary}. These challenges make it difficult for a knowledge worker to stay focused and can impact both the quality of work performed and productivity. For instance, the continuous disruptions that knowledge workers face in office work environments can lead to a higher error rate and a lower performance~\cite{bailey2001effects,mark2008cost}. In some cases,
-the consequences are even more severe; in control room
-settings, the consequences can be accidents that cost millions of dollars in losses. 
+\textit{`The most valuable asset of a 21st-century institution (whether 
+business or non-business) will be its knowledge workers and their 
+productivity'}~\cite{drucker1999knowledge}. Knowledge workers constantly face 
+challenges, such as a high work fragmentation, continuous disruptions and 
+distractions, highly complex and demanding tasks, and long working 
+hours~\cite{gonzalez2004constant,mark2008cost,czerwinski04diary}. These 
+challenges make it difficult for a knowledge worker to stay focused and
+impact interaction with their digital environment, the quality of work performed and productivity. For instance, the 
+continuous disruptions that knowledge workers face in office work environments 
+can lead to a higher error rate and a lower 
+performance~\cite{bailey2001effects,mark2008cost}. In some cases,
+the consequences are even more severe; e.g., in control room
+settings, the consequences of an erroneous intraction can lead to accidents valued in millions of dollars in losses. 
 %when a sleepy operator might, for example, miss early warning signs and cause...
 %\todo{Nick: can you find a good example here and citation?}. 
 %Similarly, stress at the workplace is a growing concern at the workplace and one of the most common work-related health problem that can lead to fatigue, burnout and various other illnesses, resulting in work absence and a high productivity loss~\cite{hockey1997stress,setz2010stress,wrs2010}. 
-Less immediate, but just as insidious, stress at the workplace is a growing concern and one of the most common work-related health problems. It leads to fatigue, burnout and various other illnesses, ultimately resulting in work absences and marked productivity losses~\cite{hockey1997stress,setz2010stress,wrs2010}. 
+Less immediate, but just as insidious, stress at the workplace is a growing 
+concern and one of the most common work-related health problems. It leads to 
+fatigue, burnout and various other illnesses, ultimately resulting in work 
+absences and marked productivity 
+losses~\cite{hockey1997stress,setz2010stress,wrs2010}. 
 
-Being able to continuously measure human aspects --- such as focus, awakeness, and stress --- in the workplace bears huge potential for better supporting knowledge workers, combatting workplace challenges, and improving knowledge worker productivity. Such measures could be used to provide better management of disruptions~\cite{iqbal2005effectiveness,zuger2017reducing}, to automatically adjust lighting to reduce sleepiness among control room operators, or to continuously monitor stress levels to trigger pro-active interventions and reduce health problems. 
+Being able to continuously measure human aspects --- such as focus, awakeness, 
+and stress --- in the workplace bears huge potential for better supporting 
+knowledge workers combatting workplace challenges, and improving productivity 
+and well-being. Such measures could be used to provide better interaction with 
+their environment, such as management 
+of disruptions~\cite{iqbal2005effectiveness,zuger2017reducing}, to 
+automatically adjust lighting and temperature to reduce sleepiness, or to continuously monitor stress levels to trigger pro-active 
+interventions and reduce health problems. 
 
-Fortunately, with recent advances in sensing technologies there is increasing hope that we can accurately and automatically measure such human aspects. A number of studies have already discussed and investigated the use of biometrics to measure aspects such as a person's cognitive state 
+Fortunately, with recent advances in sensing technologies there is increasing 
+hope that we can accurately and automatically measure such human aspects. A 
+number of HCI studies have discussed and investigated the use of biometrics to 
+measure aspects such as a person's cognitive state 
 %This change is regarding Reviewer 2's concern: what are the "aspects"?
-(e.g., processing load)~\cite{beatty82,Kramer90,richter1998psychophysiological,Rowe98,Wilson2002} 
+(e.g., processing load)~\cite{beatty82,Kramer90,richter1998psychophysiological,Rowe98,Wilson2002}, 
 and more specifically to measure stress~\cite{dishman2000stress,Setz2010}, 
-or awakeness / (energetic) arousal~\cite{exler2016tired,mcduff2012affectaura,haag2004emotion}. Yet, very few 
-studies measure productivity-related factors in the workplace over an 
-extended period of time, and little is known about measuring the more 
-abstract concept of focus (directed attention). 
+or awakeness / (energetic) arousal~\cite{exler2016tired,mcduff2012affectaura,haag2004emotion}. Similarly,
+studies have examined the occurrence, cause and effect of similar 
+aspects in various contexts~\cite{mark2014bored,mark2008cost}, how these can be measured~\cite{Hernandez14}, and 
+ how they might be modulated/regulated~\cite{Snyder15}. 
+While previous work mostly focused on smaller or controlled lab studies, our study extends this work by performing a field study to examine whether and how these three variables ---stress, focus and awakeness--- can be measured over an extended period of time in a knowledge worker's context, 
+%Yet, very few 
+%studies measure productivity-related factors in the workplace over an 
+%extended period of time
+and little is known about measuring the more 
+abstract concept of focus (i.e., directed attention). 
 % Added regarding concern of Reviewer 2: Define what is meant by focus when it's first introduced. 
 Given the importance of focus, described as a 
 combination of engagement and challenge in a work task by Mark et al.~\cite{mark2014bored}, to an office workers' productivity, this factor also 
 deserves further study. 
 
-The objective of our research is to develop continuous (and automatic) measures of focus, awakeness, and stress in the workplace. These measures are targeted with an eye towards improving knowledge workers' productivity and well-being in the future. For instance, by automatically protecting the worker from audible interruptions during a high focus period by showering him/her with white noise or by recommending stress-reducing interventions during an extended period of high stress. 
+The objective of our research is to develop continuous (and automatic) 
+measures of focus, awakeness, and stress in the workplace. These measures are 
+targeted towards improving knowledge workers' productivity and 
+well-being in the future by customizing interaction with their environment; e.g., by automatically protecting the workers
+from audible interruptions during a high focus period by showering them 
+with white noise or by recommending stress-reducing interventions during an 
+extended period of high stress. 
 
-Our work builds upon previous work and extends it by performing an eight-week study in the workplace with 14 knowledge workers, collecting biometric and computer interaction data as well as experience samples on focus, awakeness, and stress. Our participants, who perform various job functions for a research and development group within a single large corporation, wore a single biometric armband sensor\footnote{Biovotion Everion sensor~\cite{everion}} with low invasiveness that captured heart- and skin-related measures. This modality was chosen to ease longitudinal deployment in the field. Using machine learning, we created classifiers and analyzed their ability to predict the three productivity-related human aspects. In addition, we compared biometric features with computer interaction features in their predictive power, we analyzed how the combination
-of these two training sets compares to the performance of each
+Our work builds upon previous work and extends it by performing an eight-week 
+study in the workplace with 14 knowledge workers, collecting biometric and 
+computer interaction data as well as experience samples on focus, awakeness, 
+and stress. Our participants, who perform various job functions for a research 
+and development group within a single large corporation, wore a single 
+biometric armband sensor\footnote{Biovotion Everion sensor~\cite{everion}} 
+with low invasiveness that captured heart-, respiration- and skin-related measures. This 
+modality was chosen to ease longitudinal deployment in the field. Using 
+machine learning, we created classifiers and analyzed their ability to predict 
+the three productivity-related human aspects. Similarly, we captured computer 
+interaction features from participants' everyday computer usage and
+analyzed how a model trained using the combination
+of these two training sets compares to the performance of models using each
 set individually.
 
 The results of our analysis show that biometrics of a single minimally invasive sensor can be used to predict productivity-related indicators accurately, with the abstract concept of focus (predictably) being the hardest to detect. The results also show that knowledge workers' self-reported levels of stress, focus and awakeness and their physiological manifestation and prediction can vary a lot between individuals. Our results further show that overall combining biometric features with computer interaction information 
@@ -36,7 +83,8 @@ The main contributions of our work are:
 \begin{itemize}
 	\item The creation and analysis of measures for the automatic monitoring of knowledge workers' awakeness, stress, and focus in the workplace based on an eight-week field study with 14 office workers.
 	\item A thorough analysis of ways to increase performance, including the training sample size, time window to collect data, and the inclusion of computer interaction features.
-	\item A discussion on the impact of applying this research to possible target workspaces, besides a reflection on aspects that can be further improved in future studies.
+	\item A discussion on the impact of applying this research to improve
+the interaction of knowledge workers with their digital environment leading to an improvement in their productivity and well-being, besides a reflection on aspects that can be further improved in future studies.
     \end{itemize}
 
 %Ideally businesses believe that \textit{`The most valuable asset of a 21st-century institution (whether business or non-business) [is] its knowledge workers and their productivity'}~\cite{drucker1999knowledge}. In practice these valuable assets are as mercilessly optimized as assembly lines during the industrial age. Knowledge workers' desks occupy increasingly small footprints, optimizing a company's cost per square unit. Their shifts, especially in factories, command centers, or web service organizations, span twenty four hours a day, optimizing uptime. 
