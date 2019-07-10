@@ -29,18 +29,17 @@ focused, the less common class in all three cases. Since the less common
 class can be very small, we weighted each participants' classifier 
 performance by the percentage of the samples in this smaller class.
 
-
 \begin{figure}
   \centering
           \includegraphics[width=0.5\textwidth]{20180912AwakenessLC2.png}
   \caption{Performance of the per participant trained awakeness classifiers, measured in precision, recall (sensitivity), and F-score. The dotted red line represents the F-score trend.}\label{fig:learningCurveInd}
-  \vspace*{-3mm}
+  %\vspace*{-3mm}
 \end{figure}
 
-\vspace{0.05in}
+%\vspace{0.05in}
 \noindent\textit{Individual Classifiers for Binary Prediction}\\
 The averaged performance of all individually trained random forest classifiers for 'awake' with respect to the training sample size is presented in Figure~\ref{fig:learningCurveInd}. The trend indicates a positive correlation between the number of samples in the training set and the classifiers' F-score performance, with an overall improvement of  114\% (from 0.14 to 0.30) in the F-score between a training set of one sample to one with 33 samples. The trends for
-the remaining indicators are 29\% for stress and no overall improvement for focus.\\[-0.1cm]
+the remaining indicators are 29\% for stress and no overall improvement for focus.%\\[-0.1cm]
 
 %\noindent\textit{}
 %When contrasting
@@ -77,16 +76,6 @@ In general, the less biometric data is needed to accurately predict a certain ou
    \label{timeWindows}
 \end{figure}
 
-
-
-\begin{figure}
-  \centering
-      \includegraphics[width=0.5\textwidth]{20180912AwakenessTWBars.png}
-  \caption{Performance (F-score) of individual classifiers trained on the different time windows to predict `awake'.}
-  \label{timeWindowsPandR}
-  \vspace*{-3mm}
-\end{figure}
-
 Figure~\ref{timeWindowsPandR} shows how the F-score changes for predicting 
 `awake' over the 16 different time windows. The figure shows an increasing 
 trend in the F-score, i.e. the higher the number of included time windows, 
@@ -99,7 +88,13 @@ a 10 second time window by 28\% (from 0.18 to 0.24), the performance for a
 time window of 1200 seconds is a good trade-off for selecting a shorter time 
 window while maintaining high performance.
 
-
+\begin{figure}
+  \centering
+      \includegraphics[width=0.5\textwidth]{20180912AwakenessTWBars.png}
+  \caption{Performance (F-score) of individual classifiers trained on the different time windows to predict `awake'.}
+  \label{timeWindowsPandR}
+ % \vspace*{-3mm}
+\end{figure}
 
 %We also compared the performance of a model created per user against
 %a model created across users.
@@ -159,7 +154,7 @@ Category switches per min& Activity performed category \\
 \caption{Features collected per user by the computer interaction tracker}%~\cite{meyer18}}
 \label{tracker}
 \end{center}
-\vspace*{-1mm}
+%\vspace*{-1mm}
 \end{table}
 
 For calculating computer interaction features, we again used the aforementioned 16 time windows and scaled the computer interaction values if the time windows did not align. For our comparative analysis of the different sensing techniques---biometrics vs computer interaction---we then created two new feature sets for each participant in addition to the biometric one: one with only computer interaction features, and one with computer interaction features plus biometric features. 
@@ -197,7 +192,7 @@ Model/Feature Set & Precision & Recall & F-Score \\ %& Accuracy\\
 \caption{Comparison of the performance of predicting stress, focus and awakeness using the 3 different feature sets for the 10 participants. The performance is calculated as the average of the performance of the individual classifiers. Computer Interactions is abbreviated as C.I. here for readability. Precision and recall refer to the prediction of the more important classes, i.e. `stressed', `not awake', `not focused'.}
 \label{ciPerformance}
 \end{center}
-\vspace*{-3mm}
+%\vspace*{-1mm}
 \end{table}
 
 As with the biometric models, the individual performance of both the computer interaction only models and the combined models varied quite a bit between participants. Using stress as an example again, in the computer interaction models 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 128\% in precision, and 78\% in recall. In the combined model for stress, 5 of the 10 participants saw improvements compared to the baseline, with a maximum improvement of 117\% in precision and 95\% in recall. Neither model was capable of correctly predicting any instances of 'stressed' for participant S7.
