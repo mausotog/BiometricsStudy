@@ -13,6 +13,27 @@
 
 To evaluate the efficacy of continuously predicting a knowledge worker's stress, focus, and awakeness in the workplace, we trained and tested machine learning classifiers using a leave-one-out cross validation. For prediction, we used the features extracted from the collected data as the input data, and binarized the participants' self-reported responses on stress, focus, and awakeness into two classes each (e.g., 'stressed' and 'not stressed') to use as output measures.
 
+\subsection{Observed Trends in Knowledge Worker Stress Levels}
+We examined the end of day survey responses collected from each participant to see if any identifiable trends emerged. We used data from 13 of the 14 participants - one participant was excluded from this analysis as they experienced atypical stress levels in the latter half of the study due to factors outside of our control.
+
+\subsubsection{Baseline stress levels}
+Common along all participants was a trend to select one stress rating far more frequently than any other. We will refer to this value as the participant's baseline stress level. All but one participant reported their perceived stress level for the day as their baseline stress level more than 50\% of the time. In total, the baseline values made up 65\% of the reported values collected from participants. Interestingly, while participants sometimes saw periods of sustained increases in stress, lasting as many as 6 consecutive workdays in the most extreme case, participants would always return to their baseline stress level at some point.
+
+The baseline stress level varied significantly between participants. 7 participants reported feeling average stress levels most frequently (rating 3 on our scale), while 5 reported feeling little stress (rating 2) and 1 reported feeling no stress at all (1).
+
+\subsubsection{Stressful days tend to come in clusters}
+Accounting for the variance between participants perceived stress baselines, we consider a stressful day to be one that represents a deviation of 1 or more stress levels above the participants baseline. Of the 93 stressful days we observed in total, we found that 39 (41\%) of these days occurred in groupings of two or more consecutive stressful workdays. The most common size of these groups was two workdays, while the largest group we observed was six workdays.
+The day after a stressful day is much more likely to be a stressful day as compared to any other day. (0.55 average increase over baseline, compared to 0.02 average increase over baseline)
+
+\subsubsection{Extreme changes in stress levels are rare}
+After accounting for each participant's perceived stress baseline, we examined the frequency of deviations from the baseline. We found that participants were far more likely to report a stress level that was within 1 point of their baseline, than to report a stress level 2 or more points away. These extreme deviations represented only 15\% of all reported values which differed from the participants baseline. As well, the majority (78\%) of these deviations came from just two participants. This suggests that some people may be less resilient to the stress of the workplace than others - while for most people extremely stressful days are few and far between.
+
+\subsubsection{Stress fluctuations are difficult to explain without invasive measures}
+We created a linear mixed model to attempt to explain some of the stress that our participants were experiencing. We experimented with multiple independent variables, including those derived from computer interaction data such as total time spent actively on the computer, percentage of time idle, and amount of time spent on non work-related web browsing. We also looked at the day of the week and proximity to beginning or end of month as possible explanatory variables. However, ultimately we were unable to find any variable which showed a significant correlation with our participants perceived stress levels. This points to the need for additional instrumentation if we are to succesfully understand and predict stress in the workplace.
+
+\subsubsection{Tai Chi Intervention}
+We linked participants tai chi session attendance data with their self-reported percieved stress levels. Building a linear mixed model with tai chi attendance as a random effect, we found that tai chi attendance contributed a small amount to decreased stress in the work week immediately following the tai chi session (slope of -0.188, p < 0.05). However, we did not find a connection between attendance and stress on the day of the session.
+
 \subsection{Predicting Stress, Focus \& Awakeness}
 % random forest best
 \label{secOverallAccuracy}
