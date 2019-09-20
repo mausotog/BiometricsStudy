@@ -6,76 +6,70 @@ productivity'}~\cite{drucker1999knowledge}. Knowledge workers constantly face
 challenges, such as a high work fragmentation, continuous disruptions and 
 distractions, highly complex and demanding tasks, and long working 
 hours~\cite{gonzalez2004constant,mark2008cost,czerwinski04diary}. 
-Consequently, stress in the workplace is an ever-growing concern. It leads to 
+These challenges, amongst others, can lead to stress in the workplace.
+Stress is an ever-growing concern as it can lead to
 fatigue, burnout and various other illnesses, ultimately resulting in work 
 absences and marked productivity 
 losses~\cite{hockey1997stress,setz2010stress,wrs2010}.
-But while the effects of stress are obvious the causes can be more subtle. Stress can be caused by
-a multitude of factors within the office including but not limited to workload, management issues, workplace harassment and bullying,
-constant interruptions, and noisy environments. It could also be the result of external stressors seeping into the workplace.
-Regardless of the cause, garnering an understanding of what stress looks like in the workplace could
-prove invaluable to helping us develop effective interventions.
-Likewise, being able to continuously measure stress in the workplace bears huge potential for better supporting 
-knowledge workers in combatting workplace challenges, and improving productivity 
-and well-being.
 
-At the same time, these 
-challenges that contribute to stress levels can make it hard for knowledge workers to stay focused, impact interaction with their digital environment, degrade the quality of work performed and hinder productivity.
-For instance, the continuous disruptions that knowledge workers face in office work environments can lead to a higher error rate and lower 
-performance~\cite{bailey2001effects,mark2008cost}.
+Given the importance of understanding stress and its relationship and
+effect on work, a number of studies have been conducted using a
+variety of methods. Some have studied stress using invasive
+techniques, such as measuring cortisol as a stress biomarker
+(e.g.,~\cite{piazza10}).  Such invasive techniques are best suited
+for laboratory environments.  Others have shown the benefit of using
+autonomic nervous system (ANS) activity by analyzing biometric signals
+of the human body, such as blood pressure (e.g.,~\cite{kataoka00}).
+These less invasive approaches can be used in longer-term field
+studies, opening up the ability to ask the question of what stress
+looks like in the wild. 
 
-Fortunately, with recent advances in sensing technologies there is increasing 
-hope that we can accurately and automatically measure stress and it's related aspects. A 
-number of HCI studies have discussed and investigated the use of biometrics to 
-measure aspects such as a person's cognitive state 
-%This change is regarding Reviewer 2's concern: what are the "aspects"?
-(e.g., processing load)~\cite{beatty82,Kramer90,richter1998psychophysiological,Rowe98,Wilson2002}, 
-and more specifically to measure stress~\cite{dishman2000stress,Setz2010}, 
-or awakeness / (energetic) arousal~\cite{exler2016tired,mcduff2012affectaura,haag2004emotion}. Similarly,
-studies have examined the occurrence, cause and effect of similar 
-aspects in various contexts~\cite{mark2014bored,mark2008cost}, how these can be measured~\cite{Hernandez14}, and 
- how they might be modulated/regulated~\cite{Snyder15}. 
-While previous work mostly focused on smaller or controlled lab studies, our study extends this work by performing a field study to examine whether and how these three variables ---stress, focus and awakeness--- can be measured over an extended period of time in a knowledge worker's context, 
-%Yet, very few 
-%studies measure productivity-related factors in the workplace over an 
-%extended period of time
-and little is known about measuring the more 
-abstract concept of focus (i.e., directed attention). 
-% Added regarding concern of Reviewer 2: Define what is meant by focus when it's first introduced. 
-Given the importance of focus, described as a 
-combination of engagement and challenge in a work task by Mark et al.~\cite{mark2014bored}, to an office workers' productivity, this factor also 
-deserves further study. 
+In this paper, we build on this ability to non-invasively monitor stress
+to investigate two questions: RQ1) how do knowledge
+workers at work experience stress over time, and RQ2) can we predict
+whether a knowledge worker is experiencing stress in the moment based
+on biometric data. A better understanding of how stress is experienced (RQ1)
+can help inform the design of workplaces to manage
+and alleviate stress. An ability to predict stress in the moment (RQ2)
+can enable the development of digital tools to avoid stress. 
 
-In this research we examine what office stress actually looks like over long periods of time, and develop continuous (and automatic) 
-measures of stress, focus, and awakeness in the workplace. These measures are targeted towards improving knowledge workers' productivity and 
-well-being in the future by customizing interaction with their environment; e.g., by continuously monitoring stress levels and recommending stress-reducing interventions during 
-extended periods of high stress, automatically adjusting lighting and temperature to heighten awakeness, or improving management 
-of disruptions~\cite{iqbal2005effectiveness,zuger2017reducing} to aid with focus and productivity.
+Our work builds upon previous work and extends it by performing an
+eight-week study in the workplace with 14 knowledge workers,
+collecting biometric data as well as
+experience samples on stress, and two related human aspects: focus and
+awakeness. We collected participant reports on focus because the
+challenges that contribute to stress levels can also make it hard for
+knowledge workers to stay focused and the level of focus
+can affect
+productivity~\cite{mark2014bored}.  We collected participant reports
+on awakeness because a lack of awakeness (sleepiness) can result in
+undesired consequences on work~\cite{connor02}.  The participants in
+our study, who perform various job functions for a research and
+development group within a single large corporation, wore a single
+biometric armband sensor\footnote{Biovotion Everion
+  sensor~\cite{everion}} with low invasiveness that captured heart-,
+respiration- and skin-related measures. This modality was chosen to
+ease longitudinal deployment in the field. Using machine learning, we
+created classifiers and analyzed their ability to predict stress, focus, and awakeness levels. Considering all of these three human aspects helps us to consider whether one aspect might be easier to detect than another. If one aspect is easier to detect, it might serve
+as a proxy or an indicator of the presence (or absence) of other aspects. 
 
-Our work builds upon previous work and extends it by performing an eight-week 
-study in the workplace with 14 knowledge workers, collecting biometric and 
-computer interaction data as well as experience samples on focus, awakeness, 
-and stress. Our participants, who perform various job functions for a research 
-and development group within a single large corporation, wore a single 
-biometric armband sensor\footnote{Biovotion Everion sensor~\cite{everion}} 
-with low invasiveness that captured heart-, respiration- and skin-related measures. This 
-modality was chosen to ease longitudinal deployment in the field. Using 
-machine learning, we created classifiers and analyzed their ability to predict stress, focus, and awakeness levels.
-%Similarly, we captured computer 
-%interaction features from participants' everyday computer usage and
-%analyzed how a model trained using the combination
-%of these two training sets compares to the performance of models using each
-%set individually.
 
-In our analysis we identify several trends in day-to-day stress levels that emerged over the course of our eight-week study.
-The results of our analysis also show that biometric signals collected from a single minimally invasive sensor can be used to predict stress and its related aspects accurately, with the abstract concept of focus (predictably) being the hardest to detect. Our results further show that knowledge workers' self-reported levels of stress, focus and awakeness and their physiological manifestation and prediction can vary a lot between individuals. 
+In our analysis, we identify several trends in day-to-day stress levels
+that emerged over the course of our eight-week study.  The results of
+our analysis also show that biometric signals collected from a single
+minimally invasive sensor can be used to predict stress and its
+related aspects accurately, with the abstract concept of focus
+(predictably) being the hardest to detect. Our results further show
+that knowledge workers' self-reported levels of stress, focus and
+awakeness and their physiological manifestation and prediction can
+vary substantially between individuals.
 %Our results further show that overall combining biometric features with computer interaction information 
 %results in an improvement
 %over each of the training sets individually.
 The main contributions of our work are:
 \begin{itemize}
-	\item An qualitative examination of how knowledge worker stress presents and fluctuates in the wild.
-	\item The creation and analysis of measures for the automatic monitoring of knowledge workers' awakeness, stress, and focus in the workplace based on an eight-week field study with 14 office workers.
+	\item A qualitative examination of how knowledge worker stress presents and fluctuates in the wild.
+	\item The creation and analysis of measures for the automatic monitoring of knowledge workers' stress, focus and awakeneess in the workplace based on an eight-week field study with 14 office workers.
 	%\item A thorough analysis of ways to increase performance, including the training sample size, time window to collect data, and the inclusion of computer interaction features.
 	\item A discussion on the impact of applying this research to improve
 the interaction of knowledge workers with their digital environment leading to an improvement in their productivity and well-being, besides a reflection on aspects that can be further improved in future studies.

@@ -1,50 +1,149 @@
 %!TEX root = bioPrediction_main.tex
 \section{Discussion}
-%\vspace{0.05in}
-\noindent
-\textbf{Implications for HCI Design and Workspaces:}
-The results discussed in this paper establish great potential
-to increase the well-being of knowledge workers and the quality of their work
-through monitoring their biometric signals and computer interactions with the
-goal of recognizing their stress, awakeness, and focus levels in an uninvasive 
-and automatic manner. Being able to accurately recognize periods of high-
-stress in workers enables companies to prevent or de-escalate potentially 
-dangerous situations in the workplace, e.g. confrontation between co-workers. Similarly, this can help to design more team-based approaches such as an 
-awareness dashboard of a team's stress level, and avoid digital interruptions in high-stress or high-focus periods similar to previous studies~\cite{zuger2017reducing}.
-Likewise, awakeness and focus
-can be enhanced given such a technology
-through individual approaches such as adapting the lighting in a control 
-room, or scheduling breaks to prevent focus loss.
 
-Currently, the cost of biometric sensors and necessary infrastructure, such as automated light and sound systems for adjusting the environment, makes our approach most appropriate for high-value workspaces, such as control rooms, command centers, or dispatch offices. However, as standard office settings become more personalizable (e.g., via adjustable desks, lighting, and sound showers) and sensor costs decrease, our approach could be applied to any office environment, and thus could impact a large percentage of modern workers. As in modern cars, temperature and lighting could be regulated on a per-person basis, which would allow the environment to react to the person's current state and to maximize each person's preferences and productivity (e.g., preferences of men and women in temperature~\cite{Karjalainen07}). Further research would be needed to identify how to balance needs across a group of office workers and how to handle conflicting levels between different group members.
+Humans experience stress, focus and awakeness in different ways.  In
+this paper, we have attempted to study these mental states in the
+workplace using both participant self-reports and biometric data. We
+discuss implications from our study for the workplace, including ways
+in which the information might inform digitally-controlled or
+digitally-informed parts of the workplace. We also discuss 
+challenges imposed by the data and possible future paths of
+research.
 
-%\vspace{0.05in}
-\noindent
-\textbf{Imbalanced Data:}
-Study participants provided highly imbalanced data in their survey responses, with most participants only taking advantage of a subset of the Likert-scale values and the data points mostly being clustered around the middle of the scale, as can be seen in Table~\ref{responseDistribution}. While some of the imbalance is expected due to certain classes, such as 'not stressed', being more common in the workplace, this imbalance also provides challenges in the training and assessment of a machine learning classifier, as also found by others, e.g.~\cite{Exler16}. We addressed this for the training by oversampling in case of few data samples for the individual models and undersampling in case of a general model where more data was available. Especially in light of this imbalance in the data, the results we achieved with our models are encouraging. For the assessment of the classifiers' performance we addressed the imbalance by not just presenting accuracy, but also by focusing on prediction and recall to examine the classifier's performance in predicting the infrequent (yet more important) cases, such as when a user is struggling to stay awake and an intervention or warning might be needed most. 
+\subsection{Implications for Workplaces}
+Being able to accurately recognize periods of high-stress in knowledge
+workers could enable more respectful workplaces. For example, an
+ability to sense and predict stress in the moment could help companies
+to prevent or de-escalate potentially dangerous situations in the
+workplace, e.g. confrontation between co-workers. Building an 
+understanding of stress and focus over time and in the moment
+could also help create workplaces that are more conducive
+to enabling knowledge workers to be more productive. For example,
+this information could be used to feed an awareness dashboard of a team's stress level,
+and avoid digital interruptions in high-stress or high-focus periods
+similar to previous studies~\cite{zuger2017reducing}.  Building
+an understanding of awakeness and focus could also enable the creation
+of workplaces that are conducive to workers producing higher-quality
+work. For example, if awakeness or focus decreases, they might 
+be enhanced by adapting lighting in the workplace 
+or scheduling breaks to prevent focus loss.
+
+Currently, the cost of biometric sensors and necessary infrastructure,
+such as automated light and sound systems for adjusting the
+environment, makes our approach most appropriate for high-value
+workspaces, such as control rooms, command centers, or dispatch
+offices. However, as standard office settings become more
+personalizable (e.g., via adjustable desks, lighting, and sound
+showers) and sensor costs decrease, our approach could be applied to
+any office environment, and thus could impact a large percentage of
+modern workers. As in modern cars, temperature and lighting could be
+regulated on a per-person basis, which would allow the environment to
+react to the person's current state and to maximize each person's
+preferences and productivity (e.g., preferences of men and women in
+temperature~\cite{Karjalainen07}). Further research would be needed to
+identify how to balance needs across a group of office workers and how
+to handle conflicting levels between different group members.
+
+
+
+%%\vspace{0.05in}
+%\noindent
+%\textbf{Implications for HCI Design and Workspaces}
+%% The results discussed in this paper establish great potential
+%% to increase the well-being of knowledge workers and the quality of their work
+%% through monitoring their biometric signals and computer interactions with the
+%% goal of recognizing their stress, awakeness, and focus levels in an uninvasive 
+%% and automatic manner. e
+
+\subsection{The Effect of Tai Chi on Stress}
+As described in our study procedure, we offered and asked participants to attend a one-hour Tai Chi class per week for the last four weeks of the study. We recorded each participant's attendance, including which day they attended the offered classes. The two primary reasons for this intervention was to keep participants motivated to continue the self-reports over the long study period, and to offer a technique that might help reduce stress.
+
+While this was not the focus of our study, we performed a secondary analysis to examine whether the Tai Chi classes had any effect on the participants' stress levels in the work days directly following the Tai Chi session. For this, we build a linear mixed model with the self-reported daily stress level as dependent variables and the participants as random effects. We found that Tai Chi attendance contributed a small amount to decreased stress in the work week immediately following the Tai Chi session (slope of -0.188, p <0.05). However, we did not find a connection between attendance and stress on the day of the session suggesting that Tai Chi might have long-term effects, but is not conducive at relieving stress close in time to the intervention. Overall, the Tai Chi thus had a small impact on the collected data of the second month of the study, which poses a threat to the validity to our observed trends for this period of time. However, since knowledge workers might attend these kinds of classes on their own doing, we believe that this is negligible, and the analysis rather provides a weak indication that this kind of stress intervention might in fact help to reduce stress in the wild.
+
+
+
+
+
+%% %\vspace{0.05in}
+%% \noindent
+%% \textbf{Ground Truth and Self-Reporting:} 
+\subsection{Ground Truth and Self-Reporting}
+Studying mental states, such as stress, awakeness and focus,
+requires collecting a valid ground truth from each participant.
+We spent considerable time when designing the study
+ determining the exact questions to ask of participants,
+consulting experts in the area, and basing
+the questions and wording on previous research and studies. 
+Despite the care taken, it is possible that the 
+gathered data lacks reliability and validity. Some have
+questioned the
+reliability and validity of self-reports as we used in our study
+due to subjective biases, lack of care in reporting, and the
+highly individual nature of reporting aspects such as
+stress~\cite{Hernandez11,Hovsepian15}. In addition, in contexts such
+as the workplace, as in our study,
+participants  might be afraid to genuinely report levels
+of aspects, such as sleepiness. Hence, there is a chance that the
+self-reports we gathered  do not adequately reflect the ground
+truth of the underlying variables under investigation. It could even be
+the case that certain biometrics might represent a more accurate
+ground truth of the studied phenomena than the self-reports. This
+suggests that a more confirmative study rather than an inquiry study
+could be a better approach, and we will explore such routes in future
+work.
+
+%% %\vspace{0.05in}
+%% \noindent
+%% \textbf{Imbalanced Data:} 
+\subsection{Imbalanced Data}
+Study participants provided highly
+imbalanced data in their survey responses, with most participants only
+taking advantage of a subset of the Likert-scale values and the data
+points mostly being clustered around the middle of the scale, as can
+be seen in Table~\ref{responseDistribution}. While some of the
+imbalance is expected due to certain classes, such as 'not stressed',
+being more common in the workplace, this imbalance also provides
+challenges in the training and assessment of a machine learning
+classifier, as also found by others, e.g.~\cite{Exler16}. We addressed
+this for the training by oversampling in case of few data samples for
+the individual models and undersampling in case of a general model
+where more data was available. Especially in light of this imbalance
+in the data, the results we achieved with our models are
+encouraging. For the assessment of the classifiers' performance we
+addressed the imbalance by not just presenting accuracy, but also by
+focusing on prediction and recall to examine the classifier's
+performance in predicting the infrequent (yet more important) cases,
+such as when a user is struggling to stay awake and an intervention or
+warning might be needed most.
 % \textbf{Unbalanced Data:}
 % As shown in Table~\ref{responseDistribution}, the typical participant provided highly unbalanced survey responses, with most responses exhibiting a central tendency. Many participants provided zero or one very high (or very low) value on the Likert scale. In spite of this, our results show that by using biometric sensors and leveraging a machine learning approach, we are able to predict stress, focus, and awakeness better than the baseline, with improvements up to 84.64\%. Taking into account that the model correctly predicts many cases that happen infrequently, this is especially promising. These infrequent cases, such as when a user is highly stressed or struggling to stay awake, are in fact the most important cases to detect, as they are when intervention is needed most.
 
-%\vspace{0.05in}
-\noindent
-\textbf{Ground Truth and Self-Reporting:} 
-One of the key points for developing a good classifier for awakeness, focus and stress, is to collect a valid ground truth to be used as the output measure. When designing the study, we therefore spent an extensive amount of time on determining the exact questions to ask in the experience sampling, consulting experts in the area, and basing the questions and wording on previous research and studies. Yet, the reliability and validity of self-reports have been questioned in the past due to subjective biases, lack of care in reporting, and the highly individual nature of reporting aspects such as stress~\cite{Hernandez11,Hovsepian15}. In addition, in contexts such as the workplace, employees might be afraid to genuinely report levels of aspects, such as sleepiness. Hence, there is a chance that the collected experience samples do not adequately reflect the ground truth of the underlying variable under investigation. It could even be the case that certain biometrics might represent a more accurate ground truth of the studied phenomena than the self-reports. This suggests that a more confirmative study rather than an inquiry study could be a better approach, and we will explore such routes in future work.
+\subsection{Predicting Stress with Computer Interaction Data}
+Knowledge workers, a focus of our work and study, often spend
+a large amount of time each day interacting with information on 
+their computer at work. An interesting direction for future study
+is to consider whether this computer interaction data, which can
+be gathered non-invasively as work occurs, could serve to sense
+and predict stress, focus and awakeness. Features that could be
+investigated include keystrokes per minute, mouse clicks per minute
+and changes in the active window title.
 
 
-%\vspace{0.05in}
-\noindent
-\textbf{Corpus Size:}
-In this study we collected data from 14 professionals over the course of eight weeks. By scholarly standards this constitutes a large dataset --- especially given that the participants were not students. However, in the context of machine learning this corpus is relatively small. Thus, the model's overall performance, while promising, is only an indication of the performance that a larger corpus could provide. Our results show that there is a positive correlation between data added to the training corpus and the performance level of the model. This upwards trend likely continues, but a larger dataset is needed to confirm or reject this hypothesis. 
+
+%% %\vspace{0.05in}
+%% \noindent
+%% \textbf{Corpus Size:}
+%% In this study we collected data from 14 professionals over the course of eight weeks. By scholarly standards this constitutes a large dataset --- especially given that the participants were not students. However, in the context of machine learning this corpus is relatively small. Thus, the model's overall performance, while promising, is only an indication of the performance that a larger corpus could provide. Our results show that there is a positive correlation between data added to the training corpus and the performance level of the model. This upwards trend likely continues, but a larger dataset is needed to confirm or reject this hypothesis. 
 
 % \vspace{0.05in}
 % \noindent
 % \textbf{Data Collection:} 
 % One advantage of our study is that it was conducted on professionals in a real office setting (i.e., not on students). However, the disadvantage to working with professionals is that business deadlines and other pressing real world issues lead to missing survey responses. Additionally, busy professionals often fall into the trap of always selecting the same value for a given question that they have answered many times, which reduces the accuracy of the collected data. To minimize the effect of this inertia, we advise collecting data at typical low-productivity times, such as in the early afternoon or on Mondays~\cite{mark2014bored}.
 
-%\vspace{0.05in}
-\noindent
-\textbf{Per-User Model vs. Across-Users Model:}
-Our results show that individually trained models outperform on average a more general model. Yet, given the increase in model performance with training data set size, we expect that with enough data, a generic model will perform reasonably close to the individually trained models. This would have significant practical implications, eliminating the need for survey-based feedback (which is only necessary for model training), and thereby completely automating measurement of human aspects. Our follow up work will focus on gathering more data toward this end.
+%% %\vspace{0.05in}
+%% \noindent
+%% \textbf{Per-User Model vs. Across-Users Model:}
+%% Our results show that individually trained models outperform on average a more general model. Yet, given the increase in model performance with training data set size, we expect that with enough data, a generic model will perform reasonably close to the individually trained models. This would have significant practical implications, eliminating the need for survey-based feedback (which is only necessary for model training), and thereby completely automating measurement of human aspects. Our follow up work will focus on gathering more data toward this end.
 
 
 % \vspace{0.05in}
