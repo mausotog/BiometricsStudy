@@ -4,13 +4,6 @@
 
 %\section{Analysis and Results}
 
-\begin{table*}[h]
-  \centering
-  \includegraphics[width=1.0\textwidth]{rq1performance.pdf}
-  \caption{Results of predictions using the individual models. The distribution columns show a bar chart of the response distribution (negative/positive) for each of the three variables. The baseline row represents the averaged results of our baesline classifier. The general row shows the averaged results of our models trained on all participants.}\label{tab:accuracy}%\todo{revise caption}}
-  \vspace*{-4mm}
-\end{table*}
-
 %% To evaluate the efficacy of continuously predicting a knowledge worker's stress, focus, and awakeness in the workplace, we trained and tested machine learning classifiers using a leave-one-out cross validation. For prediction, we used the features extracted from the collected data as the input data, and binarized the participants' self-reported responses on stress, focus, and awakeness into two classes each (e.g., 'stressed' and 'not stressed') to use as output measures.
 
 \section{Observed Trends Over Time in Stress Levels}
@@ -179,12 +172,6 @@ Even after binarizing the responses as described in the previous section, we fou
    \vspace*{-2mm}
 \end{table}
 
-
-\subsection{Selecting a Classifier Algorithm}
-
-There are many different algorithms that can be used to build a classifier. To select an
-algorithm, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performed a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we refer to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
-% for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
 \begin{table}[h]
 	\begin{centering}
 	\small\addtolength{\tabcolsep}{-1pt}
@@ -200,6 +187,21 @@ algorithm, we compared multiple classifiers using the popular machine learning l
     \caption{The hyperparameters selected by grid search analysis to tune our random forest models. K refers to the number of features selected.}    \label{tab:hyperparams}
     \end{centering}
 \end{table}
+
+\subsection{Selecting a Classifier Algorithm}
+
+There are many different algorithms that can be used to build a classifier. To select an
+algorithm, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performed a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we refer to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
+% for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
+
+
+
+\begin{table*}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{rq1performance.pdf}
+  \caption{Results of predictions using the individual models. The distribution columns show a bar chart of the response distribution (negative/positive) for each of the three variables. The baseline row represents the averaged results of our baesline classifier. The general row shows the averaged results of our models trained on all participants.}\label{tab:accuracy}%\todo{revise caption}}
+  \vspace*{-4mm}
+\end{table*}
 
 \subsection{Individual Classifiers}
 %\noindent\textit{Results of Individual Classifiers}\\
@@ -217,6 +219,8 @@ predicts the most likely/frequent class while ignoring the class of
 higher importance and interest, precision and recall of the class of
 interest are also important to
 consider~\cite{yap2014,bhattacharyya_data_2011,Hernandez11}.
+For some users (i.e., S1. as seen In Table \ref{responseDistribution}), the imbalance in their data was so extreme that even after adjusting by oversampling it was impossible to create a reasonable classifier. These scenarios are difficult to predict as any classifier will not have an appropriate balance of stress and not stressed situations to learn from. 
+
 
 % However, the imbalance in the data can lead to a classifier with high accuracy if it always just predicts the more likely class while ignoring the class of higher importance and interest in our case (i.e. stressed, not focused, not awake). Therefore, we further report the precision and recall for the three classes 'stressed', 'not focused' and 'not awake'. 
 
@@ -240,9 +244,7 @@ precision and 184.6\% in recall for S12, while they did worse for S1,
 S3, S5, S7, S9, S10, and S13, and in the worst cases did not correctly
 predict a single instance of 'stressed'. Typically users that have the
 lowest precision and recall values are those where the data is the
-most unbalanced. This translates to a scenario where the classifier
-will likely label the minority instances as part of the majority class
-due to the unbalanced ratio of the data.\\[-0.1cm]
+most unbalanced.\\[-0.1cm]
 % We attribute these discrepancies to the large differences in response distributions between participants, as well as to the subjectivity of self-reporting.
 %
 %(improvement: 8\% precision, 1\% recall, 8\% accuracy), the individual performance varied greatly among participants. Some participants showed negligible difference in comparison to the baseline classifier, e.g. subject ..., while others showed a large improvement, e.g. subject ...
