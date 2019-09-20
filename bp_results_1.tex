@@ -2,7 +2,7 @@
 %\input{bp_results_1}
 %%\input{bp_results_2}
 
-\section{Analysis and Results}
+%\section{Analysis and Results}
 
 \begin{table*}[h]
   \centering
@@ -11,33 +11,90 @@
   \vspace*{-4mm}
 \end{table*}
 
-To evaluate the efficacy of continuously predicting a knowledge worker's stress, focus, and awakeness in the workplace, we trained and tested machine learning classifiers using a leave-one-out cross validation. For prediction, we used the features extracted from the collected data as the input data, and binarized the participants' self-reported responses on stress, focus, and awakeness into two classes each (e.g., 'stressed' and 'not stressed') to use as output measures.
+%% To evaluate the efficacy of continuously predicting a knowledge worker's stress, focus, and awakeness in the workplace, we trained and tested machine learning classifiers using a leave-one-out cross validation. For prediction, we used the features extracted from the collected data as the input data, and binarized the participants' self-reported responses on stress, focus, and awakeness into two classes each (e.g., 'stressed' and 'not stressed') to use as output measures.
 
-\subsection{Observed Trends in Knowledge Worker Stress Levels}
-We examined the end of day survey responses collected from each participant to see if any identifiable trends emerged. We used data from 13 of the 14 participants - one participant was excluded from this analysis as they experienced atypical stress levels in the latter half of the study due to factors outside of our control.
+\section{Observed Trends Over Time in Stress Levels}
 
-\subsubsection{Baseline stress levels}
-Common along all participants was a trend to select one stress rating far more frequently than any other. We will refer to this value as the participant's baseline stress level. All but one participant reported their perceived stress level for the day as their baseline stress level more than 50\% of the time. In total, the baseline values made up 65\% of the reported values collected from participants. Interestingly, while participants sometimes saw periods of sustained increases in stress, lasting as many as 6 consecutive workdays in the most extreme case, participants would always return to their baseline stress level at some point.
+To gain insights into how knowledge workers experience stress over an
+extended period of work, we examined the end of day survey responses
+collected from each participant to see if any identifiable trends
+emerged. We used data from 13 of the 14 participants - we excluded one participant
+from this analysis as they experienced atypical stress
+levels in the latter half of the study due to factors outside of our
+control.
 
-The baseline stress level varied significantly between participants. 7 participants reported feeling average stress levels most frequently (rating 3 on our scale), while 5 reported feeling little stress (rating 2) and 1 reported feeling no stress at all (1).
+\subsection{Baseline Stress Levels}
+Common amongst all participants was a trend to select one stress rating
+far more frequently than any other. We will refer to this value as the
+participant's baseline stress level. All but one participant reported
+their perceived stress level for the day as their baseline stress
+level more than 50\% of the time. In total, the baseline values made
+up 65\% of the reported values collected from
+participants. Interestingly, while participants sometimes saw periods
+of sustained increases in stress, lasting as many as 6 consecutive
+workdays in the most extreme case, participants would always return to
+their baseline stress level at some point.
 
-\subsubsection{Stressful days tend to come in clusters}
-Accounting for the variance between participants perceived stress baselines, we consider a stressful day to be one that represents a deviation of 1 or more stress levels above the participants baseline. Of the 93 stressful days we observed in total, we found that 39 (41\%) of these days occurred in groupings of two or more consecutive stressful workdays. The most common size of these groups was two workdays, while the largest group we observed was six workdays.
-The day after a stressful day is much more likely to be a stressful day as compared to any other day. (0.55 average increase over baseline, compared to 0.02 average increase over baseline)
+The baseline stress level varied significantly between participants. 7
+participants (54\%) reported feeling average stress levels most frequently
+(rating 3 on our scale), while 5 (38\%) reported feeling little stress
+(rating 2) and 1 (8\%) reported feeling no stress at all (rating 1).
 
-\subsubsection{Extreme changes in stress levels are rare}
-After accounting for each participant's perceived stress baseline, we examined the frequency of deviations from the baseline. We found that participants were far more likely to report a stress level that was within 1 point of their baseline, than to report a stress level 2 or more points away. These extreme deviations represented only 15\% of all reported values which differed from the participants baseline. As well, the majority (78\%) of these deviations came from just two participants. This suggests that some people may be less resilient to the stress of the workplace than others - while for most people extremely stressful days are few and far between.
+\subsection{Stressful Days Tend to Cluster}
+Accounting for the variance between participants perceived stress
+baselines, we consider a stressful day to be one that represents a
+deviation of 1 or more stress levels above the participant's
+baseline. Of the 93 stressful days we observed in total, we found that
+39 (41\%) of these days occurred in groupings of two or more
+consecutive stressful workdays. The most common size of these groups
+was two workdays, while the largest group we observed was six
+workdays.  The day after a stressful day is much more likely to be a
+stressful day as compared to any other day with a 0.55 average increase
+over baseline, compared to 0.02 average increase over baseline.
 
-\subsubsection{Stress fluctuations are difficult to explain without invasive measures}
-We created a linear mixed model to attempt to explain some of the stress that our participants were experiencing. We experimented with multiple independent variables, including those derived from computer interaction data such as total time spent actively on the computer, percentage of time idle, and amount of time spent on non work-related web browsing. We also looked at the day of the week and proximity to beginning or end of month as possible explanatory variables. However, ultimately we were unable to find any variable which showed a significant correlation with our participants perceived stress levels. This points to the need for additional instrumentation if we are to succesfully understand and predict stress in the workplace.
+\subsection{Extreme Changes in Stress Levels are Rare}
+After accounting for each participant's perceived stress baseline, we
+examined the frequency of deviations from the baseline. We found that
+participants were far more likely to report a stress level that was
+within 1 point of their baseline, than to report a stress level 2 or
+more points away. These extreme deviations represented only 15\% of
+all reported values which differed from the participants baseline. As
+well, the majority (78\%) of these deviations came from just two
+participants. This suggests that some people may be less resilient to
+the stress of the workplace than others. For most participants,
+extremely stressful days were few and far between.
 
-\subsubsection{Tai Chi Intervention}
-We linked participants tai chi session attendance data with their self-reported percieved stress levels. Building a linear mixed model with tai chi attendance as a random effect, we found that tai chi attendance contributed a small amount to decreased stress in the work week immediately following the tai chi session (slope of -0.188, p < 0.05). However, we did not find a connection between attendance and stress on the day of the session.
+\subsection{Explaining Stress Fluctuations}
+We created a linear mixed model to attempt to explain some of the
+stress that our participants were experiencing. We experimented with
+multiple independent variables, including those derived from computer
+interaction data such as total time spent actively on the computer,
+percentage of time idle, and amount of time spent on non work-related
+web browsing. We also looked at the day of the week and proximity to
+beginning or end of month as possible explanatory variables. However,
+ultimately we were unable to find any variable which showed a
+significant correlation with our participants perceived stress
+levels. This points to the need for additional instrumentation if we
+are to succesfully understand and predict stress in the workplace.
 
-\subsection{Predicting Stress, Focus \& Awakeness}
+%% \subsubsection{Tai Chi Intervention}
+%% We linked participants tai chi session attendance data with their self-reported percieved stress levels. Building a linear mixed model with tai chi attendance as a random effect, we found that tai chi attendance contributed a small amount to decreased stress in the work week immediately following the tai chi session (slope of -0.188, p < 0.05). However, we did not find a connection between attendance and stress on the day of the session.
+
+\section{Predicting Stress in the Moment}
 % random forest best
 \label{secOverallAccuracy}
-As a first step, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performing a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we will be referring to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
+
+To investigate whether stress, focus and awakeness can be predicted in
+the moment based on biometric measures.
+we investigated classifiers trained
+for each individual and across all participants. We report on the effectiveness of
+these classifiers and the features that are important in prediction of stress, focus
+and awakeness.
+
+\subsection{Selecting a Classifier Algorithm}
+
+There are many different algorithms that can be used to build a classifier. To select an
+algorithm, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performed a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we refer to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
 % for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
 \begin{table}[h]
 	\begin{centering}
@@ -55,15 +112,48 @@ As a first step, we compared multiple classifiers using the popular machine lear
     \end{centering}
 \end{table}
 
+\subsection{Individual Classifiers}
+%\noindent\textit{Results of Individual Classifiers}\\
+Since peoples' experience of stress, focus, and awakeness (as well as
+their physiological manifestations) can vary substantially
+(e.g.,~\cite{Hernandez11}), we first trained individual classifiers
+for each participant (rather than a general one for all
+participants). The results of our analysis are reported in
+Table~\ref{tab:accuracy}. For our analysis, we report values of
+accuracy, one of the most commonly used metric to compare performance,
+as well as precision and recall of the classes of interest:
+'stressed', 'not focused', and 'not awake'. Since the imbalance in the
+data can lead to high accuracy values if a classifier always just
+predicts the most likely/frequent class while ignoring the class of
+higher importance and interest, precision and recall of the class of
+interest are also important to
+consider~\cite{yap2014,bhattacharyya_data_2011,Hernandez11}.
 
-
-\noindent\textit{Results of Individual Classifiers}\\
-Since peoples' experience of stress, focus, and awakeness (as well as their physiological manifestations) can vary a lot (e.g.,~\cite{Hernandez11}), we first trained individual classifiers for each participant (rather than a general one for all participants). The results of our analysis are reported in Table~\ref{tab:accuracy}. For our analysis, we report values of accuracy, one of the most commonly used metric to compare performance, as well as precision and recall of the classes of interest: 'stressed', 'not focused', and 'not awake'. Since the imbalance in the data can lead to high accuracy values if a classifier always just predicts the most likely/frequent class while ignoring the class of higher importance and interest, precision and recall of the class of interest can be more adequate metrics in this case~\cite{yap2014,bhattacharyya_data_2011,Hernandez11}. 
 % However, the imbalance in the data can lead to a classifier with high accuracy if it always just predicts the more likely class while ignoring the class of higher importance and interest in our case (i.e. stressed, not focused, not awake). Therefore, we further report the precision and recall for the three classes 'stressed', 'not focused' and 'not awake'. 
 
 
-
-Overall, we were able to use the extracted physiological features to predict all three aspects with reasonable accuracy, precision, and recall, as well as to improve upon the baseline---a stratified random classifier that randomly chooses one of the two classes with a bias towards the larger class. While the individually trained classifiers improved on average across all participants upon the baseline in all cases excepting recall of 'not focused', the improvement was substantially higher for awakeness (85\% improvement in precision,  62\% in recall, and 7\% in accuracy) than for stress or focus. Also, the performance of the individually trained classifiers varied greatly across participants. While some participants showed a large improvement, for others the baseline performed much better than the individually trained classifier. For instance, for predicting 'stressed', the individual classifiers improved upon the baseline for S4, S6, S8, S11, S12, and S14 with a maximum improvement of 88.4\% in precision and 184.6\% in recall for S12, while they did worse for S1, S3, S5, S7, S9, S10, and S13, and in the worst cases did not correctly predict a single instance of 'stressed'. Typically users that have the lowest precision and recall values are those where the data is the most unbalanced. This translates to a scenario where the classifier will likely label the minority instances as part of the majority class due to the unbalanced ratio of the data.\\[-0.1cm]
+Overall, we were able to use extracted physiological features to
+predict all three aspects with reasonable accuracy, precision, and
+recall, as well as to improve upon the baseline---a stratified random
+classifier that randomly chooses one of the two classes with a bias
+towards the larger class. While the individually trained classifiers
+improved on average across all participants upon the baseline in all
+cases excepting recall of 'not focused', the improvement was
+substantially higher for awakeness (85\% improvement in precision,
+62\% in recall, and 7\% in accuracy) than for stress or focus. Also,
+the performance of the individually trained classifiers varied greatly
+across participants. While some participants showed a large
+improvement, for others the baseline performed much better than the
+individually trained classifier. For instance, for predicting
+'stressed', the individual classifiers improved upon the baseline for
+S4, S6, S8, S11, S12, and S14 with a maximum improvement of 88.4\% in
+precision and 184.6\% in recall for S12, while they did worse for S1,
+S3, S5, S7, S9, S10, and S13, and in the worst cases did not correctly
+predict a single instance of 'stressed'. Typically users that have the
+lowest precision and recall values are those where the data is the
+most unbalanced. This translates to a scenario where the classifier
+will likely label the minority instances as part of the majority class
+due to the unbalanced ratio of the data.\\[-0.1cm]
 % We attribute these discrepancies to the large differences in response distributions between participants, as well as to the subjectivity of self-reporting.
 %
 %(improvement: 8\% precision, 1\% recall, 8\% accuracy), the individual performance varied greatly among participants. Some participants showed negligible difference in comparison to the baseline classifier, e.g. subject ..., while others showed a large improvement, e.g. subject ...
@@ -95,8 +185,8 @@ Overall, we were able to use the extracted physiological features to predict all
 %\end{table}
 
 
-
-\noindent\textit{Feature Selection and Importance}\\
+\subsection{Feature Selection and Importance}
+%\noindent\textit{Feature Selection and Importance}\\
 There are a large variety of features that can be (and have been) calculated in previous research for each of the basic measurements listed in Table~\ref{signals}, such as the mean, standard deviation, maximum, and interquartile range. In addition, each of these metrics can be combined with the various time windows captured of a basic measurement, resulting in a large feature space. To reduce the feature space, we experimented with multiple feature selection methods, including selecting the top k highest correlated features by various metrics such as mutual information, Pearson's correlation coefficient, ANOVA's F-value, as well as wrapper methods such as recursive feature elimination, optimizing mean decrease accuracy by iteratively permuting features, and only selecting features that exceed a certain Gini importance threshold. We found that all methods produced similar results with respect to accuracy, precision, and recall for the individual models. Ultimately, we chose to use the top k features with the highest ANOVA F-value, as it is relatively simple and efficient to calculate. The values of k used were selected by grid search analysis, and are shown in Table \ref{tab:hyperparams}. 
 
 %Respiration rate is also highly important for stress (#3 , 14.4%) but I'm not sure what previous works say about correlation with stress
@@ -128,9 +218,9 @@ Overall, the features that were selected as the important ones for the individua
   \vspace*{-2mm}
 \end{table}
 
-
-\noindent\textit{Individual vs.\ General Model}\\
-Individual models are trained specifically for each individual and thus require a data collection period before they are capable of making accurate predictions. On the other hand, the idea of general models is to be able to train them on already collected data and then  to be able to apply them even to new and unseen individuals, thus overcoming the cold-start problem. Given the big individual differences in biometrics, training a general model to achieve an adequate accuracy for new individuals is not necessarily possible. 
+\subsection{Individual vs.\ General Model}
+%\noindent\textit{Individual vs.\ General Model}\\
+Individual models are trained specifically for each individual and thus require a data collection period before they are capable of making accurate predictions. On the other hand, the idea of general models is to be able to train them on already collected data and then  to be able to apply them even to new and unseen individuals, thus overcoming the cold-start problem. Given the large individual differences in biometrics, training a general model to achieve an adequate accuracy for new individuals is not necessarily possible. 
 
 To examine the performance of a general model for our participants, we trained three general models, one for focus, one for awakeness and one for stress. We roughly followed the same procedure as for the individual models. Due to the larger amount of data available in the general case, we used the more common random undersampling, which randomly selects elements in the majority class to exclude from the dataset, instead of random oversampling to balance the distribution of the dataset. The models were trained on the datasets of 13 of the 14 participants, and then evaluated on the dataset of the last, repeating this process for all 14 participants. 
 
