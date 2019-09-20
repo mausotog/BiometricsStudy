@@ -219,7 +219,7 @@ predicts the most likely/frequent class while ignoring the class of
 higher importance and interest, precision and recall of the class of
 interest are also important to
 consider~\cite{yap2014,bhattacharyya_data_2011,Hernandez11}.
-For some users (i.e., S1. as seen In Table \ref{responseDistribution}), the imbalance in their data was so extreme that even after adjusting by oversampling it was impossible to create a reasonable classifier. These scenarios are difficult to predict as any classifier will not have an appropriate balance of stress and not stressed situations to learn from. 
+For some users (i.e., S1. as seen In Table \ref{responseDistribution}), the imbalance in their data was so extreme that even after adjusting by oversampling it was impossible to create a reasonable classifier. These scenarios are difficult to predict as any classifier will not have enough variance in its training data for the 'stressed' situation to adequately distinguish it from the non-stressed case.
 
 
 % However, the imbalance in the data can lead to a classifier with high accuracy if it always just predicts the more likely class while ignoring the class of higher importance and interest in our case (i.e. stressed, not focused, not awake). Therefore, we further report the precision and recall for the three classes 'stressed', 'not focused' and 'not awake'. 
