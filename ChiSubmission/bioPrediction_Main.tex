@@ -1,0 +1,397 @@
+\documentclass{sigchi}
+
+% Use this section to set the ACM copyright statement (e.g. for
+% preprints).  Consult the conference website for the camera-ready
+% copyright statement.
+
+% Copyright
+\CopyrightYear{2020}
+%\setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+% DOI
+\doi{https://doi.org/10.1145/3313831.XXXXXXX}
+% ISBN
+\isbn{978-1-4503-6708-0/20/04}
+%Conference
+\conferenceinfo{CHI'20,}{April  25--30, 2020, Honolulu, HI, USA}
+%Price
+\acmPrice{\$15.00}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+%% HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+%% Please note you need to make sure the copy for your specific
+%% license is used here!
+% \toappear{
+% Permission to make digital or hard copies of all or part of this work
+% for personal or classroom use is granted without fee provided that
+% copies are not made or distributed for profit or commercial advantage
+% and that copies bear this notice and the full citation on the first
+% page. Copyrights for components of this work owned by others than ACM
+% must be honored. Abstracting with credit is permitted. To copy
+% otherwise, or republish, to post on servers or to redistribute to
+% lists, requires prior specific permission and/or a fee. Request
+% permissions from \href{mailto:Permissions@acm.org}{Permissions@acm.org}. \\
+% \emph{CHI '16},  May 07--12, 2016, San Jose, CA, USA \\
+% ACM xxx-x-xxxx-xxxx-x/xx/xx\ldots \$15.00 \\
+% DOI: \url{http://dx.doi.org/xx.xxxx/xxxxxxx.xxxxxxx}
+% }
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+% \pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+
+\usepackage{booktabs} % For formal tables
+\usepackage{comment}
+\usepackage{tabularx} 
+
+% Some optional stuff you might like/need.
+\usepackage{microtype}        % Improved Tracking and Kerning
+% \usepackage[all]{hypcap}    % Fixes bug in hyperref caption linking
+%\usepackage{ccicons}          % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+% If you want to use todo notes, marginpars etc. during creation of
+% your draft document, you have to enable the "chi_draft" option for
+% the document class. To do this, change the very first line to:
+% "\documentclass[chi_draft]{sigchi}". You can then place todo notes
+% by using the "\todo{...}"  command. Make sure to disable the draft
+% option again before submitting your final document.
+\usepackage{todonotes}
+
+\presetkeys{todonotes}{inline}{}
+% for commenting and making it visible in the pdf (easy to hide after)
+\newboolean{hidecomments}
+\setboolean{hidecomments}{false}
+%\nochangebars
+\ifthenelse{\boolean{hidecomments}}
+{\newcommand{\cb}[2]{}}
+{\newcommand{\cb}[2]{
+		\fbox{\bfseries\sffamily\scriptsize#1}
+		{\sf\small$\blacktriangleright$ %$\RHD$
+			{#2} $\blacktriangleleft$}}} %\LHD$}}}%
+\newcommand\tf[1]{\cb{TF}{\textcolor{green}{#1}}}
+\newcommand\cs[1]{\cb{CS}{\textcolor{blue}{#1}}}
+\newcommand\ms[1]{\cb{MS}{\textcolor{red}{#1}}}
+\newcommand\tfC[1]{\todo[color=green,inline]{Thomas: #1}}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{SIGCHI Conference Proceedings Format}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Authors' choice; of terms; separated; by
+  semicolons; include commas, within terms only; this section is required.}
+\def\plaingeneralterms{Documentation, Standardization}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  pdfdisplaydoctitle=true, % For Accessibility
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+  hypertexnames=false
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+	
+	%\title{Optimizing High-Impact Workplaces: Using Biometric Signals to Predict Stress, Focus, and Awakeness}
+	\title{Observing and Predicting Knowledge Worker Stress in the Wild}
+	%\titlenote{Produces the permission block, and copyright information}
+	
+	
+	\author{Authors will be visible after double blind review\vspace{0cm}
+	\vspace{18ex}}
+	
+	
+	\begin{comment}
+	
+	\author{Mauricio Soto}
+	\affiliation{%
+	\institution{Carnegie Mellon University}
+	\city{Pittsburgh}
+	\state{PA}
+	}
+	\email{mauriciosoto@cmu.edu}
+	
+	\author{Chris Satterfield}
+	\affiliation{%
+	\institution{The University of British Columbia}
+	\city{Vancouver}
+	\state{British Columbia}
+	}
+	\email{cds00@cs.ubc.ca}
+	
+	\author{Thomas Fritz}
+	\affiliation{%
+	\institution{University of Zurich}
+	\city{Zurich}
+	\state{Switzerland}
+	}
+	\email{fritz@ifi.uzh.ch}
+	
+	\author{Gail C. Murphy}
+	\affiliation{%
+	\institution{The University of British olumbia}
+	\city{Vancouver}
+	\state{British Columbia}
+	}
+	\email{murphy@cs.ubc.ca}
+	
+	\author{David Shepherd}
+	\affiliation{%
+	\institution{ABB Corporate Research}
+	\city{Raleigh}
+	\state{North Carolina}
+	}
+	\email{david.shepherd@us.abb.com}
+	
+	\author{Nicholas Kraft}
+	\affiliation{%
+	\institution{ABB Corporate Research}
+	\city{Raleigh}
+	\state{North Carolina}
+	}
+	\email{nicholas.a.kraft@us.abb.com}
+	
+	\end{comment}
+	
+	\maketitle
+	
+	% The default list of authors is too long for headers.
+	%\renewcommand{\shortauthors}{Soto et al.}
+	%\renewcommand{\shortauthors}{(Authors)}
+	
+
+	
+	\begin{abstract}
+Knowledge workers face many challenges as they work: work is 
+fragmented, disruptions are constant, tasks are complex, and work hours can be 
+long. These challenges can impact knowledge workers' stress, focus and awakeness, and in turn their interaction with the digital environment, the quality of work 
+performed and their productivity in general. We report on a field study with 14
+knowledge workers over an eight-week period in which we investigated, using
+experience sampling, how the workers experience stress over time. During this field study, we also collected biometric data, which we then used to investigate if it is possible to predict such productivity-related indicators as stress, focus and awakeness, in the moment.
+We observed and report on various trends in knowledge worker stress levels
+over several weeks and show that classifiers can be built that are able to
+predict stress, focus and awakeness from biometric data above a baseline.
+
+
+%		Knowledge workers face many challenges as they work: work is 
+%fragmented, disruptions are constant, tasks are complex, and work hours can be 
+%long. Knowledge workers' stress, and lack of focus or awakeness can have a 
+%significant impact on their interaction with the digital environment, the quality of work 
+%performed and productivity in general. We report on a field study with 14
+%knowledge workers over an eight-week period in which we investigated, using
+%self-reports, how
+%the workers experience stress overe time. During this field study, we collected biometric
+%data, which we then used to investigate if it is possible to predict such
+%productivity-related indicators, such as stress, focus and awakeness, in the moment.
+%We observed and report on various trends in knowledge worker stress levels
+%over several weeks and show that classifiers can be built that are able to
+%predict stress, focus and awakeness from biometric data above a baseline.
+%
+
+%% 		Knowledge workers face many challenges as they work: work is 
+%% fragmented, disruptions are constant, tasks are complex, and work hours can be 
+%% long. Knowledge workers' stress, and lack of focus or awakeness can have a 
+%% significant impact on their interaction with the digital environment, the quality of work 
+%% performed and productivity in general. Biometric sensors make it possible to 
+%% continuously monitor human aspects, such as focus, awakeness and stress 
+%% providing opportunities to help knowledge workers combat workplace challenges. 
+%% We investigate how biometric measures, such as heart rate, respiration rate, 
+%% and galvanic skin response, and computer interaction measures can be used to 
+%% create a machine learning model able to accurately predict stress, awakeness, 
+%% and focus levels. In a field study with 14 professionals over an eight-week 
+%% period we collected and compared biometric, computer interaction, and self-
+%% reporting data. Our results show that, with only a few days of self-reporting 
+%% data, biometrics can be used to predict the level of stress, focus, and 
+%% awakeness of operators.
+		
+		%In certain collaborative work environments, particularly in control rooms, workers' performance can have an out-sized impact on outcomes. A sleepy factory operator that misses early warnings could lose millions of dollars due to a process shutdown; a stressed mining operator that mistakenly dispatches two underground trucks to the same location could cause a deadly crash. In these constantly evolving work environments being able to monitor operators' stress, awakeness, and focus level is important not only to identify issues that need immediate attention, but also to ensure an optimal work environment for these high-stakes workers. Typically, a person's alertness levels are acquired via self-reporting. Unfortunately, this causes frequent interruptions and even impacts the very measures it seeks to measure, such as focus. To avoid these issues we automatically collected biometrics such as heart rate, respiration rate, and galvanic skin response, and used them to create a machine learning model able to accurately predict stress, awakeness, and focus levels. In a field study with fourteen professionals over an eight-week period we collected and compared biometric and self-reporting data. Our results show that, with only a few days of self-reporting data, biometrics can be used to predict the level of stress, focus, and awakeness of operators. 
+		
+		
+	\end{abstract}
+	
+	%
+	% The code below should be generated by the tool at
+	% http://dl.acm.org/ccs.cfm
+	% Please copy and paste the code instead of the example below.
+	%
+	% Show the XML Only
+	\begin{CCSXML}
+		<ccs2012>
+		<concept>
+		<concept_id>10003120.10003121</concept_id>
+		<concept_desc>Human-centered computing~Human computer interaction (HCI)</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>		
+		<concept>
+		<concept_id>10003120.10003121.10011748</concept_id>
+		<concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
+		<concept_significance>300</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003121.10003124</concept_id>
+		<concept_desc>Human-centered computing~Interaction paradigms</concept_desc>
+		<concept_significance>300</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003121.10003122.10003332</concept_id>
+		<concept_desc>Human-centered computing~User models</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003123.10010860.10010859</concept_id>
+		<concept_desc>Human-centered computing~User centered design</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003138.10003139.10010904</concept_id>
+		<concept_desc>Human-centered computing~Ubiquitous computing</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003138.10003140</concept_id>
+		<concept_desc>Human-centered computing~Ubiquitous and mobile computing systems and tools</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>
+		<concept>
+		<concept_id>10003120.10003138.10011767</concept_id>
+		<concept_desc>Human-centered computing~Empirical studies in ubiquitous and mobile computing</concept_desc>
+		<concept_significance>500</concept_significance>
+		</concept>
+		</ccs2012>
+	\end{CCSXML}
+	
+	\ccsdesc[500]{Human-centered computing~User models}
+	\ccsdesc[500]{Human-centered computing~Human computer interaction (HCI)}
+	\ccsdesc[300]{Human-centered computing~Interaction paradigms}
+	\ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
+	\ccsdesc[500]{Human-centered computing~User centered design}
+	\ccsdesc[500]{Human-centered computing~Ubiquitous computing}
+	\ccsdesc[500]{Human-centered computing~Ubiquitous and mobile computing systems and tools}
+	\ccsdesc[500]{Human-centered computing~Empirical studies in ubiquitous and mobile computing}
+	
+	
+	% Author Keywords
+	%\keywords{\plainkeywords}
+	\keywords{Biometrics, Stress, Awakeness, Focus, Computer Interaction, Ubiquituous Computing, Empirical Study, User Centered Design}
+	
+	% Print the classficiation codes
+	%\printccsdesc
+	%Please use the 2012 Classifiers and see this link to embed them in the text: \url{https://dl.acm.org/ccs/ccs_flat.cfm}
+	
+
+\input{bp_intro_v4}
+\input{bp_relatedWork}
+\input{bp_studyMethod}
+%\input{bp_data}
+\input{bp_results_1}
+%\input{bp_results_2}
+\input{bp_discussion}
+\input{bp_threats}
+\input{bp_conclusion}
+
+
+%\input{samplebody-conf}
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+%\balance{}
+
+%\bibliographystyle{ACM-Reference-Format}
+%\bibliography{bp_bibliography}
+
+%\end{document}
+
+
+% BALANCE COLUMNS
+\balance{}
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{bp_bibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

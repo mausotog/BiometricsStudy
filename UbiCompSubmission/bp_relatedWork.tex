@@ -1,0 +1,103 @@
+%!TEX root = bioPrediction_main.tex
+\section{Related Work}
+
+The study and prediction approach on which we report in this paper is related
+to previous studies of productivity-related indicators and studies
+using biometerics to predict these indicators. We consider
+related work in each of these categories in turn.
+
+\subsection{Productivity-related Indicators}
+
+Our study focuses on the productivity-related indicators of stress, focus and awakeness.
+
+%% Previous approaches~\cite{zuger18,Lalle16,Panwar18} have shown the feasibility of applying machine learning 
+%% to biometric data to measure variables such as stress, interruptibility, 
+%% negative emotion, or confusion during computer 
+%% interaction. These approaches vary in the 
+%% variables examined, the invasiveness of the sensors, and the length and 
+%% context of the studies. Many previous studies focused on 
+%% shorter time frames (mostly hours, but in one case also up to five 
+%% days~\cite{sano2013stress} 
+%% or two weeks~\cite{zuger18}). To the best of the authors' knowledge, no 
+%% other study has examined such an extensive period (eight weeks) in a real-
+%% world office environment and the inspected variables (stress, awakeness, and focus).
+
+
+\subsubsection{Stress}
+Much previous work relates to identifying and mitigating stress in an office environment.
+Previous studies have measured stress by taking one of two possible approaches.
+The first approach is to measure plasma catecholamine and cortisol as stress biomarkers~\cite{piazza10}.
+This approach is impractical for use over prolonged periods of time, as in our eight-week study.
+Further, this approach is imprecise because of the delay from the stress stimulation to the stress response, which 
+may take from minutes to hours~\cite{Chandola10,Hellhammer09}.
+
+The second approach, which we have chosen for our study, is to measure autonomic nervous system (ANS) activity by analyzing biometric signals of the human body, such as blood pressure, heartbeat, and temperature~\cite{kataoka00,Eekelen04,valentini10}.
+In particular, changes in heart rate variability are associated with cognitive and emotional stress~\cite{mcduff16,dishman2000stress}.
+This second approach has been used successfully by several past studies~\cite{Force96,gal07,montano09}.
+
+Hovsepian et al.~\cite{Hovsepian15} have worked to obtain a standard for continuous stress assessment. They used sensors to conduct a seven-day lab study with 26 participants, as well as a field study with 20 participants. They found that their model showed significant improvement over simple heart rate variability measurements. However, this model requires the use of a suite of invasive sensors that would be impractical for a study the length of ours.
+
+Hernandez et al.~\cite{Hernandez14} investigated the use of pressure-sensitive keyboard and a capacitative mouse as non-intrusive means for measuring computer users stress levels. They found participants exhibited significantly increased typing pressure and mouse contact when in stressful conditions. McDuff et al.~\cite{mcduff16} experimented with a camera to measure photoplethysmographic signals indicative of cognitive stress. Vizer et al.~\cite{vizer_automated_2009} used keystroke and linguistic features to automatically measure stress levels in response to cognitive and physical stress conditions. All of these studies were performed in a controlled lab setting over a short duration and the results have yet to be replicated in the field.
+
+Evans and Johnson~\cite{evans00} investigated the correlation between noise in the workplace and stress levels. They found that workers exposed to open-office noise showed aftereffects that indicate motivational deficits. The population for their experiment comprised 40 female clerical workers, who were randomly assigned to a control condition or to three-hour low-intensity noise room designed to simulate typical open-office noise levels.
+
+Stress in the workplace and its effects on service providers has been analyzed in call centers~\cite{Hernandez11} and in the context of the perceived imbalance between resources and demands~\cite{cherniss80}. These studies considered several factors such as personality traits, career-related goals and attitudes, and life outside of work, and these factors were correlated with stress levels and burnout.
+
+Kocielnik et al.~\cite{kocielnik_smart_2013} developed a framework for unobtrusive and continuous measurement of stress in real life conditions. They equipped university staff members with a wristband sensor and combined this data with information from the participants calendars over the course of four weeks. They observed that the data they collected reflected well the participants perceptions of their own stress levels. However this work focused mostly on providing retrospective information to users so they can work to improve their own stress balance. They did not attempt to make observations about the big picture of participants stress profiles or make predictions in real time.
+
+
+Our study stands out from these works by nature of its length and focus on knowledge worker stress in everyday office life, using unobtrusive measures. To the best of our knowledge there is no longitudinal study which attempts to explain and predict knowledge worker stress that comes close to the length of our own study. The eight week duration gives us authority to speak on the nature of day-to-day fluctuations in knowledge worker stress levels.
+
+
+%Bader~\cite{Bader95} proposed an approach towards monitoring and estimating a person's awakeness by leveraging on a stationary pressure sensor to track the person's body movements and a correlator to produce a change signal which is compared with a preset wakefulness threshold in a threshold detector circuit.
+
+%A wearable system for mood assessment considering smartphone features and data from mobile ECGs. Exler, Schankin, 
+%Looked at energetic-arousal (tired-awake)
+%This paper focuses on valence, and barely mentions energetic arousal 
+%so I will leave it out
+
+\subsubsection{Focus}
+Focus refers to the allocation of limited cognitive processing resources~\cite{Anderson04}.
+Mark et al.~\cite{mark2014bored} studied engagement in workplace activities by analyzing the digital activity of 32 information workers in situ for 5 days to understand how attentional states change with context. They found that boredom is highest in the early afternoon and focus peaks in the middle of the afternoon. They also found that doing work that requires focus correlates with stress, while rote work correlates with happiness.
+
+Interruptions in the office are a common barrier keeping workers from sustaining focus on their work related activities, particularly when the interruptions occur at inopportune moments.
+Such interruptions may include emails, alerts, or interactions with co-workers\cite{gonzalez2004constant,chong2006interruptions,shamsi07}. Interruptions in inopportune times can have negative effects that range from higher error rate and lower overall performance
+to an increase in stress and frustration~\cite{bailey2001effects,czerwinski2000instant,mark2008cost}.
+External interruptions may cause workers to enter a ``chain of distraction''~\cite{shamsi07}.
+This chain is composed by stages of preparation, diversion, resumption and recovery that result in time away from an ongoing task. 
+
+Other studied constructs that relate to focus in the workplace include cognitive absorption, cognitive engagement, flow, and mindfulness.
+Cognitive absorption describes periods of time in which a person experiences total immersion in an activity.
+This state is also accompanied by a sense of deep enjoyment, a feeling of control, curiosity, and not realizing the passing of time.
+It has been associated with ease of use and perceived usefulness of information technology~\cite{agarwal00}.
+Cognitive engagement is described~\cite{webster97} as a period of strong focus in an activity without the feeling of a sense of control of the situation.
+Flow~\cite{Csikszentmihalyi90}, and mindfulness~\cite{Weick06,dane11} are psychological states that describe periods of prolonged attention and total immersion in an activity. Flow occurs when a person is focused on an activity that requires high challenge and high use of the person's skills, whereas mindfulness is characterized by being aware of fine detail, affording the capacity to discover and manage unexpected events.
+
+\subsubsection{Awakeness}
+
+Sleepiness (lack of awakeness) and its associated risk of serious injury to passengers has been studied in the context of automobile 
+accidents~\cite{connor02,Nordbakke07}.
+These studies show a strong association between the level of acute driver sleepiness and the risk of injury crash.
+Connor et al.~\cite{connor02} conducted a population-based case study using the Stanford sleepiness scale, which is similar to a seven-point Likert scale and describes seven different levels of sleepiness from ``Could not stay awake, sleep onset was imminent'' (1) to ``Felt active, wide awake'' (7).
+Nordbakke and Sagberg~\cite{Nordbakke07} show that drivers are well aware of  various factors influencing the risk of falling asleep while driving. Drivers also have good knowledge of the most effective measures to prevent falling asleep at the wheel.
+However, most of drivers continue driving even when recognizing sleepiness signals, due to the desire to arrive at a reasonable time, the length of the drive, or pre-planed commitments.
+
+
+\subsection{Biometrics}
+Our study investigates the prediction of multiple productivity-related indicators (stress, focus, and awakeness) using two different types of measurements, biometric signals and computer interaction, over eight weeks in a real-life office setting.
+Existing work~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015} analyzes a broad array of biometric signals and correlates them with individual's cognitive states and processes.
+For example, Zuger et al.~\cite{zuger18} used biometrics to sense interruptibility in the office~\cite{zuger18}.
+%and found correlations between biometric signals and predicting code quality~\cite{Muller16}, to assess task difficulty in software development~\cite{fritz2014using}, to assess developer's mental load and perceived difficulty while working on small code snippets, and
+Biometric signals have also been studied in the context of technology users. For example, Parnin~\cite{Parnin2011} analyzes electromyography to measure sub-vocal utterances, and how these might be correlated with the programmer's perceived difficulty of programming tasks. Similarly, biometrics have been used to measure code difficulty by using biometric sensors~\cite{fritz2014using}
+and using Near Infrared Spectroscopy to measure developer's cerebral blood flow~\cite{Nakagawa2014}.
+
+Eye tracking technology~\cite{Bednarik2006,Crosby1990,Rodeghero2014} and brain activity~\cite{Ikutani2014,Siegmund2014} 
+have been used in previous studies to analyze different tasks in an office environment.
+Eye tracking has been used to analyze memory load and processing load by inspecting task-evoked pupillary response and pupil size~\cite{beatty82}. Similar studies have shown high correlation between pupil size and mental workload of subtasks~\cite{beatty82} and cognitive load~\cite{Klingner10}.
+Brain activity has been associated with different mental states~\cite{Berger29} by analyzing specific frequency bands (alpha, beta, gamma, delta, and theta) using electroencephalography (EEG). The increase or decrease of some of these frequencies is correlated with
+attentional demand and working memory load~\cite{Smith05,sterman93}.
+In contrast to studies that use eye tracking or EEG, we focused on a less invasive technology that can be applied in a real world scenario.
+
+
+
+
