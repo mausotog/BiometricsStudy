@@ -15,13 +15,12 @@ losses~\cite{hockey1997stress,setz2010stress,wrs2010}.
 Given the importance of understanding stress and its relationship and
 effect on work, a number of studies have been conducted using a
 variety of methods. Some have studied stress using invasive
-techniques, such as measuring cortisol as a stress biomarker
-(e.g.,~\cite{piazza10}).  Such invasive techniques are best suited
-for laboratory environments.  Others have shown the benefit of using
+techniques, such as measuring cortisol as a stress biomarker~\cite{piazza10} which are best suited
+for laboratory environments.  Further research has shown the benefit of using
 autonomic nervous system (ANS) activity by analyzing biometric signals
-of the human body, such as blood pressure (e.g.,~\cite{kataoka00}).
+of the human body, such as blood pressure~\cite{kataoka00}.
 These less invasive approaches can be used in longer-term field
-studies, opening up the ability to ask the question of what stress
+studies, opening up the question of what stress
 looks like in the wild. 
 
 In this paper, we build on this ability to non-invasively monitor stress
@@ -34,8 +33,13 @@ and alleviate stress. An ability to predict stress in the moment (RQ2)
 can enable the development of digital tools to avoid stress. 
 
 Our work builds upon previous work and extends it by performing an
-eight-week study in the workplace with 14 knowledge workers,
-collecting biometric data as well as
+eight-week study in the workplace with 14 knowledge 
+workers. To the best of our knowledge, this is the 
+longest in-situ study performed in a real-world 
+environment of knowledge workers to analyze an extensive collection of biometric signals with experience samples examining real-time prediction of stress in the workplace~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}.
+Previous studies are predominantly controlled lab studies which used only a subset of the relevant biometric signals we captured, have been much more limited in duration, or are not focused on the workplace. 
+
+We collected biometric data as well as
 experience samples on stress, and two related human aspects: focus and
 awakeness. We collected participant reports on focus because the
 challenges that contribute to stress levels can also make it hard for
@@ -45,14 +49,13 @@ productivity~\cite{mark2014bored}.  We collected participant reports
 on awakeness because a lack of awakeness (sleepiness) can result in
 undesired consequences on work~\cite{connor02}.  The participants in
 our study, who perform various job functions for a research and
-development group within a single large corporation, wore a single
+development group within a single large corporation, wore a novel, state-of-the-art
 biometric armband sensor\footnote{Biovotion Everion
   sensor~\cite{everion}} with low invasiveness that captured heart-,
 respiration- and skin-related measures. This modality was chosen to
 ease longitudinal deployment in the field. Using machine learning, we
 created classifiers and analyzed their ability to predict stress, focus, and awakeness levels. Considering all of these three human aspects helps us to consider whether one aspect might be easier to detect than another. If one aspect is easier to detect, it might serve
 as a proxy or an indicator of the presence (or absence) of other aspects. 
-
 
 In our analysis, we identify several trends in day-to-day stress levels
 that emerged over the course of our eight-week study.  The results of
