@@ -79,7 +79,7 @@ In an attempt to explain some of the stress that our participants were experienc
 \label{secOverallAccuracy}
 
 To investigate whether stress, focus and awakeness can be predicted in
-the moment based on biometric measures.
+the moment based on biometric measures,
 we investigated classifiers trained
 for each individual and across all participants. We report on the effectiveness of
 these classifiers and the features that are important in prediction of stress, focus
@@ -138,7 +138,7 @@ features using all of the available biometric data from 10:35am to 11:05am.
 For each time window, we calculate 10 statistical measurements from the 
 biometric data to create 10 distinct features. Specifically, the 10 
 statistical measurements are: mean, standard deviation, variance, median, 
-percentile25, percentile75, interquartile range, maximum, minimum, and 
+25\textsuperscript{th} percentile, 75\textsuperscript{th} percentile, interquartile range, maximum, minimum, and 
 range. Thus, for each survey response, we generate a large number of 
 corresponding features based on three factors: biometric measurement, time 
 window, and statistical measurement. In addition to these biometric 
@@ -199,7 +199,7 @@ algorithm, we compared multiple classifiers using the popular machine learning l
 Since peoples' experience of stress, focus, and awakeness (as well as
 their physiological manifestations) can vary substantially
 (e.g.,~\cite{Hernandez11}), we first trained individual classifiers
-for each participant (rather than a general one for all
+for each participant (as opposed to a general one for all
 participants). The results of our analysis are reported in
 Table~\ref{tab:accuracy}. For our analysis, we report values of
 accuracy, one of the most commonly used metric to compare performance,
@@ -210,7 +210,7 @@ predicts the most likely/frequent class while ignoring the class of
 higher importance and interest, precision and recall of the class of
 interest are also important to
 consider~\cite{yap2014,bhattacharyya_data_2011,Hernandez11}.
-For some users (i.e., S1. as seen In Table \ref{responseDistribution}), the imbalance in their data was so extreme that even after adjusting by oversampling it was impossible to create a reasonable classifier. These scenarios are difficult to predict as any classifier will not have enough variance in its training data for the 'stressed' situation to adequately distinguish it from the non-stressed case.
+For some users (i.e., S1. as seen in Table \ref{responseDistribution}), the imbalance in their data was so extreme that even after adjusting by oversampling it was impossible to create a reasonable classifier. These scenarios are difficult to predict as any classifier will not have enough variance in its training data for the 'stressed' situation to adequately distinguish it from the non-stressed case.
 
 
 % However, the imbalance in the data can lead to a classifier with high accuracy if it always just predicts the more likely class while ignoring the class of higher importance and interest in our case (i.e. stressed, not focused, not awake). Therefore, we further report the precision and recall for the three classes 'stressed', 'not focused' and 'not awake'. 
