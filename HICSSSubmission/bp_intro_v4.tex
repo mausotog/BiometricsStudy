@@ -1,0 +1,172 @@
+%!TEX root = bioPrediction_main.tex
+\section{Introduction}
+\textit{`The most valuable asset of a 21st-century institution (whether 
+business or non-business) will be its knowledge workers and their 
+productivity'}~\cite{drucker1999knowledge}. Knowledge workers constantly face 
+challenges, such as a high work fragmentation, continuous disruptions and 
+distractions, highly complex and demanding tasks, and long working 
+hours~\cite{gonzalez2004constant,mark2008cost,czerwinski04diary}. 
+These challenges, amongst others, can lead to stress in the workplace.
+Stress is an ever-growing concern as it can lead to
+fatigue, burnout and various other illnesses, ultimately resulting in work 
+absences and marked productivity 
+losses~\cite{hockey1997stress,setz2010stress,wrs2010}.
+
+Given the importance of understanding stress and its relationship and
+effect on work, a number of studies have been conducted using a
+variety of methods. Minimally invasive studies have shown the benefit of using
+autonomic nervous system (ANS) activity by analyzing biometric signals
+of the human body, such as blood pressure~\cite{kataoka00}.
+These approaches can be used in long-term field
+studies, opening up the question of what stress
+looks like in the wild. 
+In contrast, other studies have studied stress using invasive
+techniques, such as measuring cortisol as a stress biomarker~\cite{piazza10}. These studies are best suited
+for laboratory environments.
+
+In this paper, we build on this ability to non-invasively monitor stress
+to investigate two questions: RQ1) how do knowledge
+workers at work experience stress over time, and RQ2) can we predict
+whether a knowledge worker is experiencing stress in the moment based
+on biometric data. A better understanding of how stress is experienced (RQ1)
+can help inform the design of workplaces to manage
+and alleviate stress. An ability to predict stress in the moment (RQ2)
+can enable the development of digital tools to avoid stress. 
+
+Our work builds upon previous work and extends it by performing an
+eight-week study in the workplace with 14 knowledge 
+workers. To the best of our knowledge, this is the 
+longest in-situ study performed in a real-world 
+environment of knowledge workers analyzing an extensive collection of biometric signals with experience samples examining real-time prediction of stress in the workplace~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}.
+Previous studies are predominantly controlled lab studies which used only a subset of the relevant biometric signals we captured, much more limited in duration, or not focused on a real-world environment. 
+
+We collected biometric data as well as
+experience samples on stress, and two related human aspects: focus and
+awakeness. We collected participant reports on focus because the
+challenges that contribute to stress levels can also make it hard for
+knowledge workers to stay focused and the level of focus
+can affect
+productivity~\cite{mark2014bored}.  We collected participant reports
+on awakeness because a lack of awakeness (sleepiness) can result in
+undesired consequences on work~\cite{connor02}.  The participants in
+our study perform various job functions for a research and
+development group within a single large corporation. For this study, they wore a novel, state-of-the-art
+biometric armband sensor\footnote{Biovotion Everion
+  sensor~\cite{everion}} with low invasiveness that captured heart-,
+respiration- and skin-related measures. This modality was chosen to
+ease longitudinal deployment in the field. Using machine learning, we
+created classifiers and analyzed their ability to predict stress, focus, and awakeness levels. Considering all of these three human aspects helps us to consider whether one aspect might be easier to detect than another. If one aspect is easier to detect, it might serve
+as a proxy or an indicator of the presence (or absence) of other aspects. 
+
+In our analysis, we identify several trends in day-to-day stress levels
+that emerged over the course of our eight-week study.  The results of
+our analysis also show that biometric signals collected from a single
+minimally invasive sensor can be used to predict stress and its
+related aspects accurately, with the abstract concept of focus
+(predictably) being the hardest to detect. Our results further show
+that knowledge workers' self-reported levels of stress, focus and
+awakeness and their physiological manifestation and prediction can
+vary substantially between individuals.
+%Our results further show that overall combining biometric features with computer interaction information 
+%results in an improvement
+%over each of the training sets individually.
+The main contributions of our work are:
+\begin{itemize}
+	\vspace{-3mm}
+	\item A qualitative examination of how knowledge worker stress presents and fluctuates in the wild based on an eight-week field study with 14 office workers.
+	\vspace{-3mm}
+	\item The creation and analysis of measures for the automatic monitoring of knowledge workers' stress, focus and awakeneess in the workplace based on a machine learning model trained on biometric data and experience samples.
+	%\item A thorough analysis of ways to increase performance, including the training sample size, time window to collect data, and the inclusion of computer interaction features.
+	\vspace{-3mm}
+	\item A discussion on the impact of applying this research to improve
+the interaction of knowledge workers with their digital environment leading to an improvement in their productivity and well-being, besides a reflection on aspects that can be further improved in future studies.
+    \end{itemize}
+
+%Ideally businesses believe that \textit{`The most valuable asset of a 21st-century institution (whether business or non-business) [is] its knowledge workers and their productivity'}~\cite{drucker1999knowledge}. In practice these valuable assets are as mercilessly optimized as assembly lines during the industrial age. Knowledge workers' desks occupy increasingly small footprints, optimizing a company's cost per square unit. Their shifts, especially in factories, command centers, or web service organizations, span twenty four hours a day, optimizing uptime. 
+%
+%
+%
+%In these settings they face a variety of challenges. Their squeezed workspaces lead to continuous disruptions and distractions, on top of the high work fragmentation and highly complex tasks typical of modern office work~\cite{gonzalez2004constant,zuger2015interruptibility,zuger18,mark2014bored}. %This leads to an up to 80\% of accidents being attributed, at least in part, to actions or omissions of workers\cite{hse99}. 
+%Their shift work--and the required overnight shifts that accompany it--naturally causes sleepines. These challenges combine to increase stress and decrease focus, which in turn impacts worker productivity. For instance, the continuous disruptions that knowledge workers face can lead to higher error rates, lower overall performance~\cite{bailey2001effects,mark2008cost}, and, in a control room setting, could easily cause an accident that costs millions of dollars.
+%%when a sleepy operator might, for example, miss early warning signs and cause...
+%%\todo{Nick: can you find a good example here and citation?}. 
+%Less immediate but just as insidious, stress at the workplace is a growing concern and one of the most common work-related health problems. It leads to fatigue, burnout and various other illnesses, ultimately resulting in work absences and marked productivity losses~\cite{hockey1997stress,setz2010stress,wrs2010}. 
+%
+%The first step in combating these common workplace challenges is to be able to measure their effect on workers. Yet measuring human aspects--focus, stress, and awakeness--has traditionally been done manually, making it difficult to efficiently apply Taylorism's scientific management. And yet the benefits of doing so are clear; measuring human aspects could provide better management of disruptions~\cite{iqbal2005effectiveness,zuger2017reducing}, automatically adjust lighting to circadian cycles to reduce sleepiness among shift workers, or continuously monitor stress levels to trigger pro-active interventions. 
+%
+%Fortunately, with recent advances in sensing technologies there is increasing hope that we can accurately and automatically measure human aspects. A number of recent studies have discussed and investigated the use of biometrics to measure aspects such as a person's cognitive and emotional states~\cite{beatty82,picard1995affective,Kramer90,Rowe98,richter1998psychophysiological,Wilson2002}. Specifically, studies have looked at using biometrics to measure stress~\cite{dishman2000stress,Setz2010}, or awakeness / (energetic) arousal~\cite{exler2016tired,mcduff2012affectaura,haag2004}. Yet, very few studies measure productivity-related factors in the workplace over an extended period of time, and little is known about measuring the more abstract concept of focus. Given the importance of focus, described as a combination of engagement and challenge in a work task by Mark et al.~\cite{mark2014bored}, to an office workers' productivity, this factor deserves further study. 
+%
+%
+%Especially with the advances in sensing technologies, there is an increasing number of studies that discussed and investigated the use of biometrics to measure aspects such as a person's cognitive and emotional states~\cite{beatty82,picard1995affective,Kramer90,Rowe98,richter1998psychophysiological,Wilson2002}. Studies have also looked more specifically at using biometrics to measure stress~\cite{dishman2000stress,Setz2010}, or awakeness / (energetic) arousal~\cite{exler2016tired,mcduff2012affectaura,haag2004}. Yet, only very few studies have looked at measuring such productivity-related factors in the workplace over an extended period of time. Also, little is known about measuring a more abstract concept of focus that is often used in the context of knowledge workers' productivity and was, for example, described as a combination of engagement and challenge in a work task by Mark et al.~\cite{mark2014bored}. 
+
+%Thus, the objective of our research is to continuously (and automatically) measure focus, awakeness, and stress in the workplace. These measures are targeted with an eye towards improving knowledge workers' productivity and well-being in the future. For instance, by automatically protecting the worker from audible interruptions during a high focus period by showering him/her with white noise or by recommending stress-reducing interventions such as Tai Chi during an extended period of high stress. 
+%
+%Our work builds upon previous work and extends it by performing an eight-week study in the workplace with 14 knowledge workers, collecting biometric and computer interaction data as well as experience samples on focus, awakeness, and stress. Our participants, who perform various job functions for a research and development group within a single large corporation, wore a single biometric armband sensor\footnote{Biovotion Everion sensor~\cite{everion}} with low invasiveness that captured heart- and skin-related measures. This modality was chosen to ease longitudinal deployment in the field. Using machine learning, we created classifiers and analyzed their ability to predict the three productivity-related human aspects. In addition, we compared biometric features with computer interaction features in their predictive power, we analyzed .. and ...
+%
+%The results of our analysis show that biometrics of a single minimally invasive sensor can be used to ... accurately, with the abstract concept of focus (predictably) being the hardest to detect, yet even its detection within reasonable limits was feasible. \tf{Chris: is it possible to state this?} The results also show that knowledge workers' self-reported levels of stress, focus and awakeness and their physiological manifestation and prediction can vary a lot between individuals. Our results further show that ...
+%The main contributions of our work are the creation and analysis of measures for the automatic monitoring of knowledge workers' awakeness, stress, and the more abstract concept of focus in the workplace based on an eight-week field study with 14 office workers. a thorough analysis of ... and a discussion on the ...
+
+%
+%combine multiple factors, also including a more abstract concept of focus that is highly related to attention, but also engagement and challenge~\cite{mark2014bored}
+%compare it with computer interaction sensors that are less invasive
+%focus on a single biometric sensor modality to support longitudinal deployment and comfort
+
+% Yet, only few studies looked at a more complete set of productivity-related factors
+%focus, awakeness and stress predicting these productivity-related factors in combination, comparing biometrics to 
+%I'd say it's the assessment of predicting multiple factors, using two different types of measurements (biometric and computer interaction), and doing all of it in practice over an extended period of time (every few are more than a few hours).
+
+%stressed: high arousal, low valence
+%tired: low arousal
+
+
+
+
+
+
+
+
+
+
+
+%
+%
+%
+%%\todo{NAK: I have heard from either Thomas or CGM a figure that captures how many problems are due to human error (something like 80\%). If we can find that cite, it should figure prominently in the motivation.}
+%
+%%Control rooms, while not much different from standard office settings on the surface, differ in the immediacy of their impact. In emergency dispatch offices, factory control rooms, and mining operations centers decision immediately impact safety and profits. A sleepy factory operator that misses early warnings could lose millions of dollars due to a process shutdown; a stressed mining operator that mistakenly dispatches two underground trucks to the same location could cause a deadly crash.  In these demanding settings  the environment must be finely tuned to support the job at hand. For instance, on overnight shifts, if controlling the lighting helps workers shift their circadian sleep cycle, reducing their sleepiness, it should be done, as the consequences of bad decisions are high.
+%
+%%To ensure the best decisions are made we focus on reducing stress, increasing focus and awakeness. Unfortunately, beyond a few lightly-studied phenomenon such as temperature's affect on awakeness, there are few absolutes that can be applied to workplaces wholesale. Thus, when optimizing a workspace tracking the affect of a given change, if any, is key. 
+%
+%%The challenge with tracking the affect of a given change in a workspace on its workers is that it is most often done via self-reporting, or the process of filling out daily, hourly, or worse surveys on one's current awakeness, stress, and focus. Worse, this process must be repeated every time a change is implemented. Performing this process rapidly becomes impractical since the changes in the environment may be very frequent  (e.g., modifying the room temperature several times a day). Previous studies show that interruptions that undesired constant interruptions that happen at inopportune moments have negative effects, causing more stress and frustration~\cite{adamczyk2004if,czerwinski2000instant,mark2008cost}.
+%
+%% The importance of the problem
+%Human decisions in the workplace directly impact worker productivity, product/process quality, and workplace safety. Control rooms are noteworthy for the immediacy of impact. Control room operators make hundreds of decisions during a workday, and the consequences of poor decisions can be severe. A sleepy factory operator could cause millions of dollars in losses by failing to recognize the early warning signs of a process shutdown, an unfocused water-processing plant operator could cause a water line failure by missing an alarm warning of a pressure overload, or a stressed mining operator could cause a deadly crash by mistakenly dispatching two trucks to the same underground location.
+%
+%% The overall problem
+%The goal of control room design is to create and maintain an environment that maximizes operator alertness (i.e., that decreases stress and that increases focus and awakeness). Modern control rooms rely on adjustments to ergonomics, light, and temperature to support improved operator alertness. For example, adjusting the lighting in a control room can help operators on overnight shifts to alter their circadian sleep cycles, improving their awakeness while at work. A key challenge in control room design is understanding the effects of a given change to the control room environment on the operators. In particular, reliance on operator self-reporting to capture current levels of stress, focus, and awakeness is cumbersome, distracting, and labor intensive. Indeed, self-reporting can affect the phenomena being measured; e.g., interrupting work to respond to a survey can reduce focus. Moreover, as self-reporting is required not only to create the initial environment, but also to maintain it over time, operator self-reporting is impractical and can be harmful to operator alertness. Previous studies establish that regular interruptions, particularly those that happen at inopportune moments, cause stress and frustration~\cite{adamczyk2004if,czerwinski2000instant,mark2008cost}.
+%
+%% What others have done
+%Previous research addresses how various signals such as blood pressure, heartbeat, and temperature can be linked to psychological states and processes~\cite{Kramer90,Rowe98,Eekelen04,valentini10}. However, little research addresses how biometric signals can be used to predict proxies for alertness such as levels of stress, focus, and awakeness. Instead, previous research has focused on using biometric signals to assess task difficulty in software development~\cite{fritz2014using}, code quality online~\cite{Muller16}, or  interruptibility~\cite{zuger18}.
+%
+%% What we present in this paper
+%\todo{NAK: Would like the opinion of Thomas here --- should we give more of our vision here or stick to the (current) approach of keeping it specific to this paper. That is, do we want to talk about using biometrics to monitor and improve the workplace, or just stick to talking about predicting based on biometrics?}
+%The overall goal of our work is to create a machine learning 
+%model based in anecdotal biometric
+%data which can infer the level of stress, focus, and 
+%awakeness of a person by analyzing their biometric data.
+%This approach will remove the unnecessary constant interruptions by inferring
+%the stress, focus, and awakeness of an individual from their biometric features.
+%This will allows to assess if a change performed in the environment 
+%of an individual is beneficial
+%or prejudicial to their productivity and alertness and, therefore, be able to 
+%act upon this information to reverse or increase the change. 
+%
+%% The contributions of this paper
+%The contributions of this paper are:
+%\begin{itemize}
+%\item The results of an exploratory study on the viability of using biometric sensors to predict the stress, focus, and awakeness of an individual
+%\item A machine learning approach to predict proxies for alertness using biometric signals
+%\item Guidance regarding the optimal time window and learning curve to generate an effective predictive model
+%\item A comparison between the proposed approach using biometric signals and an approach using computer interaction data
+%\end{itemize}
+

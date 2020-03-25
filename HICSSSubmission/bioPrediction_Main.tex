@@ -1,0 +1,205 @@
+%
+% File hicss51.tex
+%
+% Contact: Holm Smidt, hsmidt@hawaii.edu
+%%
+%%
+%% Based on the style files for ACL 2015 by 
+%% car@ir.hit.edu.cn, gdzhou@suda.edu.cn
+
+
+\documentclass[10pt]{article}
+\input{hicss51-packages.tex}
+\newcommand{\sansserifformat}[1]{\fontfamily{cmss}{ #1}}%
+
+\usepackage{flushend}
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{minted}
+%\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+%\renewcommand{\textrightarrow}{$\rightarrow$}
+
+\usepackage{booktabs} % For formal tables
+\usepackage{comment}
+\usepackage{tabularx} 
+
+% Some optional stuff you might like/need.
+%\usepackage{microtype}        % Improved Tracking and Kerning
+
+
+%\usepackage{todonotes}
+
+%\presetkeys{todonotes}{inline}{}
+% for commenting and making it visible in the pdf (easy to hide after)
+%\newboolean{hidecomments}
+%\setboolean{hidecomments}{false}
+%\nochangebars
+%\ifthenelse{\boolean{hidecomments}}
+%{\newcommand{\cb}[2]{}}
+%{\newcommand{\cb}[2]{
+%		\fbox{\bfseries\sffamily\scriptsize#1}
+%		{\sf\small$\blacktriangleright$ %$\RHD$
+%			{#2} $\blacktriangleleft$}}} %\LHD$}}}%
+%\newcommand\tf[1]{\cb{TF}{\textcolor{green}{#1}}}
+%\newcommand\cs[1]{\cb{CS}{\textcolor{blue}{#1}}}
+%\newcommand\ms[1]{\cb{MS}{\textcolor{red}{#1}}}
+%\newcommand\tfC[1]{\todo[color=green,inline]{Thomas: #1}}
+
+%\setlength\titlebox{5cm}
+
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size).
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Observing and Predicting Knowledge Worker Stress in the Wild}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+
+\author{Authors will be visible after double blind review}
+
+\begin{comment}
+\author{Mauricio Soto\\
+  ABB Future Labs \\
+  Raleigh \\
+  North Carolina \\
+  {\underline{mauricio.soto@us.abb.com}} \\\And
+  Chris Satterfield \\
+  University of British Columbia \\
+  Vancouver \\
+  British Columbia \\
+  {\underline{cds00@cs.ubc.ca}} \\\And 
+  Thomas Fritz \\
+  University of Zurich \\
+  Zurich \\ 
+  Switzerland \\
+  {\underline{fritz@ifi.uzh.ch}} \\\And 
+  Gail C. Murphy \\
+  University of British Columbia \\
+  Vancouver \\
+  British Columbia \\
+  {\underline{murphy@cs.ubc.ca}}\\\And 
+  David Shepherd \\
+  Virginia Commonwealth University \\
+  Richmond \\
+  Virginia \\
+  {\underline{shepherdd@vcu.edu}} \\\And 
+  Nicholas A. Kraft \\
+  UserVoice \\
+  Raleigh \\ 
+  North Carolina \\
+  {\underline{kraft.nicholas.a@gmail.com}} \\}
+\end{comment}
+
+\date{}
+\begin{document}
+\maketitle
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+%\renewcommand{\shortauthors}{Soto et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+Knowledge workers face many challenges in the workplace: work is 
+fragmented, disruptions are constant, tasks are complex, and work hours can be 
+long. These challenges can impact knowledge workers' stress, focus and awakeness, and in turn their interaction with the digital environment, the quality of work 
+performed and their productivity in general. We report on a field study with 14
+knowledge workers over an eight-week period in which we investigated, using
+experience sampling, how the workers experience stress over time. During this field study, we also collected biometric data, which we then used to investigate if it is possible to predict such productivity-related indicators as stress, focus and awakeness, in the moment.
+We observed and report on various trends in knowledge worker stress levels
+over several weeks and show that machine learning models can be built to
+predict stress, focus and awakeness from biometric data.
+	\end{abstract}
+	% Author Keywords
+	%\keywords{\plainkeywords}
+	%\keywords{Biometrics, Stress, Awakeness, Focus, Computer Interaction, Ubiquituous Computing, Empirical Study, User Centered Design}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\input{bp_intro_v4}
+\input{bp_relatedWork}
+\input{bp_studyMethod}
+%\input{bp_data}
+\input{bp_results_1}
+%\input{bp_results_2}
+\input{bp_discussion}
+\input{bp_threats}
+\input{bp_conclusion}
+
+
+%\input{samplebody-conf}
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+%\balance{}
+
+%\bibliographystyle{ACM-Reference-Format}
+%\bibliography{bp_bibliography}
+
+%\end{document}
+
+
+% BALANCE COLUMNS
+
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+%\bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{ieeetr}
+\bibliography{bp_bibliography}
+
+%\bibliography{sample}
+
+
+\end{document}
+
+
+
+
+
+
+
+

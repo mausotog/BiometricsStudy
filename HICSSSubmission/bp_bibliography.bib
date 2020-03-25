@@ -1,0 +1,2711 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+
+
+%Entries
+%%% ====================================================================
+%%% BIOMETRICS STUDY
+
+@INPROCEEDINGS{zuger18,
+  AUTHOR = "Zuger, Manuela and Muller, Sebastian and Meyer, Andre and Fritz, Thomas",
+  TITLE = "Sensing Interruptibility in the Office: A Field Study on the Use of Biometric and Computer Interaction Sensor",
+  BOOKTITLE = "Conference on Human Factors in Computing Systems",
+  MONTH = "April",
+  YEAR = {2018}
+}
+
+@article{drucker1999knowledge,
+  title={Knowledge-worker productivity: The biggest challenge},
+  author={Drucker, Peter F},
+  journal={California management review},
+  volume={41},
+  number={2},
+  pages={79--94},
+  year={1999},
+}
+
+@inproceedings{exler2016tired,
+ author = {Exler, Anja and Schankin, Andrea and Klebsattel, Christoph and Beigl, Michael},
+ title = {A Wearable System for Mood Assessment Considering Smartphone Features and Data from Mobile ECGs},
+ booktitle = {Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing: Adjunct},
+ series = {UbiComp '16},
+ year = {2016},
+ pages = {1153--1161},
+} 
+
+@inproceedings{mcduff2012affectaura,
+ author = {McDuff, Daniel and Karlson, Amy and Kapoor, Ashish and Roseway, Asta and Czerwinski, Mary},
+ title = {AffectAura: An Intelligent System for Emotional Memory},
+ booktitle = {Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+ series = {CHI '12},
+ year = {2012},
+ pages = {849--858},
+ publisher = {ACM},
+} 
+
+@inproceedings{czerwinski04diary,
+ author = {Czerwinski, Mary and Horvitz, Eric and Wilhite, Susan},
+ title = {A Diary Study of Task Switching and Interruptions},
+ booktitle = {Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+ series = {CHI '04},
+ year = {2004},
+ pages = {175--182},
+ publisher = {ACM},
+} 
+
+@article{dishman2000stress,
+title = "Heart rate variability, trait anxiety, and perceived stress among physically fit men and women",
+journal = "International Journal of Psychophysiology",
+author = "Rod K. Dishman and Yoshio Nakamura and Melissa E. Garcia and Ray W. Thompson and Andrea L. Dunn and Steven N. Blair",
+volume = "37",
+number = "2",
+pages = "121 - 133",
+year = "2000",
+}
+
+
+@INPROCEEDINGS{vorburger05,
+  AUTHOR = "Peter Vorburger Abraham Bernstein and Alen Zurfluh",
+  TITLE = "Interruptability Prediction Using Motion Detection",
+  BOOKTITLE = "Workshop on Managing Context Information in Mobile and Pervasive Environments",
+  YEAR = {2005}
+}
+
+
+@INPROCEEDINGS{tanaka11,
+	AUTHOR = "Takahiro Tanaka and Kinya Fujita",
+    TITLE = "Study of user
+interruptibility estimation based on focused application
+switching",
+	BOOKTITLE = "Conference
+on Computer Supported Cooperative Work",
+	YEAR = "2011",
+    PAGES = "721--724"
+}
+
+@ARTICLE{setz2010stress, 
+ author={C. Setz and B. Arnrich and J. Schumm and R. La Marca and G. Troster and U. Ehlert}, 
+ journal={IEEE Transactions on Information Technology in Biomedicine}, 
+ title={Discriminating Stress From Cognitive Load Using a Wearable EDA Device}, 
+ year={2010}, 
+ volume={14}, 
+ number={2}, 
+ pages={410-417}, 
+}
+
+@article{hockey1997stress,
+ author = "G. Robert J. Hockey",
+ title = {Compensatory control in the regulation of human performance under stress and high workload: A cognitive-energetical framework},
+ journal = "Biological Psychology",
+ volume = "45",
+ number = "1",
+ pages = "73 - 93",
+ year = "1997",
+}
+
+
+@techreport{wrs2010,
+ author = {European Foundation for the Improvement of Living and Working Conditions},
+ title = {Work-related stress},
+ series = {Technical Report},
+ year = {2010},
+ note = {\url{https://www.eurofound.europa.eu/printpdf/publications/report/2010/work-related-stress}}
+}
+
+
+@INPROCEEDINGS{fogarty05,
+	AUTHOR = "Fogarty, James and Ko, Andrew J. and Aung, Htet Htet and Golden, Elspeth and Tang, Karen P and Hudson, Scott E.",
+    TITLE = "Examining Task Engagement in Sensor-Based Statistical
+Models of Human Interruptibility",
+	BOOKTITLE = "SIGCHI Conference on Human Factors in Computing Systems",
+	PAGES = "331--340",
+    year=2005
+}
+
+@INPROCEEDINGS{meyer18,
+	AUTHOR = "Andre N. Meyer",
+    TITLE = "Fostering software developers' productivity at work through self-monitoring and goal-setting",
+	BOOKTITLE = "40th International Conference on Software Engineering",
+	PAGES = "480--483 "
+}
+
+@INPROCEEDINGS{pedregosa11,
+	AUTHOR = "F. Pedregosa and G. Varoquaux and A. Gramfort and V. Michel and B. Thirion and O. Grisel and M. Clondel and P. Prettenhofer and R.Weiss and V. Dubourg and J. Vanderplas and A. Passos and D. Cournapeau and M. Brucher and M. Perrot and E. Duchesnay",
+    TITLE = "Scikit-learn: Machine Learning in Python",
+	BOOKTITLE = "Journal of Machine Learning Research 12",
+	YEAR = "2011",
+    PAGES = "2825--2830"
+}
+
+
+
+@inproceedings{meyer2014software,
+  title={Software developers' perceptions of productivity},
+  author={Meyer, Andr{\'e} N and Fritz, Thomas and Murphy, Gail C and Zimmermann, Thomas},
+  booktitle={Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering},
+  pages={19--29},
+  year={2014},
+  organization={ACM}
+}
+
+@article{meyer2017work,
+  title={The Work Life of Developers: Activities, Switches and Perceived Productivity},
+  author={Meyer, Andre N and Barton, Laura E and Murphy, Gail C and Zimmermann, Thomas and Fritz, Thomas},
+  journal={IEEE Transactions on Software Engineering},
+  year={2017},
+  publisher={IEEE}
+}
+
+@inproceedings{mirza2011switch,
+  title={Switch detector: an activity spotting system for desktop},
+  author={Mirza, Hamid Turab and Chen, Ling and Chen, Gencai and Hussain, Ibrar and He, Xufeng},
+  booktitle={Proceedings of the 20th ACM international conference on Information and knowledge management},
+  pages={2285--2288},
+  year={2011},
+  organization={ACM}
+}
+
+@inproceedings{nair2005frequency,
+  title={Frequency-based detection of task switches},
+  author={Nair, Rahul and Voida, Stephen and Mynatt, Elizabeth D},
+  booktitle={Proceedings of the 19th British HCI Group Annual Conference},
+  volume={2},
+  pages={94--99},
+  year={2005}
+}
+
+@article{karvonen1988heart,
+  title={Heart rate and exercise intensity during sports activities},
+  author={Karvonen, Juha and Vuorimaa, Timo},
+  journal={Sports Medicine},
+  volume={5},
+  number={5},
+  pages={303--311},
+  year={1988},
+  publisher={Springer}
+}
+
+@inproceedings{hudson2003predicting,
+  title={Predicting human interruptibility with sensors: a Wizard of Oz feasibility study},
+  author={Hudson, Scott and Fogarty, James and Atkeson, Christopher and Avrahami, Daniel and Forlizzi, Jodi and Kiesler, Sara and Lee, Johnny and Yang, Jie},
+  booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
+  pages={257--264},
+  year={2003},
+  organization={ACM}
+}
+
+@article{stern2011preliminary,
+  title={A preliminary study on interruptibility detection based on location and calendar information},
+  author={Stern, Hermann and Pammer, Viktoria and Lindstaedt, Stefanie N},
+  journal={Proc. CoSDEO},
+  volume={11},
+  year={2011}
+}
+
+@inproceedings{tani2013estimating,
+  title={Estimating user interruptibility by measuring table-top pressure},
+  author={Tani, Takahisa and Yamada, Seiji},
+  booktitle={CHI'13 Extended Abstracts on Human Factors in Computing Systems},
+  pages={1707--1712},
+  year={2013},
+  organization={ACM}
+}
+
+@inproceedings{vorburger2011interruptability,
+  title={Interruptability Prediction Using Motion Detection},
+  author={Vorburger, Peter and Bernstein, Abraham and Zurfluh, Alen},
+  booktitle={1st Int. Workshop on Managing Context Information in Mobile and Pervasive Environments MCMP-05},
+  year={2011}
+}
+
+@article{visuri2017predicting,
+  title={Predicting Interruptibility for Manual Data Collection: A Cluster-Based User Model},
+  author={Visuri, Aku and van Berkel, Niels and Luo, Chu and Goncalves, Jorge and Ferreira, Denzil and Kostakos, Vassilis},
+  year={2017}
+}
+
+@ONLINE{amheart2016zo,
+author = {American Heart Association},
+title = {Target Heart Rates},
+month = oct,
+year = {2016},
+url = {http://www.heart.org/HEARTORG/HealthyLiving/PhysicalActivity/FitnessBasics/Target-Heart-Rates_UCM_434341_Article.jsp}
+}
+
+@article{mulder1992measurement,
+  title={Measurement and analysis methods of heart rate and respiration for use in applied environments},
+  author={Mulder, LJM},
+  journal={Biological psychology},
+  volume={34},
+  number={2},
+  pages={205--236},
+  year={1992},
+  publisher={Elsevier}
+}
+
+@article{wilson2002analysis,
+  title={An analysis of mental workload in pilots during flight using multiple psychophysiological measures},
+  author={Wilson, Glenn F},
+  journal={The International Journal of Aviation Psychology},
+  volume={12},
+  number={1},
+  pages={3--18},
+  year={2002},
+  publisher={Taylor \& Francis}
+}
+
+@inproceedings{haapalainen2010psycho,
+  title={Psycho-physiological measures for assessing cognitive load},
+  author={Haapalainen, Eija and Kim, SeungJun and Forlizzi, Jodi F and Dey, Anind K},
+  booktitle={Proceedings of the 12th ACM international conference on Ubiquitous computing},
+  pages={301--310},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{zuger2015interruptibility,
+  title={Interruptibility of software developers and its prediction using psycho-physiological sensors},
+  author={Z{\"u}ger, Manuela and Fritz, Thomas},
+  booktitle={Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems},
+  pages={2981--2990},
+  year={2015},
+  organization={ACM}
+}
+
+@inproceedings{fritz2014using,
+  title={Using psycho-physiological measures to assess task difficulty in software development},
+  author={Fritz, Thomas and Begel, Andrew and M{\"u}ller, Sebastian C and Yigit-Elliott, Serap and Z{\"u}ger, Manuela},
+  booktitle={Proceedings of the 36th International Conference on Software Engineering},
+  pages={402--413},
+  year={2014},
+  organization={ACM}
+}
+
+    
+
+@inproceedings{fogarty2005examining,
+  title={Examining task engagement in sensor-based statistical models of human interruptibility},
+  author={Fogarty, James and Ko, Andrew J and Aung, Htet Htet and Golden, Elspeth and Tang, Karen P and Hudson, Scott E},
+  booktitle={Proceedings of the SIGCHI conference on Human Factors in Computing Systems},
+  pages={331--340},
+  year={2005},
+  organization={ACM}
+}
+
+@inproceedings{iqbal2007understanding,
+  title={Understanding and developing models for detecting and differentiating breakpoints during interactive tasks},
+  author={Iqbal, Shamsi T and Bailey, Brian P},
+  booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
+  pages={697--706},
+  year={2007},
+  organization={ACM}
+}
+
+@inproceedings{nair2005frequency,
+  title={Frequency-based detection of task switches},
+  author={Nair, Rahul and Voida, Stephen and Mynatt, Elizabeth D},
+  booktitle={Proceedings of the 19th British HCI Group Annual Conference},
+  volume={2},
+  pages={94--99},
+  year={2005}
+}
+
+@article{cohen1994perceived,
+  title={Perceived stress scale},
+  author={Cohen, Sheldon and Kamarck, T and Mermelstein, R and others},
+  journal={Measuring stress: A guide for health and social scientists},
+  year={1994}
+}
+
+@article{loureiro2015morning,
+  title={Morning or Evening person? Which type are you? Self-assessment of chronotype},
+  author={Loureiro, Filipe and Garcia-Marques, Teresa},
+  journal={Personality and Individual Differences},
+  volume={86},
+  pages={168--171},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@article{randler2009validation,
+  title={Validation of the full and reduced Composite Scale of Morningness},
+  author={Randler, Christoph},
+  journal={Biological Rhythm Research},
+  volume={40},
+  number={5},
+  pages={413--423},
+  year={2009},
+  publisher={Taylor \& Francis}
+}
+
+@article{pilcher1997sleep,
+  title={Sleep quality versus sleep quantity: relationships between sleep and measures of health, well-being and sleepiness in college students},
+  author={Pilcher, June J and Ginter, Douglas R and Sadowsky, Brigitte},
+  journal={Journal of psychosomatic research},
+  volume={42},
+  number={6},
+  pages={583--596},
+  year={1997},
+  publisher={Elsevier}
+}
+
+@inproceedings{shrot2014crisp,
+  title={Crisp: an interruption management algorithm based on collaborative filtering},
+  author={Shrot, Tammar and Rosenfeld, Avi and Golbeck, Jennifer and Kraus, Sarit},
+  booktitle={Proceedings of the SIGCHI conference on human factors in computing systems},
+  pages={3035--3044},
+  year={2014},
+  organization={ACM}
+}
+
+@inproceedings{arroyo2011attention,
+  title={Attention and intention goals can mediate disruption in human-computer interaction},
+  author={Arroyo, Ernesto and Selker, Ted},
+  booktitle={Proceedings of the 13th IFIP TC 13 international conference on Human-computer interaction-Volume Part II},
+  pages={454--470},
+  year={2011},
+  organization={Springer-Verlag}
+}
+
+@inproceedings{chen2007towards,
+  title={Towards a physiological model of user interruptability},
+  author={Chen, Daniel and Hart, Jamie and Vertegaal, Roel},
+  booktitle={IFIP Conference on Human-Computer Interaction},
+  pages={439--451},
+  year={2007},
+  organization={Springer}
+}
+
+@inproceedings{gonzalez2004constant,
+	Author = {Gonz{\'a}lez, Victor M and Mark, Gloria},
+	Booktitle = {Proceedings of the SIGCHI conference on Human factors in computing systems},
+	Organization = {ACM},
+	Pages = {113--120},
+	Title = {Constant, constant, multi-tasking craziness: managing multiple working spheres},
+	Year = {2004}}
+    
+@inproceedings{chong2006interruptions,
+	Author = {Chong, Jan and Siino, Rosanne},
+	Booktitle = {Proceedings of the 2006 20th anniversary conference on Computer supported cooperative work},
+	Organization = {ACM},
+	Pages = {29--38},
+	Title = {Interruptions on software teams: a comparison of paired and solo programmers},
+	Year = {2006}}
+
+    
+@inproceedings{adamczyk2004if,
+	Author = {Adamczyk, Piotr D and Bailey, Brian P},
+	Booktitle = {Proceedings of the SIGCHI conference on Human factors in computing systems},
+	Organization = {ACM},
+	Pages = {271--278},
+	Title = {If not now, when?: the effects of interruption at different moments within task execution},
+	Year = {2004}}
+    
+@article{bailey2006need,
+	Author = {Bailey, Brian P and Konstan, Joseph A},
+	Journal = {Computers in human behavior},
+	Number = {4},
+	Pages = {685--708},
+	Publisher = {Elsevier},
+	Title = {On the need for attention-aware systems: Measuring effects of interruption on task performance, error rate, and affective state},
+	Volume = {22},
+	Year = {2006}}
+    
+@inproceedings{bailey2001effects,
+	Author = {Bailey, Brian P and Konstan, Joseph A and Carlis, John V},
+	Title = {The effects of interruptions on task performance, annoyance, and anxiety in the user interface},
+	Booktitle = {Proceedings of INTERACT},
+	Pages = {593--601},
+	Volume = {1},
+	Year = {2001}}
+    
+@inproceedings{czerwinski2000instant,
+	Author = {Czerwinski, Mary and Cutrell, Edward and Horvitz, Eric},
+	Booktitle = {People and computers XIV: Proceedings of HCI},
+	Organization = {British Computer Society},
+	Pages = {71--76},
+	Title = {Instant messaging: Effects of relevance and timing},
+	Volume = {2},
+	Year = {2000}}
+    
+@inproceedings{mark2008cost,
+	Author = {Mark, Gloria and Gudith, Daniela and Klocke, Ulrich},
+	Booktitle = {Proceedings of the SIGCHI conference on Human Factors in Computing Systems},
+	Organization = {ACM},
+	Pages = {107--110},
+	Title = {The cost of interrupted work: more speed and stress},
+	Year = {2008}}
+    
+@inproceedings{iqbal2008effects,
+	Author = {Iqbal, Shamsi T and Bailey, Brian P},
+	Booktitle = {Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+	Organization = {ACM},
+	Pages = {93--102},
+	Title = {Effects of intelligent notification management on users and their tasks},
+	Year = {2008}}
+    
+@inproceedings{chen2004using,
+	Author = {Chen, Daniel and Vertegaal, Roel},
+	Booktitle = {CHI'04 extended abstracts on Human factors in computing systems},
+	Organization = {ACM},
+	Pages = {1513--1516},
+	Title = {Using mental load for managing interruptions in physiologically attentive user interfaces},
+	Year = {2004}}
+    
+@article{bailey2008understanding,
+	Author = {Bailey, Brian P and Iqbal, Shamsi T},
+	Journal = {ACM Transactions on Computer-Human Interaction (TOCHI)},
+	Number = {4},
+	Pages = {21},
+	Publisher = {ACM},
+	Title = {Understanding changes in mental workload during execution of goal-directed tasks and its application for interruption management},
+	Volume = {14},
+	Year = {2008}}
+    
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
+
+@inproceedings{tanaka2011study,
+  title={Study of user interruptibility estimation based on focused application switching},
+  author={Tanaka, Takahiro and Fujita, Kinya},
+  booktitle={Proceedings of the ACM 2011 conference on Computer supported cooperative work},
+  pages={721--724},
+  year={2011},
+  organization={ACM}
+}
+
+@inproceedings{iqbal2005effectiveness,
+ author = {Iqbal, Shamsi T. and Bailey, Brian P.},
+ title = {Investigating the Effectiveness of Mental Workload As a Predictor of Opportune Moments for Interruption},
+ booktitle = {CHI '05 Extended Abstracts on Human Factors in Computing Systems},
+ series = {CHI EA '05},
+ pages = {1489--1492},
+ year = {2005},
+ publisher = {ACM},
+} 
+
+@inproceedings{zuger2017reducing,
+  title={Reducing Interruptions at Work: A Large-Scale Field Study of FlowLight},
+  author={Z{\"u}ger, Manuela and Corley, Christopher and Meyer, Andr{\'e} N and Li, Boyang and Fritz, Thomas and Shepherd, David and Augustine, Vinay and Francis, Patrick and Kraft, Nicholas and Snipes, Will},
+  booktitle={Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems},
+  pages={61--72},
+  year={2017},
+  organization={ACM}
+}
+
+@inproceedings{iqbal2008effects,
+  title={Effects of intelligent notification management on users and their tasks},
+  author={Iqbal, Shamsi T and Bailey, Brian P},
+  booktitle={Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+  pages={93--102},
+  year={2008},
+  organization={ACM}
+}
+
+@article{monk2008effect,
+  title={The effect of interruption duration and demand on resuming suspended goals.},
+  author={Monk, Christopher A and Trafton, J Gregory and Boehm-Davis, Deborah A},
+  journal={Journal of Experimental Psychology: Applied},
+  volume={14},
+  number={4},
+  pages={299},
+  year={2008},
+  publisher={American Psychological Association}
+}
+
+@inproceedings{mark2014bored,
+  title={Bored mondays and focused afternoons: the rhythm of attention and online activity in the workplace},
+  author={Mark, Gloria and Iqbal, Shamsi T and Czerwinski, Mary and Johns, Paul},
+  booktitle={Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+  pages={3025--3034},
+  year={2014},
+  organization={ACM}
+}
+
+@inproceedings{iqbal2004changes,
+	Author = {Iqbal, Shamsi T and Adamczyk, Piotr D and Zheng, Xianjun Sam and Bailey, Brian P},
+	Booktitle = {Proceedings of the 17th Annual ACM Symposium on User Interface Software and Technology},
+	Title = {Changes in mental workload during task execution},
+	Year = {2004}
+}
+    
+@article{veltman1998physiological,
+	Author = {Veltman, JA and Gaillard, AWK},
+	Journal = {Ergonomics},
+	Number = {5},
+	Pages = {656--669},
+	Publisher = {Taylor \& Francis},
+	Title = {Physiological workload reactions to increasing levels of task difficulty},
+	Volume = {41},
+	Year = {1998}
+}
+
+@article{richter1998psychophysiological,
+	Author = {Richter, Peter and Wagner, Thomas and Heger, Ralf and Weise, Gunther},
+	Journal = {Ergonomics},
+	Number = {5},
+	Pages = {593--609},
+	Publisher = {Taylor \& Francis},
+	Title = {Psychophysiological analysis of mental load during driving on rural roads-a quasi-experimental field study},
+	Volume = {41},
+	Year = {1998}
+}
+
+@book{maaoui2010emotion,
+	Author = {Maaoui, Choubeila and Pruski, Alain and Abdat, F},
+	Publisher = {INTECH Open Access Publisher},
+	Title = {Emotion recognition through physiological signals for human-machine communication},
+	Year = {2010}
+}
+    
+@inproceedings{mathan2007neurophysiological,
+	Author = {Mathan, Santosh and Whitlow, Stephen and Dorneich, Michael and Ververs, Patricia and Davis, Gene},
+	Booktitle = {In Proceedings of the 4th International Conference of the Augmented Cognition Society},
+	Title = {Neurophysiological estimation of interruptibility: Demonstrating feasibility in a field context},
+	Year = {2007}
+}
+
+@article{van1998interrupts,
+	title={Interrupts: just a minute never is},
+	author={van Solingen, Rini and Berghout, Egon and van Latum, Frank},
+	journal={IEEE software},
+	volume={15},
+	number={5},
+	pages={97},
+	year={1998},
+	publisher={IEEE Computer Society}
+}
+
+@article{sykes2011interruptions,
+	title={Interruptions in the workplace: A case study to reduce their effects},
+	author={Sykes, Edward R},
+	journal={International Journal of Information Management},
+	volume={31},
+	number={4},
+	pages={385--394},
+	year={2011},
+	publisher={Elsevier}
+}
+
+@inproceedings{mark2005no,
+	title={No task left behind?: examining the nature of fragmented work},
+	author={Mark, Gloria and Gonzalez, Victor M and Harris, Justin},
+	booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
+	pages={321--330},
+	year={2005},
+	organization={ACM}
+}
+
+@inproceedings{mark2016email,
+  title={Email duration, batching and self-interruption: Patterns of email use on productivity and stress},
+  author={Mark, Gloria and Iqbal, Shamsi T and Czerwinski, Mary and Johns, Paul and Sano, Akane and Lutchyn, Yuliya},
+  booktitle={Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems},
+  pages={1717--1728},
+  year={2016},
+  organization={ACM}
+}
+
+@inproceedings{ho2005using,
+  title={Using context-aware computing to reduce the perceived burden of interruptions from mobile devices},
+  author={Ho, Joyce and Intille, Stephen S},
+  booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
+  pages={909--918},
+  year={2005},
+  organization={ACM}
+}
+
+@article{wang2017accuracy,
+  title={Accuracy of wrist-worn heart rate monitors},
+  author={Wang, Robert and Blackburn, Gordon and Desai, Milind and Phelan, Dermot and Gillinov, Lauren and Houghtaling, Penny and Gillinov, Marc},
+  journal={Jama cardiology},
+  volume={2},
+  number={1},
+  pages={104--106},
+  year={2017},
+  publisher={American Medical Association}
+}
+
+@article{acharya2006heart,
+  title={Heart rate variability: a review},
+  author={Acharya, U Rajendra and Joseph, K Paul and Kannathal, Natarajan and Lim, Choo Min and Suri, Jasjit S},
+  journal={Medical and biological engineering and computing},
+  volume={44},
+  number={12},
+  pages={1031--1051},
+  year={2006},
+  publisher={Springer}
+}
+
+@article{katidioti2016interrupted,
+  title={Interrupted by Your Pupil: An Interruption Management System Based on Pupil Dilation},
+  author={Katidioti, Ioanna and Borst, Jelmer P and Bierens de Haan, Douwe J and Pepping, Tamara and van Vugt, Marieke K and Taatgen, Niels A},
+  journal={International Journal of Human--Computer Interaction},
+  volume={32},
+  number={10},
+  pages={791--801},
+  year={2016},
+  publisher={Taylor \& Francis}
+}
+
+@inproceedings{borst2015makes,
+  title={What makes interruptions disruptive?: A process-model account of the effects of the problem state bottleneck on task interruption and resumption},
+  author={Borst, Jelmer P and Taatgen, Niels A and van Rijn, Hedderik},
+  booktitle={Proceedings of the 33rd annual ACM conference on human factors in computing systems},
+  pages={2971--2980},
+  year={2015},
+  organization={ACM}
+}
+
+@inproceedings{cades2007does,
+  title={Does the difficulty of an interruption affect our ability to resume?},
+  author={Cades, David M and Davis, Deborah A Boehm and Trafton, J Gregory and Monk, Christopher A},
+  booktitle={Proceedings of the human factors and ergonomics society annual meeting},
+  volume={51},
+  number={4},
+  pages={234--238},
+  year={2007},
+  organization={SAGE Publications Sage CA: Los Angeles, CA}
+}
+
+@article{gillie1989makes,
+  title={What makes interruptions disruptive? A study of length, similarity, and complexity},
+  author={Gillie, Tony and Broadbent, Donald},
+  journal={Psychological research},
+  volume={50},
+  number={4},
+  pages={243--250},
+  year={1989},
+  publisher={Springer}
+}
+
+@inproceedings{muller2015stuck,
+  title={Stuck and frustrated or in flow and happy: Sensing developers' emotions and progress},
+  author={M{\"u}ller, Sebastian C and Fritz, Thomas},
+  booktitle={Software Engineering (ICSE), 2015 37th IEEE International Conference on},
+  volume={1},
+  pages={688--699},
+  year={2015},
+  organization={IEEE}
+}
+
+@article{healey2005detecting,
+  title={Detecting stress during real-world driving tasks using physiological sensors},
+  author={Healey, Jennifer A and Picard, Rosalind W},
+  journal={ Transactions on intelligent transportation systems},
+  volume={6},
+  number={2},
+  pages={156--166},
+  year={2005},
+  publisher={IEEE}
+}
+
+@inproceedings{sano2013stress,
+  title={Stress recognition using wearable sensors and mobile phones},
+  author={Sano, Akane and Picard, Rosalind W},
+  booktitle={Humaine Association Conference on Affective Computing and Intelligent Interaction (ACII)},
+  pages={671--676},
+  year={2013},
+  organization={IEEE}
+}
+
+@inproceedings{wijsman2011towards,
+  title={Towards mental stress detection using wearable physiological sensors},
+  author={Wijsman, Jacqueline and Grundlehner, Bernard and Liu, Hao and Hermens, Hermie and Penders, Julien},
+  booktitle={Engineering in Medicine and Biology Society},
+  pages={1798--1801},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{fisher2011smartphone,
+  title={Smartphone interruptibility using density-weighted uncertainty sampling with reinforcement learning},
+  author={Fisher, Robert and Simmons, Reid},
+  booktitle={Machine Learning and Applications and Workshops (ICMLA), 2011 10th International Conference on},
+  volume={1},
+  pages={436--441},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{komuro2017relationship,
+  title={Relationship Between Worker Interruptibility and Work Transitions Detected by Smartphone},
+  author={Komuro, Kyohei and Fujimoto, Yuichiro and Fujita, Kinya},
+  booktitle={International Conference on Human-Computer Interaction},
+  pages={687--699},
+  year={2017},
+  organization={Springer}
+}
+
+@article{rosekind2010cost,
+  title={The cost of poor sleep: workplace productivity loss and associated costs.},
+  author={Rosekind, Mark R and Gregory, Kevin B and Mallis, Melissa M and Brandt, Summer L and Seal, Brian and Lerner, Debra},
+  journal={Journal of Occupational and Environmental Medicine},
+  volume={52},
+  number={1},
+  pages={91--98},
+  year={2010},
+  publisher={LWW}
+}
+
+@article{vidavcek1986productivity,
+  title={Productivity on a weekly rotating shift system: circadian adjustment and sleep deprivation effects?},
+  author={Vida{\v{c}}ek, Stjepan and Kaliterna, Ljiljana and Rado{\v{s}}evi{\'c}-Vida{\v{c}}ek, Biserka and Folkard, Simon},
+  journal={Ergonomics},
+  volume={29},
+  number={12},
+  pages={1583--1590},
+  year={1986},
+  publisher={Taylor \& Francis}
+}
+
+@inproceedings{hudson2003predicting,
+  title={Predicting human interruptibility with sensors: a Wizard of Oz feasibility study},
+  author={Hudson, Scott and Fogarty, James and Atkeson, Christopher and Avrahami, Daniel and Forlizzi, Jodi and Kiesler, Sara and Lee, Johnny and Yang, Jie},
+  booktitle={Proceedings of the SIGCHI conference on Human factors in computing systems},
+  pages={257--264},
+  year={2003},
+  organization={ACM}
+}
+
+@inproceedings{horvitz2003learning,
+  title={Learning and reasoning about interruption},
+  author={Horvitz, Eric and Apacible, Johnson},
+  booktitle={Proceedings of the 5th international conference on Multimodal interfaces},
+  pages={20--27},
+  year={2003},
+  organization={ACM}
+}
+
+@inproceedings{begole2004lilsys,
+  title={Lilsys: sensing unavailability},
+  author={Begole, James Bo and Matsakis, Nicholas E and Tang, John C},
+  booktitle={Proceedings of the 2004 ACM conference on Computer supported cooperative work},
+  pages={511--514},
+  year={2004},
+  organization={ACM}
+}
+
+@inproceedings{lai2003myteam,
+  title={MyTeam: Availability Awareness Through the Use of Sensor Data.},
+  author={Lai, Jennifer and Yoshihama, Sachiko and Bridgman, Thomas and Podlaseck, Mark and Chou, Paul B and Wong, Danny C},
+  booktitle={INTERACT},
+  year={2003}
+}
+
+@article{fogarty2004presence,
+  title={Presence versus availability: the design and evaluation of a context-aware communication client},
+  author={Fogarty, James and Lai, Jennifer and Christensen, Jim},
+  journal={International Journal of Human-Computer Studies},
+  volume={61},
+  number={3},
+  pages={299--317},
+  year={2004},
+  publisher={Elsevier}
+}
+
+@article{xhyheri2012heart,
+  title={Heart rate variability today},
+  author={Xhyheri, Borejda and Manfrini, Olivia and Mazzolini, Massimiliano and Pizzi, Carmine and Bugiardini, Raffaele},
+  journal={Progress in cardiovascular diseases},
+  volume={55},
+  number={3},
+  pages={321--331},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@article{montgomery2012movement,
+  title={Movement toward a novel activity monitoring device},
+  author={Montgomery-Downs, Hawley E and Insana, Salvatore P and Bond, Jonathan A},
+  journal={Sleep and Breathing},
+  volume={16},
+  number={3},
+  pages={913--917},
+  year={2012},
+  publisher={Springer}
+}
+
+@inproceedings{guo2013evaluation,
+  title={An evaluation of wearable activity monitoring devices},
+  author={Guo, Fangfang and Li, Yu and Kankanhalli, Mohan S and Brown, Michael S},
+  booktitle={Proceedings of the 1st ACM international workshop on Personal data meets distributed multimedia},
+  pages={31--34},
+  year={2013},
+  organization={ACM}
+}
+
+@article{goyal2017intelligent,
+  title={Intelligent Interruption Management using Electro Dermal Activity based Physiological Sensor for Collaborative Sensemaking},
+  author={Goyal, Nitesh and Fussell, Susan R},
+  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  volume={1},
+  number={3},
+  pages={52},
+  year={2017},
+  publisher={ACM}
+}
+
+@inproceedings{sarkar2017characterizing,
+  title={Characterizing and predicting mental fatigue during programming tasks},
+  author={Sarkar, Saurabh and Parnin, Chris},
+  booktitle={Proceedings of the 2nd International Workshop on Emotion Awareness in Software Engineering},
+  pages={32--37},
+  year={2017},
+  organization={IEEE Press}
+}
+
+@inproceedings{haag2004emotion,
+  title={Emotion recognition using bio-sensors: First steps towards an automatic system},
+  author={Haag, Andreas and Goronzy, Silke and Schaich, Peter and Williams, Jason},
+  booktitle={Tutorial and research workshop on affective dialogue systems},
+  pages={36--48},
+  year={2004},
+  organization={Springer}
+}
+
+@Misc{scipy,
+  author =    {Eric Jones and Travis Oliphant and Pearu Peterson and others},
+  title =     {{SciPy}: Open source scientific tools for {Python}},
+  year =      {2001--},
+  url = "http://www.scipy.org/",
+  note = {[Online; accessed 08.01.2018]}
+}
+
+@article{storey2017social,
+  title={How social and communication channels shape and challenge a participatory culture in software development},
+  author={Storey, Margaret-Anne and Zagalsky, Alexey and Figueira Filho, Fernando and Singer, Leif and German, Daniel M},
+  journal={IEEE Transactions on Software Engineering},
+  volume={43},
+  number={2},
+  pages={185--204},
+  year={2017},
+  publisher={IEEE}
+}
+
+@inproceedings{bacchelli2013expectations,
+  title={Expectations, outcomes, and challenges of modern code review},
+  author={Bacchelli, Alberto and Bird, Christian},
+  booktitle={Proceedings of the 2013 international conference on software engineering},
+  pages={712--721},
+  year={2013},
+  organization={IEEE Press}
+}
+
+@inproceedings{vasilescu2016sky,
+  title={The sky is not the limit: multitasking across github projects},
+  author={Vasilescu, Bogdan and Blincoe, Kelly and Xuan, Qi and Casalnuovo, Casey and Damian, Daniela and Devanbu, Premkumar and Filkov, Vladimir},
+  booktitle={Proceedings of the 38th International Conference on Software Engineering},
+  pages={994--1005},
+  year={2016},
+  organization={ACM}
+}
+
+@inproceedings{mark2016workplace,
+  title={Workplace Indicators of Mood: Behavioral and Cognitive Correlates of Mood Among Information Workers},
+  author={Mark, Gloria and Czerwinski, Mary and Iqbal, Shamsi and Johns, Paul},
+  booktitle={Proceedings of the 6th International Conference on Digital Health Conference},
+  pages={29--36},
+  year={2016},
+  organization={ACM}
+}
+
+@article{isaacs1997informal,
+  title={Informal communication re-examined: New functions for video in supporting opportunistic encounters},
+  author={Isaacs, Ellen and Whittaker, Steve and Frohlich, David and O'Conaill, Brid},
+  journal={Video-mediated communication},
+  volume={997},
+  pages={459--485},
+  year={1997},
+  publisher={Laurence Erlbaum, New Jersey}
+}
+
+@misc{fitbitCharge,
+  author = {Fitbit, Inc.},
+  title = {{Fitbit Charge 2}},
+  howpublished = "\url{https://www.fitbit.com/de/charge2}",
+  year = {2017}, 
+  note = "[Online; accessed 9-July-2019]"
+}
+
+@misc{polar,
+  author = {Polar Electro},
+  title = {{Equine H7 heart rate sensor belt set}},
+  howpublished = "\url{https://www.polar.com/en/products/equine/accessories/equine_H7_heart_rate_sensor_belt_set}",
+  year = {2017}, 
+  note = "[Online; accessed 9-July-2019]"
+}
+
+@misc{microsoftGraph,
+  author = {Microsoft},
+  title = {{Microsoft Graph}},
+  howpublished = "\url{https://graph.microsoft.io}",
+  year = {2017}, 
+  note = "[Online; accessed 19-September-2017]"
+}
+
+@article{liaw2002classification,
+  title={Classification and regression by randomForest},
+  author={Liaw, Andy and Wiener, Matthew and others},
+  journal={R news},
+  volume={2},
+  number={3},
+  pages={18--22},
+  year={2002}
+}
+
+@article{breiman2001random,
+  title={Random forests},
+  author={Breiman, Leo},
+  journal={Machine learning},
+  volume={45},
+  number={1},
+  pages={5--32},
+  year={2001},
+  publisher={Springer}
+}
+
+@article{rokach2005top,
+  title={Top-down induction of decision trees classifiers-a survey},
+  author={Rokach, Lior and Maimon, Oded},
+  journal={IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)},
+  volume={35},
+  number={4},
+  pages={476--487},
+  year={2005},
+  publisher={IEEE}
+}
+
+@book{sammut2011encyclopedia,
+  title={Encyclopedia of machine learning},
+  author={Sammut, Claude and Webb, Geoffrey I},
+  year={2011},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{kapoor2007principles,
+  title={Principles of lifelong learning for predictive user modeling},
+  author={Kapoor, Ashish and Horvitz, Eric},
+  journal={User Modeling 2007},
+  pages={37--46},
+  year={2007},
+  publisher={Springer}
+}
+
+@inproceedings{kapoor2008experience,
+  title={Experience sampling for building predictive user models: a comparative study},
+  author={Kapoor, Ashish and Horvitz, Eric},
+  booktitle={Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+  pages={657--666},
+  year={2008},
+  organization={ACM}
+}
+
+@inproceedings{horvitz2002coordinate,
+  title={Coordinate: Probabilistic forecasting of presence and availability},
+  author={Horvitz, Eric and Koch, Paul and Kadie, Carl M and Jacobs, Andy},
+  booktitle={Proceedings of the Eighteenth conference on Uncertainty in artificial intelligence},
+  pages={224--233},
+  year={2002},
+  organization={Morgan Kaufmann Publishers Inc.}
+}
+
+@inproceedings{horvitz2004busybody,
+  title={BusyBody: creating and fielding personalized models of the cost of interruption},
+  author={Horvitz, Eric and Koch, Paul and Apacible, Johnson},
+  booktitle={Proceedings of the 2004 ACM conference on Computer supported cooperative work},
+  pages={507--510},
+  year={2004},
+  organization={ACM}
+}
+
+%%%====================================
+
+
+
+@article{ko2005framework,
+	Author = {Ko, Andrew J and Myers, Brad A},
+	Journal = {Journal of Visual Languages \& Computing},
+	Number = {1},
+	Pages = {41--84},
+	Publisher = {Elsevier},
+	Title = {A framework and methodology for studying the causes of software errors in programming systems},
+	Volume = {16},
+	Year = {2005}}
+
+@book{Maimon2006,
+	Date-Added = {2016-01-18 13:37:54 +0000},
+	Date-Modified = {2016-02-04 16:24:10 +0000},
+	Editor = {Oded Maimon and Lior Rokach},
+	Publisher = {Springer},
+	Title = {Data Mining and Knowledge Discovery Handbook},
+	Year = {2006}}
+
+@inproceedings{Bednarik2012,
+	Author = {Bednarik, Roman and Vrzakova, Hana and Hradis, Michal},
+	Booktitle = {Proc. of ETRA},
+	Date-Added = {2016-01-13 15:51:45 +0000},
+	Date-Modified = {2016-02-04 16:33:25 +0000},
+	Title = {What do you want to do next: a novel approach for intent prediction in gaze-based interaction},
+	Year = {2012}}
+
+@inproceedings{Leppink2015,
+	Author = {Jimmie Leppink and Angelique van den Heuvel},
+	Booktitle = {Perspectives on Medical Education},
+	Date-Added = {2016-01-12 13:03:49 +0000},
+	Date-Modified = {2016-01-12 13:03:49 +0000},
+	Title = {The Evolution of Cognitive Load Theory and Its Application to Medical Education},
+	Year = {2015}}
+
+@inproceedings{Lavie2004,
+	Author = {Nilli Lavie and Aleksandra Hirst and Jan W. de Fockert and Essi Viding},
+	Booktitle = {Journal of experimental psychology. General.},
+	Date-Added = {2016-01-12 13:03:38 +0000},
+	Date-Modified = {2016-01-12 13:03:38 +0000},
+	Title = {Load Theory of Selective Attention and Cognitive Control},
+	Year = {2004}}
+
+@inproceedings{Weast2010,
+	Author = {Rebecca A. Weast and Nicole G. Neiman},
+	Booktitle = {Annual Meeting of the Cognitive Science Society},
+	Date-Added = {2016-01-12 13:03:34 +0000},
+	Date-Modified = {2016-01-12 13:03:34 +0000},
+	Title = {The Effect of Cognitive Load and Meaning on Selective Attention},
+	Year = {2010}}
+
+@book{Sweller2011,
+	Author = {John Sweller and Paul Ayres and Slava Kalyuga},
+	Date-Added = {2016-01-12 13:03:13 +0000},
+	Date-Modified = {2016-01-12 13:03:13 +0000},
+	Publisher = {Springer},
+	Title = {Cognitive Load Theory},
+	Year = {2011}}
+
+@inproceedings{Ayres2001,
+	Author = {Paul Ayres},
+	Booktitle = {Contemporary Educational Psychology},
+	Date-Added = {2016-01-07 18:14:22 +0000},
+	Date-Modified = {2016-02-04 14:33:26 +0000},
+	Title = {Systematic Mathematical Errors and Cognitive Load},
+	Year = {2001}}
+
+@article{Sweller1988,
+	Author = {Sweller, John},
+	Date-Added = {2016-01-07 18:14:19 +0000},
+	Date-Modified = {2016-02-04 14:53:57 +0000},
+	Journal = {Cognitive Science},
+	Number = {2},
+	Pages = {257-285},
+	Title = {Cognitive Load During Problem Solving: Effects on Learning},
+	Volume = {12},
+	Year = {1988},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1207/s15516709cog1202_4}}
+
+@article{Landis1977,
+	Abstract = {This paper presents a general statistical methodology for the analysis of multivariate categorical data arising from observer reliability studies. The procedure essentially involves the construction of functions of the observed proportions which are directed at the extent to which the observers agree among themselves and the construction of test statistics for hypotheses involving these functions. Tests for interobserver bias are presented in terms of first-order marginal homogeneity and measures of interobserver agreement are developed as generalized kappa-type statistics. These procedures are illustrated with a clinical diagnosis example from the epidemiological literature.},
+	Author = {J. Richard Landis and Gary G. Koch},
+	Date-Added = {2016-01-05 12:49:04 +0000},
+	Date-Modified = {2016-02-04 16:32:30 +0000},
+	Journal = {Biometrics},
+	Number = {1},
+	Pages = {159-174},
+	Title = {The Measurement of Observer Agreement for Categorical Data},
+	Volume = {33},
+	Year = {1977},
+	Bdsk-Url-1 = {http://www.jstor.org/stable/2529310}}
+
+@misc{AppleWatch,
+	Date-Added = {2015-08-28 12:36:20 +0000},
+	Date-Modified = {2015-08-28 12:37:05 +0000},
+	Key = {AppleWatch},
+	Title = {\url{http://www.apple.com/watch/}}}
+
+@inproceedings{Kevic2015,
+	Author = {Kevic, Katja and Walters, Braden M and Shaffer, Timothy R and Sharif, Bonita and Shepherd, David C and Fritz, Thomas},
+	Booktitle = {Proc. of ESEC/FSE},
+	Date-Added = {2015-08-25 08:31:51 +0000},
+	Date-Modified = {2016-02-04 14:47:50 +0000},
+	Title = {Tracing Software Developers' Eyes and Interactions for Change Tasks},
+	Year = 2015}
+
+@inproceedings{Palomba2013,
+	Author = {Palomba, F. and Bavota, G. and Di Penta, M. and Oliveto, R. and De Lucia, A. and Poshyvanyk, D.},
+	Booktitle = {Proc. of ASE},
+	Date-Added = {2015-08-24 21:01:41 +0000},
+	Date-Modified = {2016-02-04 14:52:16 +0000},
+	Title = {Detecting bad smells in source code using change history information},
+	Year = {2013},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/ASE.2013.6693086}}
+
+@article{Moha2010,
+	Author = {Moha, N. and Gu{\'e}h{\'e}neuc, Y. and Duchien, L. and Le Meur, A.},
+	Date-Added = {2015-08-24 20:24:19 +0000},
+	Date-Modified = {2016-02-04 16:25:42 +0000},
+	Journal = {Trans. on Software Engineering},
+	Number = {1},
+	Title = {DECOR: A Method for the Specification and Detection of Code and Design Smells},
+	Volume = {36},
+	Year = {2010},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TSE.2009.50}}
+
+@inproceedings{Alikacem2006,
+	Author = {El Hachemi Alikacem and Houari Sahraoui},
+	Booktitle = {Proc. of IWSM/MetriKon},
+	Date-Added = {2015-08-24 20:23:17 +0000},
+	Date-Modified = {2015-08-25 16:47:18 +0000},
+	Title = {Generic Metric Extraction Framework},
+	Year = {2006}}
+
+@inproceedings{Munro2005,
+	Author = {Munro, M.J.},
+	Booktitle = {Proc. of METRICS},
+	Date-Added = {2015-08-24 20:20:36 +0000},
+	Date-Modified = {2016-02-04 14:50:24 +0000},
+	Title = {Product Metrics for Automatic Identification of "Bad Smell" Design Problems in Java Source-Code},
+	Year = {2005},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/METRICS.2005.38}}
+
+@inproceedings{Marinescu2004,
+	Author = {Marinescu, Radu},
+	Booktitle = {Proc. of ICSM},
+	Date-Added = {2015-08-24 20:19:23 +0000},
+	Date-Modified = {2016-02-04 14:48:39 +0000},
+	Title = {Detection Strategies: Metrics-Based Rules for Detecting Design Flaws},
+	Year = {2004},
+	Bdsk-Url-1 = {http://dl.acm.org/citation.cfm?id=1018431.1021443}}
+
+@misc{FindBugs,
+	Date-Added = {2015-08-24 11:52:38 +0000},
+	Date-Modified = {2015-08-24 14:30:34 +0000},
+	Howpublished = {\url{http://findbugs.sourceforge.net/}},
+	Key = {FindBugs}}
+
+@misc{PMD,
+	Date-Added = {2015-08-24 11:51:58 +0000},
+	Date-Modified = {2015-08-24 14:43:55 +0000},
+	Howpublished = {\url{https://pmd.github.io/}},
+	Key = {PMD}}
+
+@misc{ReplicationPackage,
+	Date-Added = {2015-08-24 09:28:46 +0000},
+	Date-Modified = {2016-02-04 16:21:50 +0000},
+	Howpublished = {\url{http://www.ifi.uzh.ch/seal/people/mueller/PredictCodeQualityWithBiometrics}},
+	Key = {Replication Package}}
+
+@misc{FacebookCodeReview,
+	Date-Added = {2015-08-24 09:10:22 +0000},
+	Date-Modified = {2015-08-24 14:46:40 +0000},
+	Howpublished = {\url{http://techcrunch.com/2011/08/07/oh-what-noble-scribe-hath-penned-these-words/}},
+	Key = {Facebook}}
+
+@book{Marinescu2006,
+	Author = {Michele Lanza and Radu Marinescu},
+	Date-Added = {2015-08-24 08:54:55 +0000},
+	Date-Modified = {2015-08-24 08:56:27 +0000},
+	Publisher = {Springer},
+	Title = {Object-oriented Metrics in Practice: Using Software Metrics to Characterize, Evaluate, and Improve the Design of Object-Oriented Systems},
+	Year = {2006}}
+
+@inproceedings{Emden2002,
+	Author = {van Emden, E. and Moonen, L.},
+	Booktitle = {Proc. of WCRE},
+	Date-Added = {2015-08-24 08:49:33 +0000},
+	Date-Modified = {2016-02-04 14:54:45 +0000},
+	Title = {Java quality assurance by detecting code smells},
+	Year = {2002},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/WCRE.2002.1173068}}
+
+@misc{GoogleMondrian2006,
+	Date-Added = {2015-08-24 07:39:35 +0000},
+	Date-Modified = {2015-08-24 14:46:26 +0000},
+	Howpublished = {\url{http://www.niallkennedy.com/blog/2006/11/google-mondrian.html}},
+	Key = {Google}}
+
+@book{ebenau1994SIP,
+	Author = {Ebenau, Robert G. and Strauss, Susan H.},
+	Date-Modified = {2015-08-24 14:39:27 +0000},
+	Publisher = {McGraw-Hill, Inc.},
+	Title = {Software Inspection Process},
+	Year = {1994}}
+
+@inproceedings{ackerman1984software,
+	Author = {Ackerman, A Frank and Fowler, Priscilla J and Ebenau, Robert G},
+	Booktitle = {Proc. of Symp. on Softw. Validation},
+	Date-Modified = {2016-02-04 16:35:15 +0000},
+	Title = {Software inspections and the industrial production of software},
+	Year = {1984}}
+
+@article{grady1994keylessons,
+	Author = {Grady, R.B. and Slack, T.V.},
+	Date-Modified = {2016-02-04 14:46:22 +0000},
+	Journal = {Software},
+	Number = {4},
+	Pages = {46-57},
+	Title = {Key lessons in achieving widespread inspection use},
+	Volume = {11},
+	Year = {1994}}
+
+@article{cunningham1993wycash,
+	Author = {Cunningham, Ward},
+	Date-Modified = {2016-02-04 16:22:46 +0000},
+	Journal = {OOPS Messenger},
+	Notes = {http://c2.com/doc/oopsla92.html, Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, object-oriented or otherwise.},
+	Number = {2},
+	Pages = {29--30},
+	Publisher = {ACM},
+	Title = {The WyCash portfolio management system},
+	Volume = {4},
+	Year = {1993}}
+
+@article{lehman1980understanding,
+	Author = {Lehman, Meir M},
+	Journal = {Journal of Systems and Software},
+	Pages = {213--221},
+	Publisher = {Elsevier},
+	Title = {On understanding laws, evolution, and conservation in the large-program life cycle},
+	Volume = {1},
+	Year = {1980}}
+
+@inproceedings{boehm1976quantitative,
+	Author = {Boehm, B. W. and Brown, J. R. and Lipow, M.},
+	Booktitle = {Proc. of ICSE},
+	Date-Modified = {2015-08-26 20:04:06 +0000},
+	Title = {Quantitative Evaluation of Software Quality},
+	Year = {1976},
+	Bdsk-Url-1 = {http://dl.acm.org/citation.cfm?id=800253.807736}}
+
+@book{boehm1981software,
+	Author = {Boehm, Barry W.},
+	Date-Modified = {2015-08-24 14:37:44 +0000},
+	Publisher = {Prentice-Hall},
+	Title = {Software engineering economics},
+	Year = {1981}}
+
+@book{mcconnell2004code,
+	Author = {McConnell, Steve},
+	Date-Modified = {2015-08-26 20:09:23 +0000},
+	Publisher = {Pearson},
+	Title = {Code complete},
+	Year = {2004}}
+
+@inproceedings{bosu2015characteristics,
+	Author = {Amiangshu Bosu and Michaela Greiler and Christian Bird},
+	Booktitle = {Proc. of MSR},
+	Date-Modified = {2016-02-04 14:41:02 +0000},
+	Title = {Characteristics of Useful Code Reviews: An Empirical Study at Microsoft},
+	Year = {2015},
+	Bdsk-Url-1 = {http://research.microsoft.com/apps/pubs/default.aspx?id=249224}}
+
+@inproceedings{rigby2008peerreview,
+	Author = {Rigby, Peter C. and German, Daniel M. and Storey, Margaret-Anne},
+	Booktitle = {Proc. of ICSE},
+	Date-Modified = {2016-02-04 14:52:59 +0000},
+	Title = {Open Source Software Peer Review Practices: A Case Study of the Apache Server},
+	Year = {2008},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1368088.1368162},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1368088.1368162}}
+
+@inproceedings{bacchelli2013expectations,
+	Author = {Bacchelli, Alberto and Bird, Christian},
+	Booktitle = {Proc. of ICSE},
+	Date-Modified = {2015-08-26 20:03:51 +0000},
+	Title = {Expectations, outcomes, and challenges of modern code review},
+	Year = {2013}}
+
+@misc{SenseCore,
+	Date-Added = {2015-08-17 13:23:15 +0000},
+	Date-Modified = {2015-08-17 13:23:32 +0000},
+	Key = {SenseCore},
+	Title = {\url{http://www.senseyourcore.com}}}
+
+@misc{Empatica,
+	Date-Added = {2015-08-17 13:20:56 +0000},
+	Date-Modified = {2015-08-17 13:21:50 +0000},
+	Key = {Empatica},
+	Title = {\url{http://www.empatica.com}}}
+
+@inproceedings{Carter2010a,
+	Author = {Carter, Jason and Dewan, Prasun},
+	Booktitle = {Proc. of CSCW},
+	Date-Added = {2015-08-17 12:42:40 +0000},
+	Date-Modified = {2016-02-04 14:42:14 +0000},
+	Read = {1},
+	Title = {Are You Having Difficulty?},
+	Year = {2010},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QQy4uL0dvb2dsZSBEcml2ZS9HZXQgU3R1Y2sgU3R1ZHkvUGFwZXIgd3JpdGluZy9QYXBlcnMvQ2FydGVyMjAxMC5wZGbSFwsYGVdOUy5kYXRhTxEB7AAAAAAB7AACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAAzxF8cUgrAAAAFsl/DkNhcnRlcjIwMTAucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWyjPP2dD6AAAAAAAAAAAAAQAFAAAJIAAAAAAAAAAAAAAAAAAAAAZQYXBlcnMAEAAIAADPEW5hAAAAEQAIAADP2bTaAAAAAQAYABbJfwAWyPoAEfFUAAc1XgAGIVkAAmRKAAIAaU1hY2ludG9zaCBIRDpVc2VyczoAc2ViYXN0aWFubXVsbGVyOgBHb29nbGUgRHJpdmU6AEdldCBTdHVjayBTdHVkeToAUGFwZXIgd3JpdGluZzoAUGFwZXJzOgBDYXJ0ZXIyMDEwLnBkZgAADgAeAA4AQwBhAHIAdABlAHIAMgAwADEAMAAuAHAAZABmAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAVlVzZXJzL3NlYmFzdGlhbm11bGxlci9Hb29nbGUgRHJpdmUvR2V0IFN0dWNrIFN0dWR5L1BhcGVyIHdyaXRpbmcvUGFwZXJzL0NhcnRlcjIwMTAucGRmABMAAS8AABUAAgAW//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4A1ADZAOEC0QLTAtgC4wLsAvoC/gMFAw4DEwMgAyMDNQM4Az0AAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAADPw==},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1718918.1718958},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1718918.1718958}}
+
+@article{Cohen1960,
+	Author = {Jacob Cohen},
+	Date-Added = {2015-08-16 12:21:12 +0000},
+	Date-Modified = {2016-02-04 14:42:33 +0000},
+	Journal = {Education and Psychological Measurement},
+	Pages = {37-46},
+	Title = {A Coefficient of Agreement for Nominal Scales},
+	Volume = {20},
+	Year = {1960}}
+
+@article{Butterworth1930,
+	Author = {Stephen Butterworth},
+	Date-Added = {2015-08-14 13:04:54 +0000},
+	Date-Modified = {2015-08-14 13:05:47 +0000},
+	Journal = {Wireless Engineer},
+	Pages = {536-541},
+	Title = {On the Theory of Filter Amplifiers},
+	Volume = {7},
+	Year = {1930}}
+
+@article{Elish2008,
+	Author = {Karim O. Elish and Mahmoud O. Elish},
+	Date-Added = {2015-08-14 10:46:22 +0000},
+	Date-Modified = {2015-08-25 15:29:46 +0000},
+	Journal = {Journal of Systems and Software},
+	Number = {5},
+	Pages = {649-660},
+	Title = {Predicting defect-prone software modules using support vector machines},
+	Volume = {81},
+	Year = {2008},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.jss.2007.07.040}}
+
+@incollection{Qi2012,
+	Author = {Qi, Yanjun},
+	Booktitle = {Ensemble Machine Learning},
+	Date-Added = {2015-08-11 12:44:58 +0000},
+	Date-Modified = {2016-02-04 16:33:42 +0000},
+	Publisher = {Springer},
+	Title = {Random Forest for Bioinformatics},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1007/978-1-4419-9326-7_11}}
+
+@inproceedings{Lee2011,
+	Author = {Lee, Taek and Nam, Jaechang and Han, DongGyun and Kim, Sunghun and In, Hoh Peter},
+	Booktitle = {Proc. of ESEC/FSE},
+	Date-Added = {2015-08-10 12:00:47 +0000},
+	Date-Modified = {2016-02-04 14:48:04 +0000},
+	Title = {Micro Interaction Metrics for Defect Prediction},
+	Year = {2011},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/2025113.2025156},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/2025113.2025156}}
+
+@article{Lessmann2008,
+	Author = {Lessmann, Stefan and Baesens, Bart and Mues, Christophe and Pietsch, Swantje},
+	Date-Added = {2015-08-06 09:11:59 +0000},
+	Date-Modified = {2016-02-04 16:25:23 +0000},
+	Journal = {Trans. on Software Engineering},
+	Number = {4},
+	Pages = {485--496},
+	Title = {Benchmarking Classification Models for Software Defect Prediction: A Proposed Framework and Novel Findings},
+	Volume = {34},
+	Year = {2008},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TSE.2008.35}}
+
+@article{dAmbros2012,
+	Author = {Marco D'Ambros and Michele Lanza and Romain Robbes},
+	Date-Added = {2015-08-05 14:19:30 +0000},
+	Date-Modified = {2015-08-26 20:05:13 +0000},
+	Journal = {Empirical Softw. Engineering},
+	Title = {Evaluating Defect Prediction Approaches: A Benchmark and an Extensive Comparison},
+	Volume = {17},
+	Year = {2012}}
+
+@article{Schmidt2000,
+	Author = {S. Schmidth and H. Walach},
+	Date-Added = {2015-08-03 11:32:01 +0000},
+	Date-Modified = {2015-08-06 10:57:45 +0000},
+	Journal = {Journal of Parapsychology},
+	Number = {2},
+	Title = {Electrodermal activity {(EDA)} - state-of-the-art measurements and techniques for parapsychological purposes},
+	Volume = {64},
+	Year = {2000}}
+
+@article{Martin1986,
+	Author = {Patricia Yancey Martin and Barry A. Turner},
+	Date-Added = {2015-08-03 08:45:48 +0000},
+	Date-Modified = {2015-08-03 08:46:48 +0000},
+	Journal = {Journal of Applied Behavioral Science},
+	Number = {2},
+	Pages = {141-157},
+	Title = {Grounded Theory and Organizational Research},
+	Volume = {22},
+	Year = {1986}}
+
+@book{Maimon2005,
+	Author = {Maimon, Oded and Rokach, Lior},
+	Date-Added = {2015-07-29 17:12:14 +0000},
+	Date-Modified = {2015-08-24 14:42:23 +0000},
+	Publisher = {Springer-Verlag},
+	Title = {Data Mining and Knowledge Discovery Handbook},
+	Year = {2005}}
+
+@article{Breiman2001,
+	Author = {Breiman, Leo},
+	Date-Added = {2015-07-29 16:53:34 +0000},
+	Date-Modified = {2015-07-29 16:53:49 +0000},
+	Journal = {Machine Learning},
+	Number = {1},
+	Pages = {5-32},
+	Title = {Random Forests},
+	Volume = {45},
+	Year = {2001},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1023/A%3A1010933404324},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1023/A:1010933404324}}
+
+@article{Benikos2012,
+	Author = {Nicholas Benikos and Stuart J. Johnstone and Steven J. Roodenrys},
+	Date-Added = {2015-07-27 16:28:59 +0000},
+	Date-Modified = {2015-08-06 10:42:42 +0000},
+	Journal = {International Journal of Psychophysiology},
+	Number = {3},
+	Pages = {262 - 272},
+	Title = {Varying task difficulty in the Go/Nogo task: The effects of inhibitory control, arousal, and perceived effort on {ERP} components},
+	Volume = {87},
+	Year = {2013},
+	Bdsk-Url-1 = {http://www.sciencedirect.com/science/article/pii/S0167876012005594},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1016/j.ijpsycho.2012.08.005}}
+
+@article{Chen2008,
+	Annote = {10.1038/nn.2147},
+	Author = {Chen, Yao and Martinez-Conde, Susana and Macknik, Stephen L and Bereshpolova, Yulia and Swadlow, Harvey A and Alonso, Jose-Manuel},
+	Date-Added = {2015-07-27 16:27:02 +0000},
+	Date-Modified = {2015-07-27 16:27:29 +0000},
+	Journal = {Nature Neuroscience},
+	Number = {8},
+	Pages = {974--982},
+	Title = {Task difficulty modulates the activity of specific neuronal populations in primary visual cortex},
+	Volume = {11},
+	Year = {2008},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nn.2147}}
+
+
+@inproceedings{Ikutani2014,
+	Author = {Ikutani, Y. and Uwano, H.},
+	Booktitle = {Proc. of SNPD},
+	Date-Added = {2015-07-25 15:50:53 +0000},
+	Date-Modified = {2016-02-04 14:47:26 +0000},
+	Title = {Brain activity measurement during program comprehension with {NIRS}},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/SNPD.2014.6888727}}
+
+@inproceedings{Nakagawa2014,
+	Author = {Nakagawa, Takao and Kamei, Yasutaka and Uwano, Hidetake and Monden, Akito and Matsumoto, Kenichi and German, Daniel M.},
+	Booktitle = {Companion Proc. of ICSE},
+	Date-Added = {2015-07-25 15:46:00 +0000},
+	Date-Modified = {2016-02-04 14:51:31 +0000},
+	Title = {Quantifying Programmers' Mental Workload During Program Comprehension Based on Cerebral Blood Flow Measurement: A Controlled Experiment},
+	Year = {2014},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/2591062.2591098},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/2591062.2591098}}
+
+@article{Radevski2015,
+	Author = {Stevche Radevski and Hideaki Hata and Kenichi Matsumoto},
+	Date-Added = {2015-07-25 15:44:21 +0000},
+	Date-Modified = {2016-02-04 14:52:45 +0000},
+	Journal = {Proceedings of Connected Health: Applications, Systems and Engineering Technologies},
+	Title = {Real-Time Monitoring of Neural State in Assessing and Improving Software Developers' Productivity},
+	Year = {2015}}
+
+@inproceedings{DeAlwis2008,
+	Author = {de Alwis, Brian and Murphy, Gail C. and Minto, Shawn},
+	Booktitle = {Proceedings of the International Workshop on Cooperative and Human Aspects of Software Engineering},
+	Date-Added = {2015-07-25 15:42:54 +0000},
+	Date-Modified = {2015-08-06 10:49:47 +0000},
+	Title = {Creating a Cognitive Metric of Programming Task Difficulty},
+	Year = {2008},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1370114.1370122},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1370114.1370122}}
+
+@article{Curtis1979,
+	Author = {Curtis, B. and Sheppard, S.B. and Milliman, P. and Borst, M.A. and Love, T.},
+	Date-Added = {2015-07-25 15:41:44 +0000},
+	Date-Modified = {2016-02-04 16:25:10 +0000},
+	Journal = {Trans. on Software Engineering},
+	Number = {2},
+	Pages = {96-104},
+	Title = {Measuring the Psychological Complexity of Software Maintenance Tasks with the {Halstead} and {McCabe} Metrics},
+	Volume = {SE-5},
+	Year = {1979},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TSE.1979.234165}}
+
+@inproceedings{Rilling2003,
+	Author = {Rilling, Juergen and Klemola, Tuomas},
+	Booktitle = {Proceedings of the 11th IEEE International Workshop on Program Comprehension},
+	Date-Added = {2015-07-25 15:40:27 +0000},
+	Date-Modified = {2015-07-25 15:40:48 +0000},
+	Title = {Identifying Comprehension Bottlenecks Using Program Slicing and Cognitive Complexity Metrics},
+	Year = {2003},
+	Bdsk-Url-1 = {http://dl.acm.org/citation.cfm?id=851042.857047}}
+
+@inproceedings{Ostrand2010,
+	Author = {Ostrand, Thomas J. and Weyuker, Elaine J. and Bell, Robert M.},
+	Booktitle = {Proceedings of the 6th International Conference on Predictive Models in Software Engineering},
+	Date-Added = {2015-07-25 15:32:24 +0000},
+	Date-Modified = {2015-07-25 15:32:44 +0000},
+	Title = {Programmer-based Fault Prediction},
+	Year = {2010},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1868328.1868357},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1868328.1868357}}
+
+@article{Weyuker2008,
+	Author = {Weyuker, Elaine J. and Ostrand, Thomas J. and Bell, Robert M.},
+	Date-Added = {2015-07-25 15:31:18 +0000},
+	Date-Modified = {2015-08-25 15:34:55 +0000},
+	Journal = {Empirical Software Engineering},
+	Number = {5},
+	Pages = {539-559},
+	Title = {Do Too Many Cooks Spoil the Broth? Using the Number of Developers to Enhance Defect Prediction Models},
+	Volume = {13},
+	Year = {2008},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1007/s10664-008-9082-8}}
+
+@inproceedings{Nagappan2008,
+	Author = {Nagappan, Nachiappan and Murphy, Brendan and Basili, Victor},
+	Booktitle = {Proc. of ICSE},
+	Date-Added = {2015-07-25 15:29:06 +0000},
+	Date-Modified = {2015-08-26 20:03:00 +0000},
+	Title = {The Influence of Organizational Structure on Software Quality: An Empirical Case Study},
+	Year = {2008},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1368088.1368160},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1368088.1368160}}
+
+@inproceedings{Nagappan2010,
+	Author = {Nagappan, Nachiappan and Zeller, Andreas and Zimmermann, Thomas and Herzig, Kim and Murphy, Brendan},
+	Booktitle = {Proc. of the International Symposium on Software Reliability Engineering},
+	Date-Added = {2015-07-25 15:27:25 +0000},
+	Date-Modified = {2015-08-25 16:50:46 +0000},
+	Title = {Change Bursts As Defect Predictors},
+	Year = {2010},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/ISSRE.2010.25}}
+
+@inproceedings{Giger2012,
+	Author = {Giger, Emanuel and D'Ambros, Marco and Pinzger, Martin and Gall, Harald C.},
+	Booktitle = {Proc. of ESEM},
+	Date-Added = {2015-07-25 15:21:28 +0000},
+	Date-Modified = {2016-02-04 14:46:11 +0000},
+	Title = {Method-level Bug Prediction},
+	Year = {2012},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/2372251.2372285},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/2372251.2372285}}
+
+@article{Ohlsson1996,
+	Author = {Ohlsson, N. and Alberg, H.},
+	Date-Added = {2015-07-25 15:11:11 +0000},
+	Date-Modified = {2015-07-25 15:11:42 +0000},
+	Journal = {IEEE Transactions on Software Engineering},
+	Number = {12},
+	Pages = {886-894},
+	Title = {Predicting fault-prone software modules in telephone switches},
+	Volume = {22},
+	Year = {1996},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/32.553637}}
+
+@inproceedings{Zimmermann2007,
+	Author = {Zimmermann, Thomas and Premraj, Rahul and Zeller, Andreas},
+	Booktitle = {Proc. of PROMISE},
+	Date-Added = {2015-07-25 13:45:41 +0000},
+	Date-Modified = {2016-02-04 16:13:24 +0000},
+	Title = {Predicting Defects for Eclipse},
+	Year = {2007},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/PROMISE.2007.10}}
+
+@inproceedings{Nagappan2006,
+	Author = {Nagappan, Nachiappan and Ball, Thomas and Zeller, Andreas},
+	Booktitle = {Proc. of ICSE},
+	Date-Added = {2015-07-25 13:45:01 +0000},
+	Date-Modified = {2015-08-26 20:02:57 +0000},
+	Title = {Mining Metrics to Predict Component Failures},
+	Year = {2006},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1134285.1134349},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1134285.1134349}}
+
+@inproceedings{Moser2008,
+	Author = {Moser, Raimund and Pedrycz, Witold and Succi, Giancarlo},
+	Booktitle = {Proc. of ESEM},
+	Date-Added = {2015-07-25 13:44:01 +0000},
+	Date-Modified = {2016-02-04 14:49:05 +0000},
+	Title = {Analysis of the Reliability of a Subset of Change Metrics for Defect Prediction},
+	Year = {2008},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1414004.1414063},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1414004.1414063}}
+
+@article{Connor2010,
+	Author = {Andy M. Connor},
+	Date-Added = {2015-07-25 13:42:19 +0000},
+	Date-Modified = {2015-08-25 15:30:59 +0000},
+	Journal = {Journal of Systems and Software},
+	Number = {5},
+	Pages = {194-204},
+	Title = {Mining Software Metrics for the Jazz Repository},
+	Volume = {1},
+	Year = {2011}}
+
+@inproceedings{Zhang2007,
+	Author = {Zhang, Hongyu and Zhang, Xiuzhen and Gu, Ming},
+	Booktitle = {Proc. of PRDC},
+	Date-Added = {2015-07-24 12:28:23 +0000},
+	Date-Modified = {2016-02-04 16:12:21 +0000},
+	Title = {Predicting Defective Software Components from Code Complexity Measures},
+	Year = {2007},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/PRDC.2007.56}}
+
+@inproceedings{Nagappan2005,
+	Author = {Nagappan, Nachiappan and Ball, Thomas},
+	Booktitle = {Proc. of ICSE},
+	Date-Added = {2015-07-24 12:27:35 +0000},
+	Date-Modified = {2015-08-26 20:02:52 +0000},
+	Title = {Use of Relative Code Churn Measures to Predict System Defect Density},
+	Year = {2005},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1062455.1062514},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1062455.1062514}}
+
+@incollection{Gray2009,
+	Author = {Gray, David and Bowes, David and Davey, Neil and Sun, Yi and Christianson, Bruce},
+	Booktitle = {Engineering Applications of Neural Networks},
+	Date-Added = {2015-07-24 12:26:45 +0000},
+	Date-Modified = {2016-02-04 16:29:46 +0000},
+	Publisher = {Springer Berlin Heidelberg},
+	Title = {Using the Support Vector Machine as a Classification Method for Software Defect Prediction with Static Code Metrics},
+	Year = {2009},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1007/978-3-642-03969-0_21}}
+
+@inproceedings{Klemola2003,
+	Author = {Klemola, T. and Rilling, J.},
+	Booktitle = {Proc. of the Intern. Conf. on Cognitive Informatics},
+	Date-Added = {2015-07-24 12:22:28 +0000},
+	Date-Modified = {2015-08-26 11:33:11 +0000},
+	Title = {A cognitive complexity metric based on category learning},
+	Year = {2003},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/COGINF.2003.1225966}}
+
+@inproceedings{Kasto2013,
+	Author = {Kasto, Nadia and Whalley, Jacqueline},
+	Booktitle = {Proceedings of the Fifteenth Australasian Computing Education Conference},
+	Date-Added = {2015-07-24 12:21:24 +0000},
+	Date-Modified = {2015-08-06 10:43:35 +0000},
+	Title = {Measuring the Difficulty of Code Comprehension Tasks Using Software Metrics},
+	Year = {2013},
+	Bdsk-Url-1 = {http://dl.acm.org/citation.cfm?id=2667199.2667206}}
+
+@inproceedings{Feigenspan2011,
+	Author = {Feigenspan, J. and Apel, S. and Liebig, J. and Kastner, C.},
+	Booktitle = {Proc. of ESEM},
+	Date-Added = {2015-07-24 12:20:24 +0000},
+	Date-Modified = {2016-02-04 14:45:52 +0000},
+	Title = {Exploring Software Measures to Assess Program Comprehension},
+	Year = {2011},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/ESEM.2011.21}}
+
+@inproceedings{Carter2010,
+	Author = {Carter, Jason and Dewan, Prasun},
+	Booktitle = {Proc. of the Intern. Conf. on Supporting Group Work},
+	Date-Added = {2015-07-24 12:01:23 +0000},
+	Date-Modified = {2015-08-26 11:30:13 +0000},
+	Title = {Design, Implementation, and Evaluation of an Approach for Determining when Programmers Are Having Difficulty},
+	Year = {2010},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1880071.1880109},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1880071.1880109}}
+
+@article{Hall2009,
+	Author = {Hall, Mark and Frank, Eibe and Holmes, Geoffrey and Pfahringer, Bernhard and Reutemann, Peter and Witten, Ian H.},
+	Date-Added = {2015-07-23 22:32:26 +0000},
+	Date-Modified = {2015-08-06 10:58:08 +0000},
+	Journal = {SIGKDD Explorations Newsletter},
+	Number = {1},
+	Pages = {10--18},
+	Title = {The WEKA Data Mining Software: An Update},
+	Volume = {11},
+	Year = {2009},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/1656274.1656278},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/1656274.1656278}}
+
+@article{Sroufe1977,
+	Author = {Sroufe, L. Alan and Waters, Everett},
+	Date-Added = {2015-07-23 22:18:03 +0000},
+	Date-Modified = {2015-07-23 22:18:59 +0000},
+	Journal = {Merrill-Palmer Quarterly of Behavior and Development},
+	Number = {1},
+	Pages = {3-27},
+	Title = {Heart Rate as a Convergent Measure in Clinical and Developmental Research},
+	Volume = {23},
+	Year = {1977},
+	Bdsk-Url-1 = {http://www.jstor.org/stable/23083894}}
+
+@article{Berntson1997,
+	Abstract = {Components of heart rate variability have attracted considerable attention in psychology and medicine and have become important dependent measures in psychophysiology and behavioral medicine. Quantification and interpretation of heart rate variability, however, remain complex issues and are fraught with pitfalls. The present report (a) examines the physiological origins and mechanisms of heart rate variability, (b) considers quantitative approaches to measurement, and (c) highlights important caveats in the interpretation of heart rate variability. Summary guidelines for research in this area are outlined, and suggestions and prospects for future developments are considered.},
+	Author = {Berntson, G G and Bigger, J T Jr and Eckberg, D L and Grossman, P and Kaufmann, P G and Malik, M and Nagaraja, H N and Porges, S W and Saul, J P and Stone, P H and van der Molen, M W},
+	Date-Added = {2015-07-23 22:15:26 +0000},
+	Date-Modified = {2015-07-23 22:15:55 +0000},
+	Journal = {Psychophysiology},
+	Number = {6},
+	Pages = {623--648},
+	Title = {Heart rate variability: origins, methods, and interpretive caveats.},
+	Volume = {34},
+	Year = {1997}}
+
+@book{Halstead1977,
+	Author = {Maurice H. Halstead},
+	Date-Added = {2015-07-16 14:27:19 +0000},
+	Date-Modified = {2015-07-16 14:27:50 +0000},
+	Publisher = {Elsevier Science Inc.},
+	Title = {Elements of Software Science},
+	Year = {1977}}
+
+@article{McCabe1976,
+	Author = {Thomas J. McCabe},
+	Date-Added = {2015-07-16 14:22:36 +0000},
+	Date-Modified = {2015-07-16 14:23:26 +0000},
+	Journal = {IEEE Transactions on Software Engineering},
+	Number = {4},
+	Pages = {308-320},
+	Title = {A Complexity Measure},
+	Volume = {SE-2},
+	Year = {1976},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TSE.1976.233837}}
+
+@inproceedings{Siegmund2014,
+	Author = {Siegmund, Janet and K\"{a}stner, Christian and Apel, Sven and Parnin, Chris and Bethmann, Anja and Leich, Thomas and Saake, Gunter and Brechmann, Andr{\'e}},
+	Booktitle = {Proceedings of International Conference
+on Software Engineering},
+	Date-Added = {2015-07-14 13:12:39 +0000},
+	Date-Modified = {2016-02-04 14:53:39 +0000},
+	Title = {Understanding Source Code with Functional Magnetic Resonance Imaging},
+	Year = {2014},
+	Bdsk-Url-1 = {http://doi.acm.org/10.1145/2568225.2568252},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1145/2568225.2568252}}
+
+@inproceedings{Parnin2011,
+	Author = {Parnin, Chris},
+	Booktitle = {Proceedings of International Conference on Program Comprehension},
+	Date-Added = {2015-07-14 13:11:36 +0000},
+	Date-Modified = {2016-02-04 14:52:28 +0000},
+	Title = {Subvocalization - Toward Hearing the Inner Thoughts of Developers},
+	Year = {2011},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/ICPC.2011.49}}
+
+@article{Crosby1990,
+	Author = {Crosby, M.E. and Stelovsky, J.},
+	Date-Added = {2015-07-03 16:36:47 +0000},
+	Date-Modified = {2015-07-03 16:37:01 +0000},
+	Journal = {Computer},
+	Number = {1},
+	Title = {How do we read algorithms? A case study},
+	Volume = {23},
+	Year = {1990}}
+
+@inproceedings{Bednarik2006,
+	Author = {Bednarik, Roman and Tukiainen, Markku},
+	Booktitle = {Proc. of ETRA},
+	Date-Added = {2015-07-03 16:35:19 +0000},
+	Date-Modified = {2016-02-04 14:40:34 +0000},
+	Title = {An Eye-tracking Methodology for Characterizing Program Comprehension Processes},
+	Year = {2006}}
+
+@inproceedings{Rodeghero2014,
+	Author = {Rodeghero, Paige and McMillan, Collin and McBurney, Paul W. and Bosch, Nigel and D'Mello, Sidney},
+	Booktitle = {International Convernce on Software Engineering},
+	Date-Added = {2015-07-03 16:33:55 +0000},
+	Date-Modified = {2016-02-04 14:53:11 +0000},
+	Title = {Improving Automated Source Code Summarization via an Eye-tracking Study of Programmers},
+	Year = {2014}}
+
+@incollection{Weber2015,
+	Author = {Barbara Weber and Manuel Neurauter and Jakob Pinggera and Stefan Zugal and Marco Furtner and Markus Martini and Pierre Sachse},
+	Booktitle = {Information Systems and Neuroscience},
+	Date-Added = {2015-07-03 16:06:05 +0000},
+	Date-Modified = {2015-07-03 16:07:34 +0000},
+	Publisher = {Springer International Publisher},
+	Title = {Measuring Cognitive Load During Process Model Creation},
+	Year = {2015}}
+
+@incollection{Cornforth2015,
+	Author = {David J. Cornforth and Alexander Koenig and Robert Riener and Katherine August and Ahsan H. Khandoker and Chandan Karmakar and Marimuthu Palaniswami and Herbert F. Jelinek},
+	Booktitle = {Serious Games Analytics: Methodologies for Performance Measurement, Assessment, and Improvement},
+	Date-Added = {2015-07-03 10:25:42 +0000},
+	Date-Modified = {2015-07-03 16:07:49 +0000},
+	Publisher = {Springer International Publisher},
+	Title = {The Role of Serious Games in Robot Exoskeleton-Assisted Rehabilitation of Stroke Patients},
+	Year = {2015}}
+
+@article{Novak2010,
+	Author = {Domen Novak and Jaka Ziherl and Andrej Olen{\u s}ek and Maja Milavec and Janez Podobnik and Matja{\u z} Mihelj and Marko Munih},
+	Date-Added = {2015-07-03 10:14:52 +0000},
+	Date-Modified = {2016-02-04 16:25:52 +0000},
+	Journal = {Trans. on Neural Systems and Rehabilitation Engineering},
+	Number = {4},
+	Title = {Psychophysiological Response to Robotic Rehabilitation Tasks in Stroke},
+	Volume = {18},
+	Year = {2010}}
+
+@article{Richter1998,
+	Author = {Peter Richter and Thomas Wagner and Ralf Heger and G{\"u}nther Weise},
+	Date-Added = {2015-07-03 10:05:52 +0000},
+	Date-Modified = {2015-07-03 10:06:51 +0000},
+	Journal = {Ergonomics},
+	Number = {5},
+	Title = {Psychophysiological analysis of mental load during driving on rural roads - a quasi-experimental field study},
+	Volume = {41},
+	Year = {1998}}
+
+@article{Fairclough2005,
+	Author = {Stephen H. Fairclough and Louise Venables and Andrew Tattersall},
+	Date-Added = {2015-07-03 09:48:47 +0000},
+	Date-Modified = {2016-02-04 14:45:05 +0000},
+	Journal = {International Journal of Psychophysiology},
+	Title = {The influence of task demand and learning on the psychophysiological response},
+	Volume = {56},
+	Year = {2005}}
+
+@inproceedings{Mueller2015,
+	Author = {Sebastian C. M{\"u}ller and Thomas Fritz},
+	Booktitle = {Proc. of ICSE},
+	Date-Added = {2015-07-03 09:32:35 +0000},
+	Date-Modified = {2016-02-04 14:49:15 +0000},
+	Title = {Stuck and Frustrated or In Flow and Happy: Sensing Developers' Emotions and Progress},
+	Year = {2015}}
+
+@article{Setz2010,
+	Author = {Cornelia Setz and Bert Arnrich and Johannes Schumm and Roberto La Marca and Gerhard Troster and Ulrike Ehlert},
+	Date-Added = {2015-07-03 09:25:40 +0000},
+	Date-Modified = {2016-02-04 16:26:02 +0000},
+	Journal = {Trans. on Information Technology in Biomedicine},
+	Number = {2},
+	Title = {Discriminating Stress From Cognitive Load Using a Wearable EDA Device},
+	Volume = {14},
+	Year = {2010}}
+
+@article{Wilson2002,
+	Author = {Glenn F. Wilson},
+	Date-Added = {2015-07-03 09:16:58 +0000},
+	Date-Modified = {2016-02-04 16:27:24 +0000},
+	Journal = {International Journal of Aviation Psychology},
+	Number = {1},
+	Title = {An Analysis of Mental Workload in Pilots During Flight Using Multiple Psychphysiological Measures},
+	Volume = {12},
+	Year = {2002}}
+
+@article{Anthony2011,
+	Author = {Lisa Anthony and Patrick Carrington and Peng Chu and Christopher Kidd and Jianwei Lai and Andrew Sears},
+	Date-Added = {2015-07-02 15:42:38 +0000},
+	Date-Modified = {2015-08-16 14:21:12 +0000},
+	Journal = {Stress},
+	Number = {360},
+	Title = {Gesture dynamics: Features sensitive to task difficulty and correlated with physiological sensors},
+	Volume = {1418},
+	Year = {2011}}
+
+@article{Kuznetsov2011,
+	Author = {Nikita A. Kuznetsov and Kevin D. Shockley and Michael J. Richardson and Michael A. Riley},
+	Date-Added = {2015-07-02 15:37:12 +0000},
+	Date-Modified = {2015-08-16 14:23:17 +0000},
+	Journal = {Neuroscience letters},
+	Number = {1},
+	Pages = {13-17},
+	Title = {Effect of precision aiming on respiration and postural-respiratory synergy},
+	Volume = {502},
+	Year = {2011}}
+
+@article{Walter1976,
+	Author = {Gary F. Walter and Stephen W. Porges},
+	Date-Added = {2015-07-02 15:25:34 +0000},
+	Date-Modified = {2015-08-16 14:23:52 +0000},
+	Journal = {Psychophysiology},
+	Number = {6},
+	Title = {Heart Rate and Respiratory Responses as a Function of Task Difficulty: The Use of Discriminant Analysis in the Selection of Psychologically Sensitive Physiological Responses},
+	Volume = {13},
+	Year = {1976}}
+
+@article{Veltman1998,
+	Abstract = {The sensitivity of physiological measures to mental workload was investigated in a flight simulator. Twelve pilots had to fly through a tunnel with varying levels of difficulty. Additionally, they had to perform a memory task with four levels of difficulty. The easiest memory task was combined with the easiest tunnel task and the most difficult memory task with the most difficult tunnel task. Between the tunnel tasks, subjects had to fly a pursuit task in which a target jet had to be followed. Rest periods before and after the experiment were used as a baseline for the physiological measures. Mental workload was measured with heart period, continuous blood pressure, respiration and eye blinks. Several respiratory parameters, heart rate variability, blood pressure variability and the gain between systolic blood pressure and heart period (modulus) were scored. All measures showed differences between rest and flight, and between the pursuit and the tunnel task. Only heart period was sensitive to difficulty levels in the tunnel task. Heart rate variability increased when respiratory activity around 0.10 Hz increased, which occurred often. The modulus was hardly influenced by respiration and therefore appears to be a better measure than heart rate variability. Among the respiratory parameters, the duration of a respiratory cycle was the most sensitive to changes in workload. The time in between two successive eye blinks (blink interval) increased and the blink duration decreased as more visual information had to be processed. Increasing the difficulty of the memory task led to a decrement in blink interval, probably caused by subvocal activity during rehearsal of target letters. The data show that physiological measures are sensitive to mental effort, whereas rating scales are sensitive to both mental effort and task difficulty.},
+	Author = {Veltman, Joris and Gaillard, A W},
+	Date-Added = {2015-07-02 14:56:57 +0000},
+	Date-Modified = {2015-07-02 15:01:12 +0000},
+	Journal = {Ergonomics},
+	Number = {5},
+	Pages = {656--669},
+	Title = {Physiological workload reactions to increasing levels of task difficulty.},
+	Volume = {41},
+	Year = {1998},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1080/001401398186829}}
+
+
+@article{Kramer90,
+	Author = {Arthur F. Kramer},
+	Booktitle = {Technical Report NPRDC-TN-90-23},
+	Title = {Physiological metrics of mental
+workload: A review of recent progress},
+	Year = {1990}}
+    
+@inproceedings{Rowe98,
+	Author = {Rowe, Dennis and Silvert, John and Irwin, Don},
+	Booktitle = {In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+	Title = {Heart rate variability: Indicator of user state as an aid to human-computer interaction},
+	Pages = {480-487},
+	Year = {1998}}
+
+    
+@inproceedings{Ferdous15,
+	Author = {Ferdous, Raihana and Osmani, Venet and Mayora, Oscar},
+	Booktitle = {International Conference on Pervasive Computing Technologies for Healthcare (PervasiveHealth)},
+	Title = {Smartphone app usage as a predictor of perceived stress levels at workplace},
+	Pages = {},
+	Year = {2015}}
+
+@inproceedings{Muller16,
+	Author = {Sebastian Muller and Thomas Fritz},
+	Booktitle = {In Proceedings of the ICSE},
+	Title = {Using (Bio)Metrics to Predict Code Quality Online},
+	Year = {2016}}
+
+@article{aldana1996,
+	title = {Relationships between Leisure Time Physical Activity and Perceived Stress},
+	volume = {82},
+	issn = {0031-5125},
+	url = {https://doi.org/10.2466/pms.1996.82.1.315},
+	doi = {10.2466/pms.1996.82.1.315},
+	abstract = {This study investigated the relationship between physical activity during leisure time and perceived stress among working adults (N = 32,229). Data were gathered on physical activity, perceived stress, current health status, age, gender, life changes, ongoing problems, number of techniques used for stress reduction, and number of personality traits related to Type A behavior. To control for confounding variables Mantel-Haenszel summary risk estimates were used. Employees who expended more than 3.0 Kcal/kg???1 ?? day???1 in physical activity during leisure time were 0.78 and 0.62 times less likely to have moderate and high perceived stress, respectively. Working adults participating in moderate amounts of these activities have about half the rate of perceived stress as nonparticipants.},
+	pages = {315--321},
+	number = {1},
+	journal = {Perceptual and Motor Skills},
+	shortjournal = {Percept Mot Skills},
+	author = {Aldana, Steven G. and Sutton, Leanne D. and Jacobson, Bert H. and Quirk, Michael G.},
+	urldate = {2018-09-14},
+	year = 1996,
+	langid = {english}
+}
+
+@article{fox1999,
+	title = {The influence of physical activity on mental well-being},
+	volume = {2},
+	pages = {411--418},
+	number = {3},
+	journal = {Public Health Nutrition},
+	author = {Fox, Kenneth R.},
+	urldate = {2018-09-14},
+	year = 1999,
+	langid = {english},
+	keywords = {Addiction, Affect, Anorexia, Anxiety, Body image, Bulimia, Cognitive ability, Depression, Eating disorders, Emotion, Exercise, Mental health, Obesity, Physical activity, Physical self-perceptions, Self-esteem, Sleep, Sport, Stress},
+}
+
+@article{masaoka1997,
+	title = {Anxiety and respiratory patterns: their relationship during mental stress and physical load},
+	volume = {27},
+	issn = {01678760},
+	shorttitle = {Anxiety and respiratory patterns},
+	pages = {153--159},
+	number = {2},
+	journal = {International Journal of Psychophysiology},
+	author = {Masaoka, Yuri and Homma, Ikuo},
+	urldate = {2018-09-14},
+	year = 1997,
+	langid = {english}
+}
+
+@inproceedings{yap2014,
+	location = {Singapore},
+	title = {An Application of Oversampling, Undersampling, Bagging and Boosting in Handling Imbalanced Datasets},
+	isbn = {978-981-4585-18-7},
+	abstract = {Most classifiers work well when the class distribution in the response variable of the dataset is well balanced. Problems arise when the dataset is imbalanced. This paper applied four methods: Oversampling, Undersampling, Bagging and Boosting in handling imbalanced datasets. The cardiac surgery dataset has a binary response variable (1 = Died, 0 = Alive). The sample size is 4976 cases with 4.2 \% (Died) and 95.8 \% (Alive) cases. {CART}, C5 and {CHAID} were chosen as the classifiers. In classification problems, the accuracy rate of the predictive model is not an appropriate measure when there is imbalanced problem due to the fact that it will be biased towards the majority class. Thus, the performance of the classifier is measured using sensitivity and precision Oversampling and undersampling are found to work well in improving the classification for the imbalanced dataset using decision tree. Meanwhile, boosting and bagging did not improve the Decision Tree performance.},
+	pages = {13--22},
+	booktitle = {Proceedings of the First International Conference on Advanced Data and Information Engineering ({DaEng}-2013)},
+	publisher = {Springer Singapore},
+	author = {Yap, Bee Wah and Rani, Khatijahhusna Abd and Rahman, Hezlin Aryani Abd and Fong, Simon and Khairudin, Zuraida and Abdullah, Nik Nik},
+	editor = {Herawan, Tutut and Deris, Mustafa Mat and Abawajy, Jemal},
+	year = 2014
+}
+
+@article{chawla2004,
+ author = {Chawla, Nitesh V. and Japkowicz, Nathalie and Kotcz, Aleksander},
+ title = {Editorial: Special Issue on Learning from Imbalanced Data Sets},
+ journal = {SIGKDD Explor. Newsl.},
+ issue_date = {June 2004},
+ volume = {6},
+ number = {1},
+ month = jun,
+ year = {2004},
+ issn = {1931-0145},
+ pages = {1--6},
+ numpages = {6},
+ doi = {10.1145/1007730.1007733},
+ acmid = {1007733},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+@article{bhattacharyya_data_2011,
+	title = {Data mining for credit card fraud: A comparative study},
+	volume = {50},
+	issn = {0167-9236},
+	pages = {602 -- 613},
+	number = {3},
+	journal = {Decision Support Systems},
+	author = {Bhattacharyya, Siddhartha and Jha, Sanjeev and Tharakunnel, Kurian and Westland, J. Christopher},
+	year = {2011},
+	keywords = {Credit card fraud detection, Data mining, Logistic regression}
+}
+
+@Misc{Bader95,
+ author = {Gaby Bader},
+ title = {Method and apparatus for monitoring and estimating the awakeness of a person},
+ year = {1995},
+ number = {US 5846206A},
+ type = {Patent},
+ version = {},
+ location = {US},
+ url = {https://patentimages.storage.googleapis.com/d2/62/c4/6c28245f570acf/US5846206.pdf},
+ filing_num = {},
+ yearfiled = {1994},
+ IPC_class = {A61B5/18}
+}
+    
+@inproceedings{evans00,
+	Author = {Evans, Gary W. and Johnson, Dana},
+	Booktitle = {Journal of Applied Psychology},
+	Title = {Stress and open-office noise},
+	Year = {2000},
+    Volume = {25(5)},
+    Pages = {779 -- 783}
+}    
+
+@inproceedings{piazza10,
+	Author = {Jennifer R. Piazza and David M. Almeida and Natalia O. Dmitrieva and Laura C. Klein},
+	Booktitle = {35th Annual International Conference of the IEEE EMBS},
+	Title = {Frontiers in the Use of Biomarkers of Health in Research on Stress and Aging},
+	Year = {2010},
+    Volume = {65B (5)},
+    Pages = {513--525}
+}   
+
+@inproceedings{Chandola10,
+	Author = {Tarani Chandola and Alexandros Heraclides and Meena Kumari},
+	Booktitle = {Neurosci Biobehav Rev.},
+	Title = {Psychophysiological biomarkers of workplace stressors},
+	Year = {2010},
+    Volume = {35},
+    Pages = {51--57}
+}  
+
+@inproceedings{Eekelen04,
+	Author = {Alexander P. J. van Eekelen and Jan H. Houtveen and Gerard A. Kerkhof},
+	Booktitle = {European Journal of Applied Physiology},
+	Title = {Circadian
+variation in base rate measures of cardiac autonomic activity},
+	Year = {2004},
+    Volume = {93},
+    Pages = {39--46}
+}  
+
+@inproceedings{valentini10,
+	Author = {Mariaconsuelo Valentini and Gianfranco Parati},
+	Booktitle = {Progress in Cardiovascular Diseases},
+	Title = {Variables Influencing Heart Rate},
+	Year = {2010},
+    Volume = {52},
+    Issue= {1},
+    Pages = {11-19}
+} 
+
+@inproceedings{Force96,
+	Author = {Task Force of the European Society of Cardiology the North American Society of Pacing Electrophysiology},
+	Booktitle = {European Heart Journal},
+	Title = {Heart Rate Variability,
+Standards of Measurement, Physiological Interpretation, and Clinical
+Use},
+	Year = {1996},
+    Volume = {93},
+    Pages = {1043-1065}
+} 
+
+@inproceedings{gal07,
+	Author = {Vera Gal and Vesna Vuksanovic},
+	Booktitle = {Medical Engineering and Physics},
+	Title = {Heart rate variability in mental stress
+aloud},
+	Year = {2007},
+    Volume = {29},
+    Pages = {344--349}
+} 
+
+@inproceedings{Okada11,
+	Author = {Yoshio Okada and Tsuyoshi Yi Yoto and Taka-aki Suzuki 
+    and Satoshi Sakuragawa and Hiroyuki Sakakibara and Kayoko Shimoi 
+    and Toshifumi Sugiura},
+	Booktitle = {Journal of Medical and Biological Engineering},
+	Title = {Wearable ECG Recorder with Acceleration Sensors for
+Monitoring Daily Stress*: Office Work Simulation Study},
+	Year = {2011},
+    Volume = {34},
+    Pages = {420--426}
+} 
+
+@inproceedings{montano09,
+	Author = {Nicola Montano and Alberto Porta and Chiara Cogliati 
+    and Giorgio Costantino and Eleonora Tobaldini and Karina Rabello 
+    Casali and Ferdinando Iellamo},
+	Booktitle = {Neuroscience and Biobehavioral Reviews},
+	Title = {Heart rate variability explored in the frequency
+domain: A tool to investigate the link between heart and behavior},
+	Year = {2009},
+    Volume = {33},
+    Pages = {71--80}
+} 
+
+@inproceedings{Hellhammer09,
+	Author = {
+Dirk H. Hellhammer and Stefan Wust and Brigitte Martina Kudielka},
+	Booktitle = {Psychoneuroendocrinology},
+	Title = {Salivary cortisol as a
+biomarker in stress research},
+	Year = {2009},
+    Volume = {34},
+    Pages = {163--171}
+}  
+    
+@book{cherniss80,
+	Author = {Cary Cherniss},
+	Publisher = {Sage Publications, Inc},
+	Title = {Staff Burnout - Job Stress in the Human Services},
+	Year = {1980}
+}
+
+@inproceedings{shamsi07,
+	Author = {Shamsi T. Iqbal and Eric Horvitz},
+	Booktitle = {SIGCHI Conference on Human Factors in Computing Systems},
+	Pages = {677--686},
+	Title = {Disruption and Recovery of
+Computing Tasks: Field Study, Analysis and
+Directions},
+	Year = {2007}
+}
+
+@inproceedings{agarwal00,
+	Author = {Ritu Agarwal and Elena Karahanna},
+	Booktitle = {MIS Quarterly},
+	Pages = {665--694},
+	Title = {Time flies when you're having fun: Cognitive absorption and beliefs about information technology usage},
+	Volume = {24 (4)},
+	Year = {2000}
+}
+
+@inproceedings{webster97,
+	Author = {Jane Webster and Hayes Ho},
+	Booktitle = {Data Base for the Advancement in
+Information Systems},
+	Pages = {63--77},
+	Title = {Audience engagement in multimedia presentations},
+	Volume = {28(2)},
+	Year = {1997}
+}
+
+@inproceedings{Weick06,
+	Author = {Karl E. Weick and Kathleen M. Sutcliffe},
+	Booktitle = {Organization Science},
+	Pages = {514--524},
+	Title = {Mindfulness and the quality of organizational attention},
+	Volume = {17},
+	Year = {2006}
+}
+
+@inproceedings{dane11,
+	Author = {Erik Dane},
+	Booktitle = {Journal of
+Management},
+	Pages = {997--1018},
+	Title = {Paying attention to mindfulness and its effect
+on task performance in the workplace},
+	Volume = {37 (4)},
+	Year = {2011}
+}
+
+@inproceedings{connor02,
+	Author = {Jennie Connor and Shanthi Ameratunga and Robyn Norton and  Elizabeth Robinson and Roger Dunn and John Bailey and Ian Civil and Rod Jackson},
+	Booktitle = {BMJ},
+	Title = {Driver sleepiness and risk of serious injury to car occupants: population based case control study},
+	Year = {2002}
+}
+
+@inproceedings{beatty82,
+	Author = {Beatty, Jackson},
+	Booktitle = {Psychological Bulletin},
+	Title = {Task-evoked pupillary responses, processing
+load, and the structure of processing resources},
+	Volume = {91(2)},
+    Issue = {276},
+	Year = {1982}
+}
+
+@inproceedings{Nordbakke07,
+	Author = {Susanne Nordbakke and Fridulv Sagberg},
+	Booktitle = {Transportation Research Part F: Traffic Psychology and Behaviour},
+	Pages = {1--10},
+	Title = {Sleepy at the wheel: Knowledge, symptoms and behaviour among car drivers},
+	Volume = {10},
+	Year = {2007}
+}
+
+@book{Csikszentmihalyi90,
+	Author = {Mihaly Csikszentmihalyi},
+	Booktitle = {Harper and Row},
+	Title = {Flow: The Psychology of Optimal
+Experience},
+	Year = {1990}
+}
+
+@inproceedings{Klingner10,
+	Author = {Jeff Klingner},
+	Booktitle = {Symposium on
+Eye-Tracking Research and Applications},
+	Pages = {275--282},
+	Title = {Fixation-aligned pupillary response
+averaging},
+	Year = {2010}
+}
+
+@inproceedings{Berger29,
+	Author = {Hans Berger},
+	Booktitle = {European Archives of Psychiatry and Clinical Neuroscience},
+	Pages = {527--570},
+	Title = {Uber das Elektrenkephalogramm des Menschen},
+	volume =87,
+	year = 1929
+}
+
+@inproceedings{Smith05,
+	Author = {Michael E. Smith and Alan Gevins},
+	Booktitle = { The International Society for Optical Engineering},
+	Pages = {116--126},
+	Title = {Neurophysiologic
+monitoring of mental workload and fatigue during
+operation of a flight simulator},
+	Volume = {},
+	Year = {2005}
+}
+
+@inproceedings{sterman93,
+	Author = {Sterman, M. B. and Mann, C. A. and Kaiser, D. A.},
+	Booktitle = {6th Annual Workshop on Space
+Operations Applications and Research},
+	Pages = {},
+	Title = {Quantitative
+EEG patterns of differential in-flight workload},
+	Volume = {2},
+	Year = {1993}
+}
+
+@inproceedings{Karjalainen07,
+	Author = {Sami Karjalainen},
+	Booktitle = {Building and Environment},
+	Pages = {1594--1603},
+	Title = {Gender differences in thermal comfort and use of thermostats in everyday thermal environments},
+	Volume = {42},
+    Issue = {4},
+	Year = {2007}
+}
+
+@misc{everion,
+ author = {Biovotion},
+ title = {Everion},
+ howpublished = {\url{https://www.biovotion.com/everion/}},
+ year = {2018},
+ note = {[Online; accessed 9-July-2019]}
+}
+
+@inproceedings{kataoka00,
+	Author = {H. Kataoka and H. Kano and H. Yoshida and A. Saijo and M. Yasuda ; M. Osumi},
+	Booktitle = {IEEE Engineering in Medicine and Biology Society},
+	Title = {Development of a skin temperature measuring system for non-contact stress evaluation},
+	Volume = {20},
+	Year = {2000}
+}
+
+@inproceedings{mcduff16,
+ author = {McDuff, Daniel J. and Hernandez, Javier and Gontarek, Sarah and Picard, Rosalind W.},
+ title = {COGCAM: Contact-free Measurement of Cognitive Stress During Computer Tasks with a Digital Camera},
+ booktitle = {Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems},
+ series = {CHI '16},
+ year = {2016},
+ pages = {4000--4004},
+ publisher = {ACM},
+} 
+
+
+@inproceedings{Hernandez11,
+	Author = {Javier Hernandez and Rob R. Morris  and Rosalind W. Picard},
+	Booktitle = {International Conference on Affective Computing and Intelligent Interaction},
+	Title = {Call Center Stress Recognition
+with Person-Specific Models},
+	Pages = {125-???134},
+	Year = {2011}
+}
+
+@book{Anderson04,
+	Author = {Anderson, John R.},
+	Title = {Cognitive Psychology and Its Implications},
+	Pages = {519},
+	Year = {2004}
+}
+
+@book{hse99,
+	Author = {HSE Books},
+	Booktitle = {Health and Safety
+Executive},
+	Title = {Reducing error and influencing
+behaviour},
+	Year = {1999}
+}
+
+@inproceedings{Hovsepian15,
+	Author = {Karen Hovsepian and Mustafa al'Absi and Emre Ertin and Thomas Kamarck and Motohiro Nakajima and Santosh Kumar},
+	Booktitle = {ACM international conference on Ubiquitous computing},
+	Title = {cStress: Towards a Gold Standard for Continuous Stress Assessment in the Mobile Environment},
+	Pages = {493--504},
+	Year = {2015}
+}
+
+@inproceedings{Exler16,
+	Author = {Anja Exler and Andrea Schankin and 	Christoph Klebsattel and Michael Beigl},
+	Booktitle = {Pervasive and Ubiquitous Computing},
+	Title = {A wearable system for mood assessment considering smartphone features and data from mobile ECGs},
+	Pages = {1153--1161},
+	Year = {2016}
+}
+
+@inproceedings{Adams18,
+	Author = {Alexander T. Adams and Elizabeth L. Murnane and Phil Adams and Michael Elfenbein and Pamara F. Chang and Shruti Sannon and Geri Gay and Tanzeem Choudhury},
+	Booktitle = {CHI Conference on Human Factors in Computing Systems},
+	Title = {Keppi: A Tangible User Interface for Self-Reporting Pain},
+	Pages = {},
+	Year = {2018}
+}
+
+@inproceedings{Panwar18,
+	Author = {Prateek Panwar and Christopher M. Collins},
+	Booktitle = {CHI Conference on Human Factors in Computing Systems},
+	Title = {Detecting Negative Emotion for Mixed Initiative Visual Analytics},
+	Pages = {},
+	Year = {2018}
+}
+
+@inproceedings{Lalle16,
+	Author = {Sebastien Lalle and Cristina Conati and Giuseppe Carenini},
+	Booktitle = {International Joint Conference on Artificial Intelligence},
+	Title = {Predicting Confusion in Information Visualization from Eye Tracking and Interaction Data},
+	Pages = {},
+	Year = {2016}
+}
+
+@inproceedings{Meyer17,
+	Author = {Andre N. Meyer and Gail C. Murphy and Thomas Zimmermann and Thomas Fritz},
+	Title = {Design Recommendations for Self-Monitoring in the Workplace: Studies in Software Development},
+	Booktitle = {Proceedings ACM Human Computer Interaction},
+	Pages = {24},
+	Year = {2017},
+	DOI = {https://doi.org/10.1145/3134714}
+}
+
+@inproceedings{Hernandez14,
+	Author = {Javier Hernandez and Pablo Paredes and Asta Roseway and Mary Czerwinski},
+	Booktitle = {CHI Conference on Human Factors in Computing Systems},
+	Title = {Under pressure: Sensing Stress of Computer Users},
+	Pages = {},
+	Year = {2014}
+}
+
+@inproceedings{Snyder15,
+	Author = {Jaime Snyder and Mark Matthews and Jacqueline Chien and Pamara F. Chang and Emily Sun and Saeed Abdullah and Geri Gay},
+	Booktitle = {Conference on Computer-Supported Cooperative Work and Social Computing},
+	Title = {MoodLight: Exploring Personal and Social Implications of Ambient Display of Biosensor Data},
+	Pages = {},
+	Year = {2015}
+}
+
+@inproceedings{Luo18,
+	Author = {Yuhan Luo and Bongshin Lee and Donghee Yvette Wohn and Amanda L. Rebar and David E. Conroy and Eun Kyoung Choe},
+	Booktitle = {CHI Conference on Human Factors in Computing Systems},
+	Title = {Time for Break: Understanding Information Workers' Sedentary Behavior Through a Break Prompting System},
+	Pages = {},
+	Year = {2018}
+}
+
+@article{Gloor_etal:2010,
+	author = {P.A. Gloor and D. Oster and O. Raz and A. Pentland and D. Schoder},
+    title = {The Virtual Mirror: Reflecting on the Social and Psychological Self to Increase Organizational Creativity},
+    journal = {International Studies of Management \& Organization},
+    pages = {74--94},
+    year = 2010,
+    volume = 40,
+    number = 2,
+}
+
+@article{Russell:1980,
+	author = {J.A. Russell},
+    title = {A Circumplex Model of Affect},
+    journal = {Journal of Personality and Social Psychology},
+    pages = {1161--1178},
+    volume = 39,
+    number = 6,
+    year = 1980,
+}
+
+@article{Wilhelm_Schoebi:2007,
+	author = {P. Wilhelm and D. Schoebi},
+    title = {Assessing modd in daily life: Structural validity to change, and reliability of a short-scale to measure three basic dimensions of mood},
+    journal = {European Journal of Psychological Assessment},
+    volume = 23,
+    number= 4,
+    pages = {258--267},
+    year = 2007,
+}
+
+
+@article{kocielnik_smart_2013,
+	title = {Smart technologies for long-term stress monitoring at work},
+	doi = {10.1109/cbms.2013.6627764},
+	abstract = {Due to the growing pace of life, stress became one of the major factors causing health problems. We have developed a framework for measuring stress in real-life conditions continuously and unobtrusively. In order to provide meaningful, useful and actionable information, we present stress information, derived from sensor measurements, in the context of person's activities. In this paper, we describe our framework, discuss how we address arising challenges and evaluate our approach on basis of the field studies we have conducted. The main results of the evaluation are that the results of long-term measurements of stress reveal people information about their behavioral patterns that they perceive as meaningful and useful, and trigger their ideas about behavioral changes necessary to achieve a better stress balance.},
+	journal = {Proceedings of the 26th IEEE International Symposium on Computer-Based Medical Systems},
+	author = {Kocielnik, Rafal and Sidorova, Natalia and Maggi, Fabrizio Maria and Ouwerkerk, Martin and Westerink, Joyce H. D. M.},
+	year = {2013},
+	keywords = {Behavioral pattern, Real life, Stress testing},
+	pages = {53--58}
+}
+
+
+@article{vizer_automated_2009,
+	title = {Automated stress detection using keystroke and linguistic features: {An} exploratory study},
+	volume = {67},
+	issn = {1071-5819},
+	shorttitle = {Automated stress detection using keystroke and linguistic features},
+	url = {http://www.sciencedirect.com/science/article/pii/S1071581909000937},
+	doi = {10.1016/j.ijhcs.2009.07.005},
+	abstract = {Monitoring of cognitive and physical function is central to the care of people with or at risk for various health conditions, but existing solutions rely on intrusive methods that are inadequate for continuous tracking. Less intrusive techniques that facilitate more accurate and frequent monitoring of the status of cognitive or physical function become increasingly desirable as the population ages and lifespan increases. Since the number of seniors using computers continues to grow dramatically, a method that exploits normal daily computer interactions is attractive. This research explores the possibility of detecting cognitive and physical stress by monitoring keyboard interactions with the eventual goal of detecting acute or gradual changes in cognitive and physical function. Researchers have already attributed a certain amount of variability and “drift” in an individual's typing pattern to situational factors as well as stress, but this phenomenon has not been explored adequately. In an attempt to detect changes in typing associated with stress, this research analyzes keystroke and linguistic features of spontaneously generated text. Results show that it is possible to classify cognitive and physical stress conditions relative to non-stress conditions based on keystroke and linguistic features with accuracy rates comparable to those currently obtained using affective computing methods. The proposed approach is attractive because it requires no additional hardware, is unobtrusive, is adaptable to individual users, and is of very low cost. This research demonstrates the potential of exploiting continuous monitoring of keyboard interactions to support the early detection of changes in cognitive and physical function.},
+	number = {10},
+	urldate = {2019-09-19},
+	journal = {International Journal of Human-Computer Studies},
+	author = {Vizer, Lisa M. and Zhou, Lina and Sears, Andrew},
+	month = oct,
+	year = {2009},
+	keywords = {Stress detection, Text feature analysis, Unobtrusive monitoring},
+	pages = {870--886},
+	file = {ScienceDirect Full Text PDF:/Users/csatterfield/Zotero/storage/QLGHM6CI/Vizer et al. - 2009 - Automated stress detection using keystroke and lin.pdf:application/pdf;ScienceDirect Snapshot:/Users/csatterfield/Zotero/storage/AWYCVFVS/S1071581909000937.html:text/html}
+}
