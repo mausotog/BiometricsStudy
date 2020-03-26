@@ -9,6 +9,7 @@
 \section{Observed Trends in Stress Levels}
 \label{stressTrends}
 
+\vspace{-4mm}
 To gain insights into how knowledge workers experience stress over an
 extended period of work, we examined the end of day survey responses
 collected from each participant to see if any identifiable trends
@@ -19,7 +20,8 @@ control.
 
 \subsection{Baseline Stress Levels}
 
-Common amongst all participants was a trend to select one stress rating
+\vspace{-4mm}
+Common among all participants was a trend to select one stress rating
 far more frequently than any other. We will refer to this value as the
 participant's baseline stress level. All but one participant reported
 their perceived stress level for the day as their baseline stress
@@ -34,7 +36,7 @@ their baseline stress level at some point.
   \centering
       \includegraphics[width=0.4\textwidth]{dailystress_s1.png}
       \includegraphics[width=0.4\textwidth]{dailystress_s3.png}
-  \caption{The day-to-day stress levels reported by two participants (S1 and S3) are shown. The y-axis represents values on the 5-point Likert scale we asked participants to respond with ranging from 1/Not at all stressed to 5/Extremely stressed. The x-axis represents the day of the study on which the value was recorded (from 0-45). The x-axes are slightly different for the 2 participants as they did not begin and end the study on exactly the same days.}
+  \caption{The day-to-day stress levels reported by two participants. Y-axis represents values on the 5-point Likert scale. The x-axis represents the day of the study.}
    \label{fig:dailyStress}
    \vspace*{-2mm}
 \end{figure}
@@ -49,6 +51,7 @@ as a distinct difference in baseline stress level (rating 2 for S1 vs rating 3 f
 
 \subsection{Stressful Days Tend to Cluster}
 
+\vspace{-4mm}
 Accounting for the variance between participants perceived stress
 baselines, we consider a stressful day to be one that represents a
 deviation of 1 or more stress levels above the participant's
@@ -60,8 +63,9 @@ workdays.  The day after a stressful day is much more likely to be a
 stressful day as compared to any other day with a 0.55 average increase
 over baseline, compared to 0.02 average increase over baseline.
 
-\subsection{Extreme Changes in Stress Levels are Rare}
+\subsection{Extreme Changes are Rare}
 
+\vspace{-4mm}
 After accounting for each participant's perceived stress baseline, we
 examined the frequency of deviations from the baseline. We found that
 participants were far more likely to report a stress level that was
@@ -70,18 +74,20 @@ more points away. These extreme deviations represented only 15\% of
 all reported values which differed from the participants baseline. As
 well, the majority (78\%) of these deviations came from just two
 participants. This suggests that some people may be less resilient to
-the stress of the workplace than others. For most participants,
+the stress of the workplace. For most participants,
 extremely stressful days were few and far between.
 
 \subsection{Explaining Stress Fluctuations}
 
-In an attempt to explain some of the stress that our participants were experiencing, we created a linear mixed model with the self-reported daily stress levels as dependent variable and the participants as random effects. We experimented with day of the week and proximity to beginning or end of month as possible explanatory variables. We also calculated daily features from the gathered computer interaction data where available---namely total time spent actively on the computer, percentage of time idle, and amount of time spent on non work-related web browsing per day. Ultimately, the analysis showed that none of the variables that we examine had a significant explanatory power with respect to our participants perceived stress levels. This indicates that aspects such as the time spent on a computer or the non work-related web browsing do not have a significant impact on the stress level. Furthermore, this points to the need for additional instrumentation and data collection, if we are to succesfully understand and predict stress in the workplace.
+\vspace{-4mm}
+In an attempt to explain some of the stress that our participants were experiencing, we created a linear mixed model with the self-reported daily stress levels as dependent variable and the participants as random effects. We experimented with day of the week and proximity to beginning or end of month as possible explanatory variables. We also calculated daily features from the gathered computer interaction data where available---namely total time spent actively on the computer, percentage of time idle, and amount of time spent on non work-related web browsing per day. Ultimately, the analysis showed that none of the variables that we examine had a significant explanatory power with respect to our participants perceived stress levels. This indicates that aspects such as the time spent on a computer or the non work-related web browsing do not have a significant impact on the stress level. Furthermore, this points to the need for additional instrumentation and data collection, if we are to successfully understand and predict stress in the workplace.
 
 
 \section{Predicting Stress in the Moment}
 % random forest best
 \label{secOverallAccuracy}
 
+\vspace{-4mm}
 To investigate whether stress, focus and awakeness can be predicted in
 the moment based on biometric measures,
 we investigated classifiers trained
@@ -91,16 +97,18 @@ and awakeness.
 
 \subsection{Data Preparation}
 
+\vspace{-4mm}
 In this section we describe how we preprocessed the collected data for use in training and testing machine learning models.
 
 \subsubsection{Data Linking}
 
+\vspace{-8mm}
 We linked the collected biometric data and survey responses for each participant. Linking the data is necessary to construct training and test datasets for use in creating and evaluation machine learning models.
 
 Our linking approach is as follows. From the start time of each survey response, we look back one hour for available biometric data. For each minute in that hour-long time window, we check for biometric data to associate with the survey response. For example, if a participant started a survey response at 11:05am, we look for biometric data in the time frame 10:05am to 11:05am. If biometric data is available in the hour-long time window, we consider the survey response to have associated biometric data. Otherwise, we exclude the survey response from our dataset.
 
 Reasons for a survey response to lack associated biometric data include:
-\begin{itemize}
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
 \item The participant not wearing the Everion in the hour before before beginning the survey
 \item The Everion not recording data in the hour before the participant began the survey (e.g., due to low battery)
 \item Biometric data not being uploaded successfully to the server
@@ -116,7 +124,7 @@ Participant S2 and S12 have particularly low numbers of usable survey responses.
 \begin{figure}
   \centering
       \includegraphics[width=0.5\textwidth]{DuringTheDay.png}
-  \caption{The figure shows the biometric data available per each participant. Green sections represent survey responses with biometric
+  \caption{Biometric data available per each participant. Green sections represent survey responses with biometric
   data available, red sections responses with no biometric data available}
    \label{surveyBio}
    \vspace*{-4mm}
@@ -125,6 +133,7 @@ Participant S2 and S12 have particularly low numbers of usable survey responses.
 
 \subsubsection{Feature Extraction}
 
+\vspace{-8mm}
 We extracted features from the biometric data to provide as input to machine 
 learning models. Previous 
 studies~ \cite{vorburger05,zuger2015interruptibility} identify time windows as an 
@@ -153,19 +162,21 @@ ground truth.
 
 \subsubsection{Response Transformations}
 
+\vspace{-8mm}
 Table~\ref{responseDistribution} illustrates the distribution of responses from each participant for each of the three survey questions (listed in Section~\ref{sec:Surveys}). The figure shows that there is a notable imbalance in the distribution of the self-reported responses provided by the participants. Most participants did not use all five points of the five-point Likert scale in their responses, and the distributions tend to skew toward one side or the other, depending on the question. Thus, we binarized the survey data into a two-point scale to give the machine learning models the best possible chance to make useful predictions. The two points in the binary scale represent negative or positive responses for each of the three human aspects of interests (e.g., not stressed or stressed). 
 
 We binarized the survey responses as follows. For each participant, we calculated the median response value for each question. We classified each response below the median as 0 ('negative') and each response above the median as 1 ('positive'). The distribution for the stress question skewed left, so we included the median values in the 'positive' class, while the distributions for focus and awakeness skewed right, so we included those median values in the 'negative' class.
 
 \subsubsection{Oversampling}
 
+\vspace{-8mm}
 Even after binarizing the responses as described in the previous section, we found the distribution of responses was still quite imbalanced for many of our participants. This can be seen in the distribution columns in Table \ref{tab:accuracy}. To combat this, we applied random oversampling to our training sets, which artificially rebalances the dataset by creating randomly replicated data in the minority class. This has been a commonly used technique in previous studies on unbalanced datasets \cite{chawla2004,yap2014}.
 
 
 \begin{table}
   \centering
       \includegraphics[width=0.5\textwidth]{distributiontable.pdf}
-  \caption{The distribution of the responses of each participant to the three questions asked during the day are shown. Each bar in the histograms represent one of the 5 values on the 5-point Likert scale we asked participants to respond with, where the far left side of the histograms are 1/Not at all, and the far right sides are 5/Extremely}
+  \caption{Distribution of the responses of each participant. Each bar in the histograms represent one of the 5 values on the 5-point Likert scale, the far left side of the histograms are 1/Not at all, and the far right sides are 5/Extremely}
    \label{responseDistribution}
    \vspace*{-2mm}
 \end{table}
@@ -186,8 +197,9 @@ Even after binarizing the responses as described in the previous section, we fou
     \end{centering}
 \end{table}
 
-\subsection{Selecting a Classifier Algorithm}
+\subsection{Selecting a Classifier}
 
+\vspace{-4mm}
 There are many different algorithms that can be used to build a classifier. To select an
 algorithm, we compared multiple classifiers using the popular machine learning library scikit-learn~\cite{pedregosa11} and performed a grid search analysis to determine the optimal hyperparameters for each classifier. Our analysis showed that random forest outperforms all other classifiers, including Na\"ive Bayes, decision trees, support vector machine, and a multilayer perceptron neural network. The optimal values for random forest and the three output measures are listed in Table \ref{tab:hyperparams}. For the remainder of this paper, we refer to random forest classifiers trained with these hyperparameters.%\\[-0.1cm]
 % for stress they were (minimum samples for split = 4, # of estimators = 100, max features = 0.5, k=300), for focus they were (minimum samples for split = 4, # of estimators = 50, max features = 0.5, k=200), and for awakeness they were (minimum samples for split = 4, # of estimators = 100, max features = 0.25, k=800)
@@ -203,6 +215,7 @@ algorithm, we compared multiple classifiers using the popular machine learning l
 
 \subsection{Individual Classifiers}
 
+\vspace{-4mm}
 %\noindent\textit{Results of Individual Classifiers}\\
 Since peoples' experience of stress, focus, and awakeness (as well as
 their physiological manifestations) can vary substantially
@@ -277,6 +290,7 @@ most unbalanced.\\[-0.1cm]
 
 \subsection{Feature Selection and Importance}
 
+\vspace{-4mm}
 %\noindent\textit{Feature Selection and Importance}\\
 There are a large variety of features that can be (and have been) calculated in previous research for each of the basic measurements listed in Table~\ref{signals}, such as the mean, standard deviation, maximum, and interquartile range. In addition, each of these metrics can be combined with the various time windows captured of a basic measurement, resulting in a large feature space. To reduce the feature space, we experimented with multiple feature selection methods, including selecting the top k highest correlated features by various metrics such as mutual information, Pearson's correlation coefficient, ANOVA's F-value, as well as wrapper methods such as recursive feature elimination, optimizing mean decrease accuracy by iteratively permuting features, and only selecting features that exceed a certain Gini importance threshold. We found that all methods produced similar results with respect to accuracy, precision, and recall for the individual models. Ultimately, we chose to use the top k features with the highest ANOVA F-value, as it is relatively simple and efficient to calculate. The values of k used were selected by grid search analysis, and are shown in Table \ref{tab:hyperparams}. 
 
@@ -311,6 +325,7 @@ Overall, the features that were selected as the important ones for the individua
 
 \subsection{Individual vs.\ General Model}
 
+\vspace{-4mm}
 %\noindent\textit{Individual vs.\ General Model}\\
 Individual models are trained specifically for each individual and thus require a data collection period before they are capable of making accurate predictions. On the other hand, the idea of general models is to be able to train them on already collected data and then  to be able to apply them even to new and unseen individuals, thus overcoming the cold-start problem. Given the large individual differences in biometrics, training a general model to achieve an adequate accuracy for new individuals is not necessarily possible. 
 
