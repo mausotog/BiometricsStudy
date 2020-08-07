@@ -8,59 +8,90 @@ distractions, highly complex and demanding tasks, and long working
 hours~\cite{gonzalez2004constant,mark2008cost,czerwinski04diary}. 
 These challenges, amongst others, can lead to stress in the workplace.
 Stress is an ever-growing concern as it can lead to
-fatigue, burnout and various other illnesses, ultimately resulting in work 
+fatigue, burnout and various other illnesses, ultimately resulting in 
+%\tf{a lack of focus} \gm{suggest removing the phrase 'a lack of focus' - better where it comes in later}, 
+work 
 absences and marked productivity 
 losses~\cite{hockey1997stress,setz2010stress,wrs2010}.
 
 Given the importance of understanding stress and its relationship and
 effect on work, a number of studies have been conducted using a
 variety of methods. Minimally invasive studies have shown the benefit of using
-autonomic nervous system (ANS) activity by analyzing biometric signals
+autonomic nervous system (ANS) activity by analyzing \rev{certain biometric (\textit{aka.} psycho-physiological) signals}
 of the human body, such as blood pressure~\cite{kataoka00}.
 These approaches can be used in long-term field
 studies, opening up the question of what stress
 looks like in the wild. 
-In contrast, other studies have studied stress using invasive
+In contrast, other studies have studied stress using more invasive
 techniques, such as measuring cortisol as a stress biomarker~\cite{piazza10}. These studies are best suited
 for laboratory environments.
 
-In this paper, we build on this ability to non-invasively monitor stress
-to investigate two questions: RQ1) how do knowledge
-workers at work experience stress over time, and RQ2) can we predict
-whether a knowledge worker is experiencing stress in the moment based
-on biometric data. A better understanding of how stress is experienced (RQ1)
-can help inform the design of workplaces to manage
-and alleviate stress. An ability to predict stress in the moment (RQ2)
-can enable the development of digital tools to avoid stress. 
+\rev{Our work builds on this ability to non-invasively monitor stress by performing an eight-week study in the workplace with 14 knowledge workers examining stress as well as two related human aspects: focus and awakeness (i.e., wakefulness). We collected data on these two additional aspects because stress and the challenges that contribute to stress levels can also affect sleep. A lack of sleep can affect
+the ability of knowledge workers to stay awake and focused at work which, in turn, can result in undesired consequences on work and productivity~\cite{connor02,cohen1997measuring,mark2014bored}.}
 
-Our work builds upon previous work and extends it by performing an
-eight-week study in the workplace with 14 knowledge 
-workers. To the best of our knowledge, this is the 
+%\tf{In this paper, we investigate two research questions: RQ1) how do knowledge workers at work experience stress and also awakeness \gm{can we remove 'also awakeness' - why not focus - it was asked in the survey?}  over time, and RQ2) can we use biometric data to predict whether a knowledge worker is experiencing stress as well was whether the worker is focused and/or awake.
+%A better understanding of how stress is experienced (RQ1) can help inform the design of workplaces to manage
+%and alleviate stress and awakeness. An ability to predict stress, focus and awakeness in the moment (RQ2) can enable the development of digital tools to support the knowledge worker in their work, for instance, by better managing disruptions, automatically adjusting lighting to reduce sleepiness, or by avoiding stress.}
+
+\rev{In this paper, we investigate two research questions. First, what is the experience of knowledge
+workers at work with respect to stress, focus and awakeness over time? Second, can we use
+biometric data to predict whether a knowledge worker is experiencing stress, is focused and is awake at 
+a given moment in time?} A better understanding of how knowledge workers experience stress, focus
+and awakeness can help inform the design of workplaces to manage and alleviate stress,
+and to encourage  focus and awakeness.  An ability to predict stress, focus
+and awakeness in the moment can enable the development of digital tools to support  knowledge
+workers in their work by better managing disruptions, automatically adjusting lighting
+to reduce sleepiness, or by avoiding stress, amongst other possibilities.}
+
+
+To the best of our knowledge, this is the 
 longest in-situ study performed in a real-world 
-environment of knowledge workers analyzing an extensive collection of biometric signals with experience samples examining real-time prediction of stress in the workplace~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}.
-Previous studies are predominantly controlled lab studies, which used only a subset of the relevant biometric signals we captured, much more limited in duration, or not focused on a real-world environment. 
+environment of knowledge workers analyzing an extensive collection of biometric signals with experience samples examining real-time prediction of stress, focus and awakeness in the workplace.
+Previous studies are predominantly controlled lab studies, which used only a subset of the relevant biometric signals we captured, much more limited in duration, or not focused on a real-world environment~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}. 
 
-We collected biometric data as well as
-experience samples on stress, and two related human aspects: focus and
-awakeness (i.e. wakefulness). We collected participant reports on focus because the
-challenges that contribute to stress levels can also make it hard for
-knowledge workers to stay focused and the level of focus
-can affect
-productivity~\cite{mark2014bored}.  We collected participant reports
-on awakeness because a lack of awakeness (sleepiness) can result in
-undesired consequences on work~\cite{connor02}.  The participants in
+
+
+% ORIGINAL
+% In this paper, we build on this ability to non-invasively monitor stress
+% to investigate two questions: RQ1) how do knowledge
+% workers at work experience stress over time, and RQ2) can we predict
+% whether a knowledge worker is experiencing stress in the moment based
+% on biometric data. A better understanding of how stress is experienced (RQ1)
+% can help inform the design of workplaces to manage
+% and alleviate stress. An ability to predict stress in the moment (RQ2)
+% can enable the development of digital tools to avoid stress. 
+
+% Our work builds upon previous work and extends it by performing an
+% eight-week study in the workplace with 14 knowledge 
+% workers. To the best of our knowledge, this is the 
+% longest in-situ study performed in a real-world 
+% environment of knowledge workers analyzing an extensive collection of biometric signals with experience samples examining real-time prediction of stress in the workplace~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}.
+% Previous studies are predominantly controlled lab studies, which used only a subset of the relevant biometric signals we captured, much more limited in duration, or not focused on a real-world environment. 
+
+% We collected biometric data as well as
+% experience samples on stress, and two related human aspects: focus and
+% awakeness (i.e. wakefulness). We collected participant reports on focus because the
+% challenges that contribute to stress levels can also make it hard for
+% knowledge workers to stay focused and the level of focus
+% can affect
+% productivity~\cite{mark2014bored}.  We collected participant reports
+% on awakeness because a lack of awakeness (sleepiness) can result in
+% undesired consequences on work~\cite{connor02}. \tfC{We could also say that stress can lead to less sleep and therefore an increased lack of awakenes, which in turn can also result in... (this way we can frame awakeness and focus as two factors that are affected and almost 'derived' by stress)}
+
+The participants in
 our study perform various job functions for a research and
 development group within a single large corporation. For this study, they wore a novel, state-of-the-art
 biometric armband sensor\footnote{Biovotion Everion
   sensor~\cite{everion}} with low invasiveness that captured heart-,
 respiration- and skin-related measures. This modality was chosen to
 ease longitudinal deployment in the field. Using machine learning, we
-created classifiers and analyzed their ability to predict stress, focus, and awakeness levels. Considering all of these three human aspects helps us to consider whether one aspect might be easier to detect than another might. If one aspect is easier to detect, it might serve
-as a proxy or an indicator of the presence (or absence) of other aspects. 
+created classifiers and analyzed their ability to predict stress, focus, and awakeness levels. Considering all of these three human aspects helps us to consider whether one aspect might be easier to detect than another. If one aspect is easier to \rev{predict}, it might serve
+as a proxy or an indicator of the presence (or absence) of other aspects.
+%\tfC{last sentence is somehow odd} 
 
 In our analysis, we identify several trends in day-to-day stress levels
 that emerged over the course of our eight-week study.  The results of
-our analysis also show that biometric signals collected from a single
+our analysis  show that biometric signals collected from a single
 minimally invasive sensor can be used to predict stress and its
 related aspects accurately, with the abstract concept of focus
 (predictably) being the hardest to detect. Our results further show
@@ -70,7 +101,7 @@ vary substantially between individuals.
 %Our results further show that overall combining biometric features with computer interaction information 
 %results in an improvement
 %over each of the training sets individually.
-The main contributions of our work are:
+The three main contributions of our work are:
 \begin{itemize}
 	\item A qualitative examination of how knowledge worker stress presents and fluctuates in the wild based on an eight-week field study with 14 office workers.
 	\item The creation and analysis of measures for the automatic monitoring of knowledge workers' stress, focus and awakeness in the workplace based on a machine learning model trained on biometric data and experience samples.
@@ -100,7 +131,7 @@ the interaction of knowledge workers with their digital environment leading to a
 %
 %Our work builds upon previous work and extends it by performing an eight-week study in the workplace with 14 knowledge workers, collecting biometric and computer interaction data as well as experience samples on focus, awakeness, and stress. Our participants, who perform various job functions for a research and development group within a single large corporation, wore a single biometric armband sensor\footnote{Biovotion Everion sensor~\cite{everion}} with low invasiveness that captured heart- and skin-related measures. This modality was chosen to ease longitudinal deployment in the field. Using machine learning, we created classifiers and analyzed their ability to predict the three productivity-related human aspects. In addition, we compared biometric features with computer interaction features in their predictive power, we analyzed .. and ...
 %
-%The results of our analysis show that biometrics of a single minimally invasive sensor can be used to ... accurately, with the abstract concept of focus (predictably) being the hardest to detect, yet even its detection within reasonable limits was feasible. \tf{Chris: is it possible to state this?} The results also show that knowledge workers' self-reported levels of stress, focus and awakeness and their physiological manifestation and prediction can vary a lot between individuals. Our results further show that ...
+%The results of our analysis show that biometrics of a single minimally invasive sensor can be used to ... accurately, with the abstract concept of focus (predictably) being the hardest to detect \gm{shouldn't this be predict?}, yet even its detection within reasonable limits was feasible. \tf{Chris: is it possible to state this?} The results also show that knowledge workers' self-reported levels of stress, focus and awakeness and their physiological manifestation and prediction can vary a lot between individuals. Our results further show that ...
 %The main contributions of our work are the creation and analysis of measures for the automatic monitoring of knowledge workers' awakeness, stress, and the more abstract concept of focus in the workplace based on an eight-week field study with 14 office workers. a thorough analysis of ... and a discussion on the ...
 
 %

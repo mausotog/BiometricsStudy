@@ -60,10 +60,12 @@
 		\fbox{\bfseries\sffamily\scriptsize#1}
 		{\sf\small$\blacktriangleright$ %$\RHD$
 			{#2} $\blacktriangleleft$}}} %\LHD$}}}%
-\newcommand\tf[1]{\cb{TF}{\textcolor{green}{#1}}}
-\newcommand\cs[1]{\cb{CS}{\textcolor{blue}{#1}}}
+\newcommand\tf[1]{\cb{TF}{\textcolor{blue}{#1}}}
+\newcommand\cs[1]{\cb{CS}{\textcolor{cyan}{#1}}}
 \newcommand\ms[1]{\cb{MS}{\textcolor{red}{#1}}}
+\newcommand\gm[1]{\cb{GCM}{\textcolor{magenta}{#1}}}
 \newcommand\tfC[1]{\todo[color=green,inline]{Thomas: #1}}
+\newcommand{\rev}[1]{\textcolor{blue}{#1}}
 
 \journal{International Journal of Human-Computer Studies}
 
@@ -106,7 +108,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{Observing and Predicting Knowledge Worker Stress in the Wild}
+\title{\rev{Observing and Predicting Knowledge Worker Stress, Focus and Awakeness in the Wild}}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -172,38 +174,23 @@
 	
 \end{comment}
 
-
-%% Group authors per affiliation:
-%\author{Elsevier\fnref{myfootnote}}
-%\address{Radarweg 29, Amsterdam}
-%\fntext[myfootnote]{Since 1880.}
-
-%% or include affiliations in footnotes:
-%\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
-%\ead[url]{www.elsevier.com}
-
-%\author[mysecondaryaddress]{Global Customer Service
-%\corref{mycorrespondingauthor}}
-%\cortext[mycorrespondingauthor]{Corresponding author}
-%\ead{support@elsevier.com}
-
-%\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
-%\address[mysecondaryaddress]{360 Park Avenue South, New York}
-
 \begin{abstract}
 Knowledge workers face many challenges in the workplace: work is 
 fragmented, disruptions are constant, tasks are complex, and work hours can be 
 long. These challenges can impact knowledge workers' stress, focus and awakeness, and in turn their interaction with the digital environment, the quality of work 
 performed and their productivity in general. We report on a field study with 14
 knowledge workers over an eight-week period in which we investigated, using
-experience sampling, how the workers experience stress over time. During this field study, we also collected biometric data, which we then used to investigate if it is possible to predict such productivity-related indicators as stress, focus and awakeness, in the moment.
+experience sampling, how the workers experience stress, \rev{focus and awakeness} over time. During this field study, we also collected biometric data \rev{including heart- and skin-related measures}, which we then used to investigate if it is possible to predict stress, focus and awakeness, in the moment.
 We observed and report on various trends in knowledge worker stress levels
-over several weeks and show that machine learning models can be built to
-predict stress, focus and awakeness from biometric data.
+over several weeks and show that machine learning models can be built
+\rev{from the data of a single minimally invasive sensor}
+to
+predict stress, focus and awakeness \rev{accurately, with the abstract concept of focus
+the hardest to predict.}
 \end{abstract}
 
 \begin{keyword}
-Biometrics, Stress, Awakeness, Focus, Computer Interaction, Ubiquitous Computing, Empirical Study, User Centered Design
+Biometrics, \tf{Psycho-Physiological Data}, Stress, Awakeness, Focus, Computer Interaction, Ubiquitous Computing, Empirical Study, User Centered Design
 \end{keyword}
 
 \end{frontmatter}
@@ -213,12 +200,12 @@ Biometrics, Stress, Awakeness, Focus, Computer Interaction, Ubiquitous Computing
 %\maketitle
 
 \input{bp_intro_v4}
+\input{bp_relatedWork}
 \input{bp_studyMethod}
 %\input{bp_data}
 \input{bp_results_1}
 %\input{bp_results_2}
 \input{bp_discussion}
-\input{bp_relatedWork}
 \input{bp_threats}
 \input{bp_conclusion}
 

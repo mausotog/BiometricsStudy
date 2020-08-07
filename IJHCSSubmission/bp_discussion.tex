@@ -1,5 +1,5 @@
 %!TEX root = bioPrediction_main.tex
-\section{Discussion}
+\section{Discussion}\label{sec:Discussion}
 
 Humans experience stress, focus and awakeness in different ways.  In
 this paper, we have attempted to study these mental states in the
@@ -58,7 +58,7 @@ to handle conflicting levels between different group members.
 
 \subsection{The Effect of Tai Chi on Stress}
 As described in our study procedure,
-due to our focus on stress, we offered participants an opportunity to be part of Thai Chi classes.
+due to our focus on stress, we offered participants an opportunity to be part of Tai Chi classes.
 The two primary reasons for this intervention was to keep participants motivated to continue the self-reports over the long study period, and to offer a technique that might help reduce stress.
 After consulting with other researchers, we decided to offer Tai Chi in the last month of the study, leaving the first month of the study unaltered. While participants were not required to take a Tai Chi class, they all took one per week except for two participants that opted out of the last two weeks of classes. Four participants explicitly stated that they liked the Tai Chi sessions or that they were ``excellent''.
 These classes were performed once per week with a duration of one hour.
@@ -110,7 +110,10 @@ challenges in the training and assessment of a machine learning
 classifier, as also found by others, e.g.~\cite{Exler16}. We addressed
 this for the training by oversampling in case of few data samples for
 the individual models and undersampling in case of a general model
-where more data was available. Especially in light of this imbalance
+where more data was available. \rev{Rebalancing the dataset using such techniques
+is a common and effective practice~\cite{branco2016survey}. Alternative techniques such as SMOTE~\cite{chawla2002smote} exist and can perform better than those we employed, however they are impractical considering the limited amount of data we have to work with. Oversampling the dataset as we did may also lead to an increased risk of model overfitting. However, we believe the benefits of rebalancing the dataset outweigh this possible downside.}
+
+Especially in light of the imbalance
 in the data, the results we achieved with our models are
 encouraging. For the assessment of the classifiers' performance we
 addressed the imbalance by not just presenting accuracy, but also by
