@@ -1,16 +1,17 @@
 %!TEX root = bioPrediction_main.tex
 \section{Field Study}
-We conducted an eight-week field study with 14 participants using experience sampling and biometric sensors to investigate how knowledge workers experience stress\rev{, focus and awakeness} over time and the feasibility of predicting stress, focus, and awakeness \rev{using} biometric signals. 
+We conducted an eight-week field study with 14 participants using experience sampling and biometric sensors to investigate how knowledge workers experience stress \rev{and awakeness} over time and the feasibility of predicting stress, focus, and awakeness \rev{using} biometric signals. 
 
 
 \subsection{Participants}
 We recruited a group of 14 professionals via personal contacts from a large power and automation company. The group is diverse in terms of age, work experience, gender, and work responsibilities. All participants work primarily in an office environment, though half of the participants spend at least 10\% (and up to 50\%) of their time in a laboratory environment. Office workers are a population that generalizes to a variety of contexts, including part-time laboratory workers, and guarantees that our participants have varying work patterns that include different levels of computer usage, as well as different levels of activity in both individual and collaborative tasks.
 
-From the 14 participants, 11 are male and 3 are female. The average participant age is ~40, with 5 in the age range 25-34, 7 in the age range 35-44, and 2 in the age range 55+. The average number of years of professional experience of the participants is ~12, with 2 having less than 5 years, 10 having 5-15 years, and 2 having more than 25 years. All participants work for a research organization within the company, but their job functions span line management, laboratory science, scientific research, technology evaluation, and software development.
+From the 14 participants, 11 are male and 3 are female. The average participant age is ~40, with 5 in the age range 25-34, 7 in the age range 35-44, and 2 in the age range 55+. The average number of years of professional experience of the participants is 12, with 2 having less than 5 years, 10 having 5-15 years, and 2 having more than 25 years. All participants work for a research organization within the company, but their job functions span line management, laboratory science, scientific research, technology evaluation, and software development.
 
 
 \subsection{Procedure}
-We performed a study over the course of eight weeks. This study includes the collection of the participant's \rev{biometric data and self-reporting surveys during their work}. \rev{We also collected computer interaction data, but given privacy concerns of some participants chose not to use this data (see Section~\ref{sec:computer_interaction_data}}). We informed participants about the study purpose and procedure, handed out biometric sensors, introduced and explained the self-reporting to the participants, \rev{handed out consent form and ensured informed consent for the study.}%\tf{and asked them to sign a consent form}.%\tfC{DAVE: do you still have these?}. \gm{Can we state that it was reviewed by a University ethics board?}
+We performed a study over the course of eight weeks. This study includes the collection of the participant's \rev{biometric data and self-reporting surveys during their work hours}. \rev{We also collected computer interaction data, but given privacy concerns of some participants chose not to use this data (see Section~\ref{sec:computer_interaction_data})}. We informed participants about the study purpose and procedure, handed out biometric sensors, introduced and explained the self-reporting to the participants, \rev{handed out consent forms and ensured informed consent from each participant for the study.}
+
 
 After the initial setup, participants were asked to fill out three surveys each day for the following eight weeks (see Section~\ref{sec:Surveys}) \rev{and wear the biometric sensor during their work hours}. At the end of the eight weeks, we collected the biometric sensors and performed a short follow-up interview on the study and the participants' experiences.
 
@@ -78,7 +79,9 @@ Figure~\ref{everion} illustrates Biovotion's Everion, which we used to track the
    \label{everion}
 \end{figure}
 
-Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study.
+Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study. \rev{We chose these biometric measurements based on previous research that has indicated their potential (see references in Table~\ref{signals}) and the availability and feasibility of collecting these measurements with low invasiveness over a long duration.} 
+
+
 
 \begin{table}[h!]
 \begin{center}

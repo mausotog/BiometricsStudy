@@ -26,29 +26,44 @@ Much previous work relates to identifying and mitigating stress in an office env
 Previous studies have measured stress by taking one of two possible approaches.
 The first approach is to measure plasma catecholamine and cortisol as stress biomarkers~\cite{piazza10}.
 This approach is impractical for use over prolonged periods of time, as in our eight-week study.
-Further, this approach is imprecise because of the delay from the stress stimulation to the stress response, which 
-may take from minutes to hours~\cite{Chandola10,Hellhammer09}.
+Further, this approach is imprecise because of the delay from the stress stimulation to the stress response, which may take from minutes to hours~\cite{Chandola10,Hellhammer09}.
 
-The second approach, which we have chosen for our study, is to measure autonomic nervous system (ANS) activity by analyzing biometric signals of the human body, such as blood pressure, heartbeat, and temperature~\cite{kataoka00,Eekelen04,valentini10}.
+The second approach, which we have chosen for our study, is to measure autonomic nervous system (ANS) activity by analyzing biometric signals of the human body, such as blood pressure, heartbeat, and skin temperature~\cite{kataoka00,Eekelen04,valentini10}.
 In particular, changes in heart rate variability are associated with cognitive and emotional stress~\cite{mcduff16,dishman2000stress}.
 This second approach has been used successfully by several past studies~\cite{Force96,gal07,montano09}.
 
-Zaman et al.~\cite{Zaman19} developed a study where they measure stress and productivity in short sessions with 63 participants using biometric sensors (thermal facial camera, wrist EDA, chest breathing sensor, and facial camera). Different from this study, our corpus is gathered from real-world office workers. Likewise, our study spans for eight weeks allowing us to analyze the behavior or our participants through the weeks and providing a more extensive in-depth analysis of our participants over time.
+Zaman et al.~\cite{Zaman19} performed a study in which they measure stress and productivity in short sessions with 63 participants using biometric sensors (thermal facial camera, wrist EDA, chest breathing sensor, and facial camera). Different from this study, our corpus is gathered from real-world office workers. Also, our study spans for eight weeks allowing us to analyze the behavior or our participants through the weeks and providing a more extensive in-depth analysis of our participants over time.
 
-Mirjafari et al.~\cite{Mirjafari19} use mobile sensing data to gather data and build machine learning models to group workers based on their workplace performance metrics. Similarly, Sarsenbayeva et al.~\cite{Sarsenbayeva19} study how stress affects mobile interaction reducing completion time and accuracy during target acquisition tasks.
+Hovsepian et al.~\cite{Hovsepian15} have worked to obtain a standard for continuous stress assessment. They used sensors to conduct a seven-day lab study with 26 participants, as well as a field study with 20 participants. They found that their model showed significant improvement over simple heart rate variability measurements. However, this model requires the use of a suite of invasive sensors that would be impractical for a study the length of ours. 
 
-Hovsepian et al.~\cite{Hovsepian15} have worked to obtain a standard for continuous stress assessment. They used sensors to conduct a seven-day lab study with 26 participants, as well as a field study with 20 participants. They found that their model showed significant improvement over simple heart rate variability measurements. However, this model requires the use of a suite of invasive sensors that would be impractical for a study the length of ours.
+Hernandez et al.~\cite{Hernandez14} investigated the use of a pressure-sensitive keyboard and a capacitive mouse as non-intrusive means for measuring computer users' stress levels. They found participants exhibited significantly increased typing pressure and mouse contact when in stressful conditions. McDuff et al.~\cite{mcduff16} experimented with a camera to measure photoplethysmographic signals indicative of cognitive stress. Vizer et al.~\cite{vizer_automated_2009} used keystroke and linguistic features to automatically measure stress levels in response to cognitive and physical stress conditions. All of these studies were performed in a controlled lab setting over a short duration and the results have yet to be replicated in the field.
 
-Hernandez et al.~\cite{Hernandez14} investigated the use of pressure-sensitive keyboard and a capacitive mouse as non-intrusive means for measuring computer users stress levels. They found participants exhibited significantly increased typing pressure and mouse contact when in stressful conditions. McDuff et al.~\cite{mcduff16} experimented with a camera to measure photoplethysmographic signals indicative of cognitive stress. Vizer et al.~\cite{vizer_automated_2009} used keystroke and linguistic features to automatically measure stress levels in response to cognitive and physical stress conditions. All of these studies were performed in a controlled lab setting over a short duration and the results have yet to be replicated in the field.
-
-Evans and Johnson~\cite{evans00} investigated the correlation between noise in the workplace and stress levels. They found that workers exposed to open-office noise showed aftereffects that indicate motivational deficits. The population for their experiment comprised 40 female clerical workers, who were randomly assigned to a control condition or to three-hour low-intensity noise room designed to simulate typical open-office noise levels.
-
-Stress in the workplace and its effects on service providers has been analyzed in call centers~\cite{Hernandez11} and in the context of the perceived imbalance between resources and demands~\cite{cherniss80}. These studies considered several factors such as personality traits, career-related goals and attitudes, and life outside of work, and these factors were correlated with stress levels and burnout.
-
-Kocielnik et al.~\cite{kocielnik_smart_2013} developed a framework for unobtrusive and continuous measurement of stress in real life conditions. They equipped university staff members with a wristband sensor and combined this data with information from the participants' calendars over the course of four weeks. They observed that the data they collected reflected well the participants perceptions of their own stress levels. However, this work focused mostly on providing retrospective information to users so they can work to improve their own stress balance. They did not attempt to make observations about the big picture of participants stress profiles or make predictions in real time.
+Kocielnik et al.~\cite{kocielnik_smart_2013} developed a framework for unobtrusive and continuous measurement of stress in real life conditions. They equipped university staff members with a wristband sensor and combined this data with information from the participants' calendars over the course of four weeks. They observed that the data they collected reflected well the participants perceptions of their own stress levels. However, this work focused mostly on providing retrospective information to users so they can work to improve their own stress balance. They did not attempt to make observations about the big picture of participants stress profiles or make predictions in real time. Also using a wristband, Hernandez et al.~\cite{Hernandez11} studied the stress level during calls in a call center over a seven day period. They collected skin conductance measures and examined the interpersonal variability of reporting stress. 
 
 
 Our study stands out from these works by nature of its length and focus on knowledge worker stress in everyday office life, using unobtrusive measures. To the best of our knowledge there is no longitudinal study which attempts to explain and predict knowledge worker stress that comes close to the length of our own study. The eight week duration gives us authority to speak on the nature of day-to-day fluctuations in knowledge worker stress levels.
+
+
+\rev{Rather than trying to measure or predict stress, several studies have induced stress and examined its effect on work performance, motivation and others. For instance, Sarsenbayeva et al.~\cite{Sarsenbayeva19} induced stress and studied how it affects mobile interaction, showing that it can reduce completion time and accuracy during target acquisition tasks. Evans and Johnson~\cite{evans00} investigated the correlation between noise in the workplace and stress levels. They found that workers exposed to open-office noise showed aftereffects that indicate motivational deficits but found no difference in cortisol levels. The population for their experiment comprised 40 female clerical workers, who were randomly assigned to a control condition or to three-hour low-intensity noise room designed to simulate typical open-office noise levels.}
+
+\rev{Stress in the workplace and its effects on service providers has also been analyzed in call centers~\cite{Hernandez11} and in the context of the perceived imbalance between resources and demands~\cite{cherniss80}. These studies considered several factors such as personality traits, career-related goals and attitudes, as well as life outside of work, and examined their correlation with stress levels and burnout.}
+
+\rev{Finally, there is also some work that already used proprietary stress measures for other types of classification. For example, Mirjafari et al.~\cite{Mirjafari19} used a proprietary stress measure by Garmin together with other data collected through the sensing of mobile devices and built machine learning models to differentiate between low and high performing workers.}
+
+%\tfC{this is very different}
+%Mirjafari et al.~\cite{Mirjafari19} used mobile devices over a long period to gather data, including a proprietary stress level measure, and built machine learning models to group workers based on their workplace performance metrics. %Sarsenbayeva et al.~\cite{Sarsenbayeva19} induced stress and studied how it affects mobile interaction reducing completion time and accuracy during target acquisition tasks.
+
+
+%Evans and Johnson~\cite{evans00} investigated the correlation between noise in the workplace and stress levels. They found that workers exposed to open-office noise showed aftereffects that indicate motivational deficits but found no difference in cortisol levels. The population for their experiment comprised 40 female clerical workers, who were randomly assigned to a control condition or to three-hour low-intensity noise room designed to simulate typical open-office noise levels.
+
+%\tfC{following stuff needs to be rewritten, it's just wrong in the first place}
+%When it comes to stress in the workplace, there have also been several studies to analyze its effects. For instance, 
+%Stress in the workplace and its effects on service providers has been analyzed in call centers~\cite{Hernandez11} 
+%and in the context of the perceived imbalance between resources and demands~\cite{cherniss80}. These studies considered several factors such as personality traits, career-related goals and attitudes, and life outside of work, and these factors were correlated with stress levels and burnout.
+
+
+
+
 
 
 %Bader~\cite{Bader95} proposed an approach towards monitoring and estimating a person's awakeness by leveraging on a stationary pressure sensor to track the person's body movements and a correlator to produce a change signal which is compared with a preset wakefulness threshold in a threshold detector circuit.
@@ -60,13 +75,14 @@ Our study stands out from these works by nature of its length and focus on knowl
 
 \subsection{Focus}
 Focus refers to the allocation of limited cognitive processing resources~\cite{Anderson04}.
-Mark et al.~\cite{mark2014bored} studied engagement in workplace activities by analyzing the digital activity of 32 information workers in situ for 5 days to understand how attentional states change with context. They found that boredom is highest in the early afternoon and focus peaks in the middle of the afternoon. They also found that doing work that requires focus correlates with stress, while rote work correlates with happiness.
+Mark et al.~\cite{mark2014bored} studied \rev{attentional states, including focus, for workplace activities by analyzing the digital activity of 32 information workers in situ for 5 days.} They found that boredom is highest in the early afternoon and focus peaks in the middle of the afternoon. They also found that doing work that requires focus correlates with stress, while rote work correlates with happiness.
 
 Interruptions in the office are a common barriers keeping workers from sustaining focus on their work related activities, particularly when the interruptions occur at inopportune moments.
 Such interruptions may include emails, alerts, or interactions with co-workers\cite{gonzalez2004constant,chong2006interruptions,shamsi07}. Interruptions in inopportune times can have negative effects that range from higher error rate and lower overall performance
 to an increase in stress and frustration~\cite{bailey2001effects,czerwinski2000instant,mark2008cost}.
 External interruptions may cause workers to enter a ``chain of distraction''~\cite{shamsi07}.
-This chain is composed by stages of preparation, diversion, resumption and recovery that result in time away from an ongoing task. 
+This chain is composed by stages of preparation, diversion, resumption and recovery that result in time away from an ongoing task. \rev{Since interruptions can have a large impact on the focus and productivity of office workers, several studies have examined the prediction of interruptibility---the availability for interruptions---using a variety of features, including computer interaction and biometrics~\cite{fogarty2005examining, iqbal2008effects, chen2004using, bailey2008understanding, zuger2015interruptibility, zuger18}. Most of these studies were again conducted for small and controlled tasks over shorter periods of time.}
+
 
 Other studied constructs that relate to focus in the workplace include cognitive absorption, cognitive engagement, flow, and mindfulness.
 Cognitive absorption describes periods of time in which a person experiences total immersion in an activity.
@@ -86,19 +102,19 @@ However, most of drivers continue driving even when recognizing sleepiness signa
 
 
 \subsection{Biometrics}
-Our study investigates the prediction of multiple productivity-related indicators (stress, focus, and awakeness) using two different types of measurements, and biometric signals over eight weeks in a real-life office setting.
-Existing work~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015} analyzes a broad array of biometric signals and correlates them with individual's cognitive states and processes.
+Our study investigates the prediction of stress, focus, and awakeness using two different types of measurements, and biometric signals over eight weeks in a real-life office setting.
+Existing work~\cite{sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent,Parnin2011,Nakagawa2014,Radevski2015}\rev{---some of it already mentioned above---}analyzes a broad array of biometric signals and correlates them with individual's cognitive states and processes.
 For example, Zuger et al.~\cite{zuger18} used biometrics to sense interruptibility in the office~\cite{zuger18}.
 %and found correlations between biometric signals and predicting code quality~\cite{Muller16}, to assess task difficulty in software development~\cite{fritz2014using}, to assess developer's mental load and perceived difficulty while working on small code snippets, and
 Biometric signals have also been studied in the context of technology users. For example, Parnin~\cite{Parnin2011} analyzes electromyography to measure sub-vocal utterances, and how these might be correlated with the programmer's perceived difficulty of programming tasks. Similarly, biometrics have been used to measure code difficulty by using biometric sensors~\cite{fritz2014using}
 and using Near Infrared Spectroscopy to measure developer's cerebral blood flow~\cite{Nakagawa2014}.
 
 Eye tracking technology~\cite{Bednarik2006,Crosby1990,Rodeghero2014} and brain activity~\cite{Ikutani2014,Siegmund2014} 
-have been used in previous studies to analyze different tasks in an office environment.
+have been used in previous studies to examine different tasks in an office environment.
 Eye tracking has been used to analyze memory load and processing load by inspecting task-evoked pupillary response and pupil size~\cite{beatty82}. Similar studies have shown high correlation between pupil size and mental workload of subtasks~\cite{beatty82} and cognitive load~\cite{Klingner10}.
 Brain activity has been associated with different mental states~\cite{Berger29} by analyzing specific frequency bands (alpha, beta, gamma, delta, and theta) using electroencephalography (EEG). The increase or decrease of some of these frequencies is correlated with
 attentional demand and working memory load~\cite{Smith05,sterman93}.
 In contrast to studies that use eye tracking or EEG, we focused on a less invasive technology that can be applied in a real world scenario.
-Similarly, we considered adding additional metrics such as Depression, Anxiety and Stress Scale (DASS) and Perceived Stress Scale (PSS)~\cite{Ferdous15} but opted for the ones presented in the paper after several discussions with experts in the area, and after piloting surveys to maximize participant compliance.
+Similarly, we considered adding additional metrics such as the Depression, Anxiety and Stress Scale (DASS) and the Perceived Stress Scale (PSS)~\cite{Ferdous15} but opted for the ones presented in the paper after several discussions with experts in the area, and after piloting surveys to maximize participant compliance.
 
 
