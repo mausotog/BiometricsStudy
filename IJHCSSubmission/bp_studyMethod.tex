@@ -1,6 +1,6 @@
 %!TEX root = bioPrediction_main.tex
 \section{Field Study}
-We conducted an eight-week field study with 14 participants using experience sampling and biometric sensors to investigate how knowledge workers experience stress \rev{and awakeness} over time and the feasibility of predicting stress, focus, and awakeness \rev{using} biometric signals. 
+We conducted an eight-week field study with 14 participants using experience sampling and biometric sensors to investigate how knowledge workers experience stress and awakeness over time and the feasibility of predicting stress, focus, and awakeness using biometric signals. 
 
 
 \subsection{Participants}
@@ -10,10 +10,10 @@ From the 14 participants, 11 are male and 3 are female. The average participant 
 
 
 \subsection{Procedure}
-We performed a study over the course of eight weeks. This study includes the collection of the participant's \rev{biometric data and self-reporting surveys during their work hours}. \rev{We also collected computer interaction data, but given privacy concerns of some participants chose not to use this data (see Section~\ref{sec:computer_interaction_data})}. We informed participants about the study purpose and procedure, handed out biometric sensors, introduced and explained the self-reporting to the participants, \rev{handed out consent forms and ensured informed consent from each participant for the study.}
+We performed a study over the course of eight weeks. This study includes the collection of the participant's biometric data and self-reporting surveys during their work hours. We also collected computer interaction data, but given privacy concerns of some participants chose not to use this data (see Section~\ref{sec:computer_interaction_data}). We informed participants about the study purpose and procedure, handed out biometric sensors, introduced and explained the self-reporting to the participants, handed out consent forms and ensured informed consent from each participant for the study.
 
 
-After the initial setup, participants were asked to fill out three surveys each day for the following eight weeks (see Section~\ref{sec:Surveys}) \rev{and wear the biometric sensor during their work hours}. At the end of the eight weeks, we collected the biometric sensors and performed a short follow-up interview on the study and the participants' experiences.
+After the initial setup, participants were asked to fill out three surveys each day for the following eight weeks (see Section~\ref{sec:Surveys}) and wear the biometric sensor during their work hours. At the end of the eight weeks, we collected the biometric sensors and performed a short follow-up interview on the study and the participants' experiences.
 
 Keeping participants engaged in an eight-week study can be
 difficult. In the second month of the study, largely to incent participants to
@@ -70,7 +70,7 @@ We collected two datasets  from each study participant.
 
 \subsubsection{Biometric Sensors}
 Figure~\ref{everion} illustrates Biovotion's Everion, which we used to track the biometric signals of the study participants. The Everion is worn on the upper arm and provides continuous monitoring of certain biometric measurements.\footnote{https://biovotion.zendesk.com/hc/en-us/articles/213613165} Previous studies~\cite{zuger18,sano2013stress,healey2005detecting,wijsman2011towards,zuger2015interruptibility,goyal2017intelligent} have used similar devices~\cite{Okada11,polar,fitbitCharge} to capture psycho-physiological and biometric measurements for shorter periods of time or capturing a smaller number of measurements.
-\rev{A comparative study has  shown that the Everion can be used as a valid proxy for HRV metrics for knowledge workers~\cite{barrios2019a}.} 
+A comparative study has  shown that the Everion can be used as a valid proxy for HRV metrics for knowledge workers~\cite{barrios2019a}.
 
 \begin{figure}
   \centering
@@ -79,7 +79,7 @@ Figure~\ref{everion} illustrates Biovotion's Everion, which we used to track the
    \label{everion}
 \end{figure}
 
-Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study. \rev{We chose these biometric measurements based on previous research that has indicated their potential (see references in Table~\ref{signals}) and the availability and feasibility of collecting these measurements with low invasiveness over a long duration.} 
+Table~\ref{signals} lists the biometrics measurements that we collected using the Everion. Each measurement is collected once per second, and each recorded observation has an associated timestamp and quality rating. Data collected by the Everion are uploaded to a server, from which we downloaded the data for use in our study. We chose these biometric measurements based on previous research that has indicated their potential (see references in Table~\ref{signals}) and the availability and feasibility of collecting these measurements with low invasiveness over a long duration.
 
 
 
@@ -114,14 +114,14 @@ Biometric Measurement & Units of Measure \\
 %\hspace{3mm}Barometric pressure & Milibar (mbar)  \\
 %\hline
 \end{tabular}
-\caption{Biometric measurements captured by the Everion, organized by category and with references to previous works using similar data. \rev{\textit{(RMSSD denotes the root mean square of successive heartbeat interval differences)}}}
+\caption{Biometric measurements captured by the Everion, organized by category and with references to previous works using similar data. \textit{(RMSSD denotes the root mean square of successive heartbeat interval differences)}}
 \label{signals}
 \end{center}
 %\vspace*{-4mm}
 \end{table}
 
 \subsubsection{Computer Interaction Data}\label{sec:computer_interaction_data}
-To gain a better understanding of our participants day-to-day work activities, we \rev{asked participants to install} an open source computer interaction monitor~\cite{Meyer17}. The monitor ran in the background on participants' computers and tracked the active windows, as well as the keyboard and mouse activity. Four of our participants opted out of this part of the study for privacy reasons (S6, S10, S12, and S13).
+To gain a better understanding of our participants day-to-day work activities, we asked participants to install an open source computer interaction monitor~\cite{Meyer17}. The monitor ran in the background on participants' computers and tracked the active windows, as well as the keyboard and mouse activity. Four of our participants opted out of this part of the study for privacy reasons (S6, S10, S12, and S13).
 % Gail: I commented out Thomas' comment as I don't think we need to address it
 %\tfC{Probably needs to state something about how it also captured non-work related browsing (see section 3.4)}
 %Therefore, we only included the computer interaction data in our analysis for our more coarse-grained explanatory model but not in our analysis on the predictive model for stress in the moment. 
@@ -171,8 +171,8 @@ detailed below:
 
 Following guidelines from similar previous studies~\cite{fogarty05,tanaka11}, we asked the participants to respond to each question using a 5-point Likert scale ranging from 1 (not at all awake/stressed/focused) to 5 (extremely awake/stressed/focused). Each participant response, as stored by Survey Gizmo, comprised the date, the time at which the response was initiated, the time at which the survey was submitted, the unique identifier for the participant, and the responses submitted by the participant.
 
-\rev{We did not ask our participants about their focus levels in the end of the day survey as focus
-is more of an in-the-moment aspect than stress and awakeness.}
+We did not ask our participants about their focus levels in the end of the day survey as focus
+is more of an in-the-moment aspect than stress and awakeness.
 
 %\subsection{Intervention}
 %At the midpoint of our study, we introduced an intervention in the form of Tai Chi classes, with the goal of examining the efficacy of Tai Chi or other mindfulness excercises for reduction of office stress. Classes were offered two times a week in the middle of the work day. Participants were asked to attend one class a week. We recorded each participants attendance, including which of the two sessions they attended.
