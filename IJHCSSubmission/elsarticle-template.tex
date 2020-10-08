@@ -7,7 +7,7 @@
 
 %% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
 %% for a journal layout:
-   \documentclass[final,1p,times,plainnat]{elsarticle}
+   \documentclass[final, 1p,times]{elsarticle}
 %% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
 %% \documentclass[final,3p,times,authoryear]{elsarticle}
 %% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
@@ -15,12 +15,12 @@
 %% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
 
 
+
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
 %\AtBeginDocument{%
 %  \providecommand\BibTeX{{%
 %    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
-
 
 
 \usepackage{lineno,hyperref}
@@ -66,6 +66,7 @@
 \newcommand\gm[1]{\cb{GCM}{\textcolor{magenta}{#1}}}
 \newcommand\tfC[1]{\todo[color=green,inline]{Thomas: #1}}
 \newcommand{\rev}[1]{\textcolor{blue}{#1}}
+
 
 \journal{International Journal of Human-Computer Studies}
 
@@ -151,7 +152,7 @@
 \begin{abstract}
 Knowledge workers face many challenges in the workplace: work is 
 fragmented, disruptions are constant, tasks are complex, and work hours can be 
-long. These challenges can impact knowledge workers' stress, focus and awakeness, and in turn their interaction with the digital environment, the quality of work 
+long. These challenges can \rev{affect} knowledge workers' stress, focus and awakeness, and in turn their interaction with the digital environment, the quality of work 
 performed and their productivity in general. We report on a field study with 14
 knowledge workers over an eight-week period in which we investigated, using
 experience sampling, how the workers experience stress \rev{and} awakeness over time. During this field study, we also collected biometric data including heart- and skin-related measures, which we then used to investigate if it is possible to predict stress, focus and awakeness, in the moment.

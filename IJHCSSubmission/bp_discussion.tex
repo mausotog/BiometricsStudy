@@ -14,8 +14,8 @@ research.
 Being able to accurately recognize periods of high-stress in knowledge
 workers could enable more respectful workplaces. For example, an
 ability to sense and predict stress in the moment could help companies
-to prevent or de-escalate potentially dangerous situations in the
-workplace, e.g. confrontation between co-workers. Building an 
+prevent or de-escalate potentially dangerous situations in the
+workplace \rev{(e.g., confrontation between co-workers)}. Building an 
 understanding of stress and focus over time and in the moment
 could also help create workplaces that are more conducive
 to enabling knowledge workers to be more productive. For example,
@@ -36,7 +36,9 @@ offices. However, as standard office settings become more
 personalizable (e.g., via adjustable desks, lighting, and sound
 showers) and sensor costs decrease, our approach could be applied to
 any office environment, and thus could impact a large percentage of
-modern workers. As in modern cars, temperature and lighting could be
+modern workers. 
+
+As in modern cars, temperature and lighting could be
 regulated on a per-person basis, which would allow the environment to
 react to the person's current state and to maximize each person's
 preferences and productivity (e.g., preferences of men and women in
@@ -59,11 +61,11 @@ to handle conflicting levels between different group members.
 \subsection{The Effect of Tai Chi on Stress}
 As described in our study procedure,
 due to our focus on stress, we offered participants an opportunity to be part of Tai Chi classes.
-The two primary reasons for this intervention was to keep participants motivated to continue the self-reports over the long study period, and to offer a technique that might help reduce stress.
+The two primary reasons for this intervention \rev{were} to keep participants motivated to continue the self-reports over the long study period, and to offer a technique that might help reduce stress.
 After consulting with other researchers, we decided to offer Tai Chi in the last month of the study, leaving the first month of the study unaltered. While participants were not required to take a Tai Chi class, they all took one per week except for two participants that opted out of the last two weeks of classes. Four participants explicitly stated that they liked the Tai Chi sessions or that they were ``excellent''.
 These classes were performed once per week with a duration of one hour.
 
-While this was not the focus of our study, we performed a secondary analysis to examine whether the Tai Chi classes had any effect on the participants' stress levels in the work days directly following the Tai Chi session. For this, we build a linear mixed model with the self-reported daily stress level as dependent variables and the participants as random effects. We found that Tai Chi attendance contributed a small amount to decreased stress in the work week immediately following the Tai Chi session (slope of -0.188, p <0.05). However, we did not find a connection between attendance and stress on the day of the session suggesting that Tai Chi might have long-term effects, but is not conducive at relieving stress close in time to the intervention. Overall, the Tai Chi thus had a small impact on the collected data of the second month of the study, which poses a threat to the validity to our observed trends for this period of time. However, since knowledge workers might attend these kinds of classes on their own doing, we believe that this is negligible, and the analysis rather provides a weak indication that this kind of stress intervention might in fact help to reduce stress in the wild.
+While this was not the focus of our study, we performed a secondary analysis to examine whether the Tai Chi classes had any effect on the participants' stress levels in the workdays directly following the Tai Chi session. For this, we build a linear mixed model with the self-reported daily stress level as dependent variables and the participants as random effects. We found that Tai Chi attendance contributed a small amount to decreased stress in the work week immediately following the Tai Chi session (slope of -0.188, p <0.05). However, we did not find a connection between attendance and stress on the day of the session suggesting that Tai Chi might have long-term effects, but is not conducive at relieving stress close in time to the intervention. Overall, the Tai Chi thus had a small impact on the collected data of the second month of the study, which poses a threat to the validity to our observed trends for this period of time. However, since knowledge workers might attend these kinds of classes on their own doing, we believe that this is negligible, and the analysis rather provides a weak indication that this kind of stress intervention might in fact help to reduce stress in the wild.
 
 %% %\vspace{0.05in}
 %% \noindent
@@ -111,9 +113,9 @@ classifier, as also found by others, e.g.~\cite{Exler16}. We addressed
 this for the training by oversampling in case of few data samples for
 the individual models and undersampling in case of a general model
 where more data was available. Rebalancing the dataset using such techniques
-is a common and effective practice~\cite{branco2016survey}. Alternative techniques such as SMOTE~\cite{chawla2002smote} exist and can perform better than those we employed, however they are impractical considering the limited amount of data we have to work with. Oversampling the dataset as we did may also lead to an increased risk of model overfitting. However, we believe the benefits of rebalancing the dataset outweigh this possible downside.
+is a common and effective practice~\cite{branco2016survey}. Alternative techniques such as SMOTE~\cite{chawla2002smote} exist and can perform better than those we employed, however they are impractical considering the limited amount of data we have to work with. 
 
-Especially in light of the imbalance
+Oversampling the dataset as we did may also lead to an increased risk of model overfitting. However, we believe the benefits of rebalancing the dataset outweigh this possible downside. In light of the imbalance
 in the data, the results we achieved with our models are
 encouraging. For the assessment of the classifiers' performance we
 addressed the imbalance by not just presenting accuracy, but also by
